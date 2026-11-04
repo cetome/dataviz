@@ -1,0 +1,67 @@
+/* dataviz - the viewer (/view/) and the builder (/builder/): start screen, lists, chips, legend
+   lines, toast. Copyright (C) 2024-2026 cetome. SPDX-License-Identifier: AGPL-3.0-or-later */
+
+/* --- start screen ------------------------------------------------------------ */
+.start { padding: 2rem var(--gutter) 3rem; background: var(--surface-soft); min-height: calc(100vh - 66px); }
+.start-inner { max-width: 52rem; margin: 0 auto; display: grid; gap: 1.25rem; }
+.start-lead { margin: 0; font-size: 1rem; color: var(--text); }
+.start-block {
+  padding: 1.25rem 1.4rem; background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow);
+}
+.start-block h2 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+.start-block .hint { margin: 0.5rem 0 0; font-size: 0.82rem; color: var(--muted); }
+.start-block p { margin: 0; }
+.start-error { margin: 0.75rem 0 0; padding: 0.6rem 0.8rem; border-radius: var(--radius); background: #fee2e2; color: var(--red-deep); font-size: 0.88rem; }
+.url-row { display: flex; gap: 0.5rem; }
+.url-row .input { flex: 1; min-width: 0; }
+.start .drop-zone { padding: 1.5rem 1rem; }
+
+.std-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.std-list li { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.8rem; border: 1px solid var(--line-soft); border-radius: var(--radius); }
+.std-list li:hover { border-color: var(--blue-light); }
+.std-open { flex: 1; min-width: 0; display: grid; color: var(--text); }
+.std-open strong { color: var(--blue); }
+.std-open span { font-size: 0.85rem; }
+.std-open small { font-size: 0.75rem; color: var(--muted); overflow-wrap: anywhere; }
+.std-actions { display: flex; gap: 0.75rem; align-items: center; font-size: 0.82rem; white-space: nowrap; }
+.link-btn { border: 0; background: none; padding: 0; font: inherit; color: var(--red-deep); cursor: pointer; }
+.link-btn:hover { text-decoration: underline; }
+
+/* --- viewer sidebar ---------------------------------------------------------- */
+.about-text { font-size: 0.85rem; }
+.about-text p { margin: 0 0 0.4rem; }
+.issues { font-size: 0.8rem; margin-top: 0.4rem; }
+.issues summary { cursor: pointer; color: var(--amber-deep); font-weight: 600; }
+.issues ul { margin: 0.4rem 0 0 1rem; padding: 0; }
+.issues li { margin: 0.2rem 0; }
+.issue-error { color: var(--red-deep); }
+.line-swatch { display: inline-block; width: 18px; height: 0; border-top: 2px solid var(--muted); margin: 0.6rem 0.4rem 0 0; flex: none; }
+.chip { display: inline-block; padding: 0.05rem 0.5rem; margin: 0.1rem 0; border-radius: 999px; background: var(--blue-tint); color: var(--blue-deep); font-size: 0.75rem; font-weight: 600; }
+.details .link-list { list-style: none; margin: 0.2rem 0 0.6rem; padding: 0; }
+.details .link-list li { margin: 0.15rem 0; }
+.details code { font-family: var(--font-mono); font-size: 0.85em; background: var(--surface-alt); padding: 0 0.25rem; border-radius: 4px; }
+
+/* --- toast ------------------------------------------------------------------- */
+.toast {
+  position: fixed; left: 50%; bottom: 1.5rem; z-index: 1001; transform: translateX(-50%);
+  max-width: min(32rem, calc(100% - 2rem)); margin: 0; padding: 0.75rem 1.1rem;
+  border-radius: var(--radius); background: var(--ink); color: #fff; font-size: 0.88rem; box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 600px) {
+  .start { padding: 1.25rem 16px 2rem; }
+  .start-block { padding: 1rem; }
+  .url-row { flex-direction: column; }
+  .std-list li { flex-direction: column; align-items: flex-start; }
+}
+
+/* --- "make a dataviz file": the three routes ---------------------------------- */
+.routes { margin: 0 0 0.75rem; padding-left: 1.2rem; display: grid; gap: 0.9rem; }
+.routes li { padding-left: 0.2rem; }
+.routes code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-alt); padding: 0 0.25rem; border-radius: 4px; }
+.route-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; margin-top: 0.45rem; font-size: 0.85rem; }
+.route-actions .btn { padding: 0.35rem 0.75rem; }
+.about-text ul { list-style: none; margin: 0 0 0.4rem; padding-left: 0; }
+.about-text ul > li { position: relative; padding-left: 1.1rem; }
+.about-text ul > li::before { content: ''; position: absolute; top: 0.55em; left: 0; width: 0.4rem; height: 0.4rem; background-color: var(--blue); }

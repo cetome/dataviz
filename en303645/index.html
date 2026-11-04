@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>EN 303 645 and TS 103 701 ◼ cetome dataviz</title>
+    <meta name="description" content="EN 303 645 provisions, their conditions and the TS 103 701 IXITs they need, as an interactive graph. Import your ICS to tailor it to your product and generate the IXIT list.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="cetome dataviz">
+    <meta property="og:title" content="EN 303 645 and TS 103 701 ◼ cetome dataviz">
+    <meta property="og:description" content="EN 303 645 provisions, their conditions and the TS 103 701 IXITs they need, as an interactive graph. Import your ICS to tailor it to your product and generate the IXIT list.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EN 303 645 and TS 103 701 ◼ cetome dataviz">
+    <meta name="twitter:description" content="EN 303 645 provisions, their conditions and the TS 103 701 IXITs they need, as an interactive graph. Import your ICS to tailor it to your product and generate the IXIT list.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+</head>
+
+<body class="graph-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="cetome dataviz home"><img src="/img/dataviz.svg" alt="cetome dataviz" width="193" height="48"></a>
+        <h1 class="page-title">EN 303 645 and TS 103 701 <small>Provisions, conditions and the IXITs they need</small></h1>
+    </header>
+
+    <div class="app">
+        <main class="graph" aria-label="Graph">
+            <div id="cy"></div>
+        </main>
+
+        <aside class="sidebar" aria-label="Filters">
+            <p class="hint">Click a provision or an IXIT to see what it links to. Click an empty part of the graph to go back. The options below still apply.</p>
+
+            <section class="panel" id="import-ics">
+                <h2 class="panel-title">Import your ICS</h2>
+                <p class="hint">Tailor the graph to your product: fill in the ICS tab of the <a href="https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03173/Assessment-Template_DUT-ICS-Results.xltx?__blob=publicationFile&amp;v=3" target="_blank" rel="noopener">BSI template</a> and drop it here. Unsupported provisions leave the graph. Reload the page to start over.</p>
+                <label for="ICSfile" class="drop-zone" id="drop-zone">
+                    <strong>Drop your ICS here</strong>
+                    <span>or</span>
+                    <input type="file" id="ICSfile" accept=".xlsx,.xlsm,.xltx">
+                </label>
+                <p class="hint" id="ics-status" aria-live="polite"></p>
+                <div class="actions">
+                    <button type="button" class="btn" id="generate-ixit">Generate the IXIT list (.xlsx)</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Search</h2>
+                <label class="visually-hidden" for="search-filter">Search a provision, a chapter or an IXIT field</label>
+                <input type="search" class="input" id="search-filter" placeholder="Provision, chapter or IXIT field..." autocomplete="off">
+                <label class="check"><input type="checkbox" id="show-documentation"> Show the documentation each link requires</label>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">IXIT</h2>
+                <label class="visually-hidden" for="ixit-filter">IXIT in view</label>
+                <select id="ixit-filter" class="input"><option value="">Show all</option></select>
+                <label class="check"><input type="checkbox" id="show-ixit-only"> Show IXIT nodes only</label>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Highlight</h2>
+                <ul id="type-filter">
+                    <li><label class="check"><input type="checkbox" id="filter-mandatory" value="mandatory"> Mandatory provisions</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-recommended" value="recommended"> Recommended provisions</label></li>
+                </ul>
+                <h3 class="panel-subtitle">Conditions</h3>
+                <ul id="condition-filter">
+                    <li><label class="check"><input type="checkbox" id="filter-c1" value="c1"> 1) passwords are used</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c2" value="c2"> 2) pre-installed passwords are used</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c3" value="c3"> 3) software components are not updateable</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c4" value="c4"> 4) the device is constrained</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c5" value="c5"> 5) the device is not constrained</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c6" value="c6"> 6) telemetry data is collected</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c7" value="c7"> 7) personal data is processed on the basis of consumers' consent</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c8" value="c8"> 8) the device allows user authentication</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c9" value="c9"> 9) the device supports automatic updates and/or update notifications</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c10" value="c10"> 10) a hard-coded unique per device identity is used for security purposes</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c11" value="c11"> 11) updates are delivered over a network interface</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c12" value="c12"> 12) an update mechanism is implemented</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-c13" value="c13"> 13) a debug interface is physically accessible</label></li>
+                </ul>
+                <label class="check check-strong"><input type="checkbox" id="show-highlighted-only" disabled> Show highlighted nodes only</label>
+            </section>
+
+            <section class="panel" id="assessment-panel"></section>
+
+            <section class="panel actions">
+                <button type="button" class="btn btn-primary" id="fit-graph">Fit view</button>
+                <button type="button" class="btn" id="reset-graph">Reset graph</button>
+            </section>
+
+            <footer class="site-footer">
+                <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="/js/vendor/xlsx.full.min.js"></script>
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/data/en303645.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/extras.js"></script>
+    <script src="/js/assessment.js"></script>
+    <script src="/js/en303645.js"></script>
+    <script src="/en303645/start.js"></script>
+</body>
+</html>

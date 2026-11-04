@@ -1,0 +1,25 @@
+dataviz
+Copyright (C) 2024-2026 cetome
+
+The code of dataviz is free software: you can redistribute it and/or modify it under the terms of
+the GNU Affero General Public License as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version. See LICENSE.
+
+Not covered by the AGPL:
+- the built-in graph data (data/, standards/): CC BY 4.0, see DATA-LICENSE.md (the standards it
+  refers to remain their publishers');
+- the format description, templates, example, schema and AI prompt (docs/, templates/, examples/,
+  schema/): CC0 1.0, no rights reserved;
+- the names "cetome" and "dataviz by cetome" and the logos in img/: trademarks of cetome, not
+  licensed. A modified version published by someone else must use its own name and logo.
+
+Third-party software included in js/vendor/ and fonts/, each under its own licence:
+
+- Cytoscape.js            MIT          https://github.com/cytoscape/cytoscape.js
+- cytoscape-cose-bilkent  MIT          https://github.com/cytoscape/cytoscape.js-cose-bilkent
+- cose-base, layout-base  MIT          https://github.com/iVis-at-Bilkent/cose-base
+- dagre                   MIT          https://github.com/dagrejs/dagre
+- cytoscape-dagre         MIT          https://github.com/cytoscape/cytoscape.js-dagre
+- SheetJS Community Ed.   Apache-2.0   https://git.sheetjs.com/sheetjs/sheetjs
+- js-yaml                 MIT          https://github.com/nodeca/js-yaml
+- Inter (font)            OFL-1.1      https://github.com/rsms/inter

@@ -1,0 +1,3001 @@
+{
+  "dataviz": 1,
+  "id": "en18031-einfo",
+  "title": "EN 18031 E.Info",
+  "subtitle": "The information the E.Info annex asks for, mechanism by mechanism",
+  "authors": "cetome",
+  "licence": "CC BY 4.0, data by cetome (see DATA-LICENSE.md)",
+  "description": "The information the E.Info annex of EN 18031 asks for, mechanism by mechanism, to simplify the EN 18031 documentation.",
+  "layout": "saved",
+  "types": [
+    {
+      "id": "req",
+      "label": "Information requirement",
+      "color": "#0044aa",
+      "caption": "title"
+    },
+    {
+      "id": "subreq",
+      "label": "Information item",
+      "color": "#1565d8",
+      "caption": "title"
+    },
+    {
+      "id": "L3",
+      "label": "Detail",
+      "color": "#0891b2",
+      "caption": "title"
+    }
+  ],
+  "filters": [
+    {
+      "id": "part",
+      "label": "Applies to",
+      "mode": "all",
+      "tags": [
+        {
+          "id": "en18031-1",
+          "label": "EN 18031-1"
+        },
+        {
+          "id": "en18031-2",
+          "label": "EN 18031-2"
+        },
+        {
+          "id": "en18031-3",
+          "label": "EN 18031-3"
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Mechanism",
+      "tags": [
+        {
+          "id": "ACM",
+          "label": "ACM Access control mechanism"
+        },
+        {
+          "id": "AUM",
+          "label": "AUM Authentication mechanism"
+        },
+        {
+          "id": "SUM",
+          "label": "SUM Secure update mechanism"
+        },
+        {
+          "id": "SSM",
+          "label": "SSM Secure storage mechanism"
+        },
+        {
+          "id": "SCM",
+          "label": "SCM Secure communication mechanism"
+        },
+        {
+          "id": "RLM",
+          "label": "RLM Resilience mechanism"
+        },
+        {
+          "id": "NMM",
+          "label": "NMM Network monitoring mechanism"
+        },
+        {
+          "id": "TCM",
+          "label": "TCM Traffic control mechanism"
+        },
+        {
+          "id": "LGM",
+          "label": "LGM Logging mechanism"
+        },
+        {
+          "id": "DLM",
+          "label": "DLM Deletion mechanism"
+        },
+        {
+          "id": "UNM",
+          "label": "UNM User notification mechanism"
+        },
+        {
+          "id": "CCK",
+          "label": "CCK Confidential cryptographic keys"
+        },
+        {
+          "id": "GEC",
+          "label": "GEC General equipment capabilities"
+        },
+        {
+          "id": "CRY",
+          "label": "CRY Cryptography"
+        }
+      ]
+    },
+    {
+      "id": "exclude",
+      "label": "Hide",
+      "mode": "none",
+      "tags": [
+        {
+          "id": "conditional",
+          "label": "Conditional items"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "SecurityAsset",
+      "title": "SecurityAsset",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM",
+        "SSM",
+        "SCM",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2, ACM-5, SSM-1, SCM-1, SCM-2, SCM-3, SCM-4, GEC-1, GEC-2, GEC-3, GEC-6",
+      "x": 1471.9,
+      "y": 1761.9
+    },
+    {
+      "id": "SecurityAsset.Access",
+      "title": "Access",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 1507.4,
+      "y": 1799.1
+    },
+    {
+      "id": "SecurityAsset.PublicAccess",
+      "title": "PublicAccess",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1529.4,
+      "y": 1738.6
+    },
+    {
+      "id": "SecurityAsset.Environment",
+      "title": "Environment",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1, SSM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1627.9,
+      "y": 1737.9
+    },
+    {
+      "id": "SecurityAsset.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1569.4,
+      "y": 1799.1
+    },
+    {
+      "id": "SecurityAsset.ACM",
+      "title": "ACM",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2",
+      "x": 1288.9,
+      "y": 1772
+    },
+    {
+      "id": "SecurityAsset.SSM",
+      "title": "SSM",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1294.9,
+      "y": 1862.2
+    },
+    {
+      "id": "SecurityAsset.class",
+      "title": "class",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1623.9,
+      "y": 1799.1
+    },
+    {
+      "id": "SecurityAsset.Com",
+      "title": "Com",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 1498.4,
+      "y": 1859.6
+    },
+    {
+      "id": "SecurityAsset.NetworkInterface",
+      "title": "NetworkInterface",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 1398,
+      "y": 1679.5
+    },
+    {
+      "id": "SecurityAsset.TrustedEnv",
+      "title": "TrustedEnv",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-2",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1630.7,
+      "y": 1678.3
+    },
+    {
+      "id": "SecurityAsset.AddMeasures",
+      "title": "AddMeasures",
+      "type": "subreq",
+      "parent": "SecurityAsset",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1530.9,
+      "y": 1678.1
+    },
+    {
+      "id": "NetworkAsset",
+      "title": "NetworkAsset",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "ACM",
+        "SSM",
+        "SCM",
+        "RLM",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2, SSM-2, SCM-2, SCM-3, SCM-4, RLM-1, GEC-2, GEC-3, GEC-4, GEC-7",
+      "x": 92.9,
+      "y": 1634.8
+    },
+    {
+      "id": "NetworkAsset.Access",
+      "title": "Access",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 121.9,
+      "y": 1668.2
+    },
+    {
+      "id": "NetworkAsset.PublicAccess",
+      "title": "PublicAccess",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 39.9,
+      "y": 1607.7
+    },
+    {
+      "id": "NetworkAsset.Environment",
+      "title": "Environment",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "ACM",
+        "SSM",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** ACM-1, SSM-2, SCM-2",
+      "x": 148.9,
+      "y": 1607.7
+    },
+    {
+      "id": "NetworkAsset.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 126.9,
+      "y": 1547.2
+    },
+    {
+      "id": "NetworkAsset.ACM",
+      "title": "ACM",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2",
+      "x": 143.9,
+      "y": 1423.7
+    },
+    {
+      "id": "NetworkAsset.SSM",
+      "title": "SSM",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-2",
+      "x": 165.4,
+      "y": 1862.4
+    },
+    {
+      "id": "NetworkAsset.class",
+      "title": "class",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2",
+      "x": 10.4,
+      "y": 1728.7
+    },
+    {
+      "id": "NetworkAsset.Com",
+      "title": "Com",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "SCM",
+        "RLM"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3, SCM-4, RLM-1",
+      "x": 61.9,
+      "y": 1728.7
+    },
+    {
+      "id": "NetworkAsset.NetInterface",
+      "title": "NetInterface",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2",
+      "x": 35.9,
+      "y": 1668.2
+    },
+    {
+      "id": "NetworkAsset.AddMeasures",
+      "title": "AddMeasures",
+      "type": "subreq",
+      "parent": "NetworkAsset",
+      "tags": [
+        "en18031-1",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2",
+      "x": 41.4,
+      "y": 1547.2
+    },
+    {
+      "id": "PrivacyAsset",
+      "title": "PrivacyAsset",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "SSM",
+        "SCM",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2, ACM-3, ACM-4, ACM-5, ACM-6, SSM-1, SCM-1, SCM-2, SCM-3, SCM-4, GEC-1, GEC-2, GEC-3, GEC-6",
+      "x": 433.1,
+      "y": 1635.7
+    },
+    {
+      "id": "PrivacyAsset.Access",
+      "title": "Access",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 302.9,
+      "y": 1669.7
+    },
+    {
+      "id": "PrivacyAsset.PublicAccess",
+      "title": "PublicAccess",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 439.9,
+      "y": 1548.7
+    },
+    {
+      "id": "PrivacyAsset.Environment",
+      "title": "Environment",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1, SSM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 321.9,
+      "y": 1609.2
+    },
+    {
+      "id": "PrivacyAsset.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 364.9,
+      "y": 1669.7
+    },
+    {
+      "id": "PrivacyAsset.ACM",
+      "title": "ACM",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 500.1,
+      "y": 1424.8
+    },
+    {
+      "id": "PrivacyAsset.TrustedSources",
+      "title": "TrustedSources",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-3",
+      "x": 333.4,
+      "y": 1488.2
+    },
+    {
+      "id": "PrivacyAsset.SSM",
+      "title": "SSM",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-1",
+      "x": 571.8,
+      "y": 1863.1
+    },
+    {
+      "id": "PrivacyAsset.class",
+      "title": "class",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 419.4,
+      "y": 1669.7
+    },
+    {
+      "id": "PrivacyAsset.Com",
+      "title": "Com",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 470.9,
+      "y": 1669.7
+    },
+    {
+      "id": "PrivacyAsset.NetInterface",
+      "title": "NetInterface",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 426.9,
+      "y": 1609.2
+    },
+    {
+      "id": "PrivacyAsset.TrustedEnv",
+      "title": "TrustedEnv",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 446.9,
+      "y": 1488.2
+    },
+    {
+      "id": "PrivacyAsset.AddMeasures",
+      "title": "AddMeasures",
+      "type": "subreq",
+      "parent": "PrivacyAsset",
+      "tags": [
+        "en18031-2",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 326.4,
+      "y": 1548.7
+    },
+    {
+      "id": "FinancialAsset",
+      "title": "FinancialAsset",
+      "type": "req",
+      "tags": [
+        "en18031-3",
+        "ACM",
+        "SSM",
+        "SCM",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2, SSM-1, SCM-1, SCM-2, SCM-3, SCM-4, GEC-1, GEC-2, GEC-3, GEC-6",
+      "x": 965,
+      "y": 1633
+    },
+    {
+      "id": "FinancialAsset.Access",
+      "title": "Access",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "ACM"
+      ],
+      "text": "**Mechanisms:** ACM-1",
+      "x": 1016.6,
+      "y": 1798.1
+    },
+    {
+      "id": "FinancialAsset.PublicAccess",
+      "title": "PublicAccess",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 932.6,
+      "y": 1737.6
+    },
+    {
+      "id": "FinancialAsset.Environment",
+      "title": "Environment",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "ACM",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1, SSM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 929.6,
+      "y": 1798.1
+    },
+    {
+      "id": "FinancialAsset.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1016.6,
+      "y": 1737.6
+    },
+    {
+      "id": "FinancialAsset.ACM",
+      "title": "ACM",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-1, ACM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 715.2,
+      "y": 1589.9
+    },
+    {
+      "id": "FinancialAsset.SSM",
+      "title": "SSM",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-1",
+      "x": 761.3,
+      "y": 1864.5
+    },
+    {
+      "id": "FinancialAsset.class",
+      "title": "class",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 903.1,
+      "y": 1858.6
+    },
+    {
+      "id": "FinancialAsset.Com",
+      "title": "Com",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 954.6,
+      "y": 1858.6
+    },
+    {
+      "id": "FinancialAsset.NetworkInterface",
+      "title": "NetworkInterface",
+      "type": "subreq",
+      "parent": "FinancialAsset",
+      "tags": [
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 1172.4,
+      "y": 1418
+    },
+    {
+      "id": "ACM",
+      "title": "ACM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "ACM",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** ACM-3, ACM-4, ACM-5, ACM-6, AUM-1-1, AUM-1-2, AUM-1-3",
+      "x": 713.9,
+      "y": 1004.9
+    },
+    {
+      "id": "ACM.NetworkInterface",
+      "title": "NetworkInterface",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-1",
+      "x": 1063,
+      "y": 1107.4
+    },
+    {
+      "id": "ACM.UserInterfaces",
+      "title": "UserInterfaces",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-2",
+      "x": 616.8,
+      "y": 1136.2
+    },
+    {
+      "id": "ACM.MachineInterfaces",
+      "title": "MachineInterfaces",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-3",
+      "x": 608.8,
+      "y": 894.2
+    },
+    {
+      "id": "ACM.ManagedAccessNetworkAsset",
+      "title": "ManagedAccessNetworkAsset",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-1, AUM-1-2",
+      "x": 412.8,
+      "y": 954.7
+    },
+    {
+      "id": "ACM.ManagedAccessPrivacyAsset",
+      "title": "ManagedAccessPrivacyAsset",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-2",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-1, AUM-1-2",
+      "x": 409.8,
+      "y": 1075.7
+    },
+    {
+      "id": "ACM.ManagedAccessFinancialAsset",
+      "title": "ManagedAccessFinancialAsset",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-1, AUM-1-2, AUM-1-3",
+      "x": 415.8,
+      "y": 894.2
+    },
+    {
+      "id": "ACM.ManagedAccessSecurityAsset",
+      "title": "ManagedAccessSecurityAsset",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-1-1, AUM-1-2, AUM-1-3",
+      "x": 412.8,
+      "y": 1015.2
+    },
+    {
+      "id": "ACM.IntendedFunctionality",
+      "title": "IntendedFunctionality",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-1\nConditional item: only to be documented when the condition applies.",
+      "x": 613.8,
+      "y": 954.7
+    },
+    {
+      "id": "ACM.IntendedEnvironment",
+      "title": "IntendedEnvironment",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-2\nConditional item: only to be documented when the condition applies.",
+      "x": 613.8,
+      "y": 1015.2
+    },
+    {
+      "id": "ACM.AuthorizedEntity",
+      "title": "AuthorizedEntity",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-1\nConditional item: only to be documented when the condition applies.",
+      "x": 362.8,
+      "y": 1136.2
+    },
+    {
+      "id": "ACM.AuthenticationMechanism",
+      "title": "AuthenticationMechanism",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-1, AUM-1-2, AUM-1-3\nConditional item: only to be documented when the condition applies.",
+      "x": 827.3,
+      "y": 890.1
+    },
+    {
+      "id": "ACM.ReadOnlyFunctionality",
+      "title": "ReadOnlyFunctionality",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-2\nConditional item: only to be documented when the condition applies.",
+      "x": 611.8,
+      "y": 1075.7
+    },
+    {
+      "id": "ACM.ReadOnlyLegal",
+      "title": "ReadOnlyLegal",
+      "type": "subreq",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-1-2\nConditional item: only to be documented when the condition applies.",
+      "x": 492.8,
+      "y": 1136.2
+    },
+    {
+      "id": "AuthorisedAccess",
+      "title": "AuthorisedAccess",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "ACM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** ACM-4\nConditional item: only to be documented when the condition applies."
+    },
+    {
+      "id": "AuthenticationMechanism",
+      "title": "AuthenticationMechanism",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-2-1, AUM-2-2",
+      "x": 828.1,
+      "y": 745
+    },
+    {
+      "id": "AuthenticationMechanism.AuthFactor",
+      "title": "AuthFactor",
+      "type": "subreq",
+      "parent": "AuthenticationMechanism",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-2-1, AUM-2-2",
+      "x": 828.1,
+      "y": 753.2
+    },
+    {
+      "id": "AUM",
+      "title": "AUM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-3, AUM-4, AUM-5-1, AUM-5-2, AUM-6",
+      "x": 1224.9,
+      "y": 163
+    },
+    {
+      "id": "AUM.AuthVal",
+      "title": "AuthVal",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-3",
+      "x": 1109.4,
+      "y": 292.3
+    },
+    {
+      "id": "AUM.AuthEnv",
+      "title": "AuthEnv",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-3",
+      "x": 1325.4,
+      "y": 231.8
+    },
+    {
+      "id": "AUM.ConfSecGoal",
+      "title": "ConfSecGoal",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 1298.9,
+      "y": 110.8
+    },
+    {
+      "id": "AUM.AuthChange",
+      "title": "AuthChange",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-4",
+      "x": 1234.4,
+      "y": 231.8
+    },
+    {
+      "id": "AUM.PwdProperty",
+      "title": "PwdProperty",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-5-1, AUM-5-2",
+      "x": 1127.9,
+      "y": 231.8
+    },
+    {
+      "id": "AUM.UniqueBestPractice",
+      "title": "UniqueBestPractice",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-5-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1152.4,
+      "y": 171.3
+    },
+    {
+      "id": "AUM.EnforceSettingFirstUse",
+      "title": "EnforceSettingFirstUse",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-5-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1164.4,
+      "y": 50.3
+    },
+    {
+      "id": "AUM.DefinedAuthEntity",
+      "title": "DefinedAuthEntity",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-5-2\nConditional item: only to be documented when the condition applies.",
+      "x": 1303.4,
+      "y": 171.3
+    },
+    {
+      "id": "AUM.EquipmentGenerated",
+      "title": "EquipmentGenerated",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "AUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** AUM-5-2\nConditional item: only to be documented when the condition applies.",
+      "x": 1158.4,
+      "y": 110.8
+    },
+    {
+      "id": "AUM.BFProtection",
+      "title": "BFProtection",
+      "type": "subreq",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "AUM"
+      ],
+      "text": "**Mechanisms:** AUM-6",
+      "x": 1309.4,
+      "y": 50.3
+    },
+    {
+      "id": "PartOfSoftw",
+      "title": "PartOfSoftw",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-1, GEC-8\nConditional item: only to be documented when the condition applies.",
+      "x": 2458.7,
+      "y": 1409.7
+    },
+    {
+      "id": "PartOfSoftw.FuncSaftyImp",
+      "title": "FuncSaftyImp",
+      "type": "subreq",
+      "parent": "PartOfSoftw",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2444,
+      "y": 1391
+    },
+    {
+      "id": "PartOfSoftw.Immutable",
+      "title": "Immutable",
+      "type": "subreq",
+      "parent": "PartOfSoftw",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2537,
+      "y": 1451.5
+    },
+    {
+      "id": "PartOfSoftw.AltMeasures",
+      "title": "AltMeasures",
+      "type": "subreq",
+      "parent": "PartOfSoftw",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2439,
+      "y": 1451.5
+    },
+    {
+      "id": "PartOfSoftw.SUM",
+      "title": "SUM",
+      "type": "subreq",
+      "parent": "PartOfSoftw",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2360.9,
+      "y": 1384.4
+    },
+    {
+      "id": "SUM",
+      "title": "SUM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-2, SUM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2122.2,
+      "y": 1384
+    },
+    {
+      "id": "SUM.Sign",
+      "title": "Sign",
+      "type": "subreq",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2130.2,
+      "y": 1452.7
+    },
+    {
+      "id": "SUM.SecChan",
+      "title": "SecChan",
+      "type": "subreq",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2170.7,
+      "y": 1392.2
+    },
+    {
+      "id": "SUM.AccContMech",
+      "title": "AccContMech",
+      "type": "subreq",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2090.7,
+      "y": 1331.7
+    },
+    {
+      "id": "SUM.Generic",
+      "title": "Generic",
+      "type": "subreq",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SUM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2069.2,
+      "y": 1452.7
+    },
+    {
+      "id": "SUM.Automation",
+      "title": "Automation",
+      "type": "subreq",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SUM"
+      ],
+      "text": "**Mechanisms:** SUM-3",
+      "x": 2081.2,
+      "y": 1392.2
+    },
+    {
+      "id": "SSM",
+      "title": "SSM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3",
+      "x": 664.8,
+      "y": 2561.5
+    },
+    {
+      "id": "SSM.Asset",
+      "title": "Asset",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3",
+      "x": 723.8,
+      "y": 2479
+    },
+    {
+      "id": "SSM.Encryption",
+      "title": "Encryption",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM"
+      ],
+      "text": "**Mechanisms:** SSM-3",
+      "x": 694.3,
+      "y": 2660.5
+    },
+    {
+      "id": "SSM.DigitalSignature",
+      "title": "DigitalSignature",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 736.8,
+      "y": 2600
+    },
+    {
+      "id": "SSM.AccessControl",
+      "title": "AccessControl",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 588.3,
+      "y": 2660.5
+    },
+    {
+      "id": "SSM.OTProgrammable",
+      "title": "OTProgrammable",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 600.3,
+      "y": 2600
+    },
+    {
+      "id": "SSM.HardwareProtection",
+      "title": "HardwareProtection",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 607.3,
+      "y": 2539.5
+    },
+    {
+      "id": "SSM.Generic",
+      "title": "Generic",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 722.8,
+      "y": 2539.5
+    },
+    {
+      "id": "SSM.ComplianceEvidence",
+      "title": "ComplianceEvidence",
+      "type": "subreq",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SSM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SSM-2, SSM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 611.8,
+      "y": 2479
+    },
+    {
+      "id": "SCM",
+      "title": "SCM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 2425.8,
+      "y": 743.4
+    },
+    {
+      "id": "SCM.Protocol",
+      "title": "Protocol",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 2587.3,
+      "y": 721.4
+    },
+    {
+      "id": "SCM.States",
+      "title": "States",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 2466.8,
+      "y": 902.9
+    },
+    {
+      "id": "SCM.SecObjectives",
+      "title": "SecObjectives",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1",
+      "x": 2485.3,
+      "y": 660.9
+    },
+    {
+      "id": "SCM.Manage",
+      "title": "Manage",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2325.8,
+      "y": 902.9
+    },
+    {
+      "id": "SCM.Capabilities",
+      "title": "Capabilities",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3, SCM-4",
+      "x": 2440.3,
+      "y": 842.4
+    },
+    {
+      "id": "SCM.ManufSecret",
+      "title": "ManufSecret",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2451.3,
+      "y": 781.9
+    },
+    {
+      "id": "SCM.SecChanExchange",
+      "title": "SecChanExchange",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2365.3,
+      "y": 600.4
+    },
+    {
+      "id": "SCM.PKI-Based",
+      "title": "PKI-Based",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2591.3,
+      "y": 660.9
+    },
+    {
+      "id": "SCM.ThirdPartyTrust",
+      "title": "ThirdPartyTrust",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2486.8,
+      "y": 721.4
+    },
+    {
+      "id": "SCM.MessageEnc",
+      "title": "MessageEnc",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2343.3,
+      "y": 781.9
+    },
+    {
+      "id": "SCM.ChannelEnc",
+      "title": "ChannelEnc",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2493.8,
+      "y": 600.4
+    },
+    {
+      "id": "SCM.SeqNumber",
+      "title": "SeqNumber",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2555.8,
+      "y": 781.9
+    },
+    {
+      "id": "SCM.TimeStamp",
+      "title": "TimeStamp",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2538.8,
+      "y": 842.4
+    },
+    {
+      "id": "SCM.OneTimeEncKey",
+      "title": "OneTimeEncKey",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2357.3,
+      "y": 660.9
+    },
+    {
+      "id": "SCM.Generic",
+      "title": "Generic",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3, SCM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2399.3,
+      "y": 902.9
+    },
+    {
+      "id": "SCM.ImplDetail",
+      "title": "ImplDetail",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3, SCM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2589.8,
+      "y": 600.4
+    },
+    {
+      "id": "SCM.CCK",
+      "title": "CCK",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3",
+      "x": 2238.7,
+      "y": 743.6
+    },
+    {
+      "id": "SCM.ThreatProtection",
+      "title": "ThreatProtection",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-2, SCM-3",
+      "x": 2356.3,
+      "y": 721.4
+    },
+    {
+      "id": "SCM.Repudiation",
+      "title": "Repudiation",
+      "type": "subreq",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-4",
+      "x": 2339.8,
+      "y": 842.4
+    },
+    {
+      "id": "NetworkInterface",
+      "title": "NetworkInterface",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 1500.8,
+      "y": 1192.3
+    },
+    {
+      "id": "NetworkInterface.Protocol",
+      "title": "Protocol",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM"
+      ],
+      "text": "**Mechanisms:** SCM-1, SCM-2, SCM-3, SCM-4",
+      "x": 1658.8,
+      "y": 1140.1
+    },
+    {
+      "id": "NetworkInterface.Radio",
+      "title": "Radio",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1639.3,
+      "y": 1200.6
+    },
+    {
+      "id": "NetworkInterface.Wired",
+      "title": "Wired",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1573.3,
+      "y": 1261.1
+    },
+    {
+      "id": "NetworkInterface.Optical",
+      "title": "Optical",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1577.3,
+      "y": 1200.6
+    },
+    {
+      "id": "NetworkInterface.Acoustic",
+      "title": "Acoustic",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "SCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** SCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1582.8,
+      "y": 1140.1
+    },
+    {
+      "id": "NetworkInterface.Exposure",
+      "title": "Exposure",
+      "type": "subreq",
+      "parent": "NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-2, GEC-3, GEC-4",
+      "x": 1347.2,
+      "y": 1239.3
+    },
+    {
+      "id": "RLM",
+      "title": "RLM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "RLM"
+      ],
+      "text": "**Mechanisms:** RLM-1",
+      "x": 1681.9,
+      "y": 40.3
+    },
+    {
+      "id": "NMM",
+      "title": "NMM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "NMM"
+      ],
+      "text": "**Mechanisms:** NMM-1",
+      "x": 1149.9,
+      "y": 425
+    },
+    {
+      "id": "NMM.GTPFiltering",
+      "title": "GTPFiltering",
+      "type": "subreq",
+      "parent": "NMM",
+      "tags": [
+        "en18031-1",
+        "NMM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** NMM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1126.9,
+      "y": 493.8
+    },
+    {
+      "id": "NMM.IPPacketFiltering",
+      "title": "IPPacketFiltering",
+      "type": "subreq",
+      "parent": "NMM",
+      "tags": [
+        "en18031-1",
+        "NMM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** NMM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1142.4,
+      "y": 433.3
+    },
+    {
+      "id": "NMM.NetworkEquipment",
+      "title": "NetworkEquipment",
+      "type": "subreq",
+      "parent": "NMM",
+      "tags": [
+        "en18031-1",
+        "NMM"
+      ],
+      "text": "**Mechanisms:** NMM-1",
+      "x": 1149.9,
+      "y": 372.8
+    },
+    {
+      "id": "TCM",
+      "title": "TCM",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "TCM"
+      ],
+      "text": "**Mechanisms:** TCM-1",
+      "x": 1321.9,
+      "y": 425
+    },
+    {
+      "id": "TCM.DatagramRules",
+      "title": "DatagramRules",
+      "type": "subreq",
+      "parent": "TCM",
+      "tags": [
+        "en18031-1",
+        "TCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** TCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1309.9,
+      "y": 493.8
+    },
+    {
+      "id": "TCM.TrafficSeparation",
+      "title": "TrafficSeparation",
+      "type": "subreq",
+      "parent": "TCM",
+      "tags": [
+        "en18031-1",
+        "TCM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** TCM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1314.4,
+      "y": 433.3
+    },
+    {
+      "id": "TCM.NetworkEquipment",
+      "title": "NetworkEquipment",
+      "type": "subreq",
+      "parent": "TCM",
+      "tags": [
+        "en18031-1",
+        "TCM"
+      ],
+      "text": "**Mechanisms:** TCM-1",
+      "x": 1321.9,
+      "y": 372.8
+    },
+    {
+      "id": "PrivacyAssetEvent",
+      "title": "PrivacyAssetEvent",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1978.4,
+      "y": 2145.1
+    },
+    {
+      "id": "PrivacyAssetEvent.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "PrivacyAssetEvent",
+      "tags": [
+        "en18031-2",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1978.4,
+      "y": 2197.8
+    },
+    {
+      "id": "PrivacyAssetEvent.LGM",
+      "title": "LGM",
+      "type": "subreq",
+      "parent": "PrivacyAssetEvent",
+      "tags": [
+        "en18031-2",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1977.5,
+      "y": 2108.8
+    },
+    {
+      "id": "FinancialAssetEvent",
+      "title": "FinancialAssetEvent",
+      "type": "req",
+      "tags": [
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2140.6,
+      "y": 2131.8
+    },
+    {
+      "id": "FinancialAssetEvent.Legal",
+      "title": "Legal",
+      "type": "subreq",
+      "parent": "FinancialAssetEvent",
+      "tags": [
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2140.6,
+      "y": 2176.2
+    },
+    {
+      "id": "FinancialAssetEvent.LGM",
+      "title": "LGM",
+      "type": "subreq",
+      "parent": "FinancialAssetEvent",
+      "tags": [
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2140.1,
+      "y": 2103.9
+    },
+    {
+      "id": "LGM",
+      "title": "LGM",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-2, LGM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2139.6,
+      "y": 1836.4
+    },
+    {
+      "id": "LGM.InternalStorage",
+      "title": "InternalStorage",
+      "type": "subreq",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2086.1,
+      "y": 1874.9
+    },
+    {
+      "id": "LGM.ExternalStorage",
+      "title": "ExternalStorage",
+      "type": "subreq",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2088.6,
+      "y": 1814.4
+    },
+    {
+      "id": "LGM.TimeStamp",
+      "title": "TimeStamp",
+      "type": "subreq",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2203.1,
+      "y": 1814.4
+    },
+    {
+      "id": "LGM.TimeRelated",
+      "title": "TimeRelated",
+      "type": "subreq",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** LGM-4\nConditional item: only to be documented when the condition applies.",
+      "x": 2202.6,
+      "y": 1874.9
+    },
+    {
+      "id": "Events",
+      "title": "Events",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM"
+      ],
+      "text": "**Mechanisms:** LGM-3, LGM-4",
+      "x": 1624.4,
+      "y": 40.3
+    },
+    {
+      "id": "Quantity",
+      "title": "Quantity",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "en18031-3",
+        "LGM"
+      ],
+      "text": "**Mechanisms:** LGM-3",
+      "x": 1521.9,
+      "y": 705.3
+    },
+    {
+      "id": "PersonalData",
+      "title": "PersonalData",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "DLM"
+      ],
+      "text": "**Mechanisms:** DLM-1",
+      "x": 1427.4,
+      "y": 705.3
+    },
+    {
+      "id": "SenSecParam",
+      "title": "SenSecParam",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "DLM"
+      ],
+      "text": "**Mechanisms:** DLM-1",
+      "x": 1310.9,
+      "y": 705.3
+    },
+    {
+      "id": "DLM",
+      "title": "DLM",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "DLM"
+      ],
+      "text": "**Mechanisms:** DLM-1",
+      "x": 1712.9,
+      "y": 705.3
+    },
+    {
+      "id": "PersonalInformation",
+      "title": "PersonalInformation",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-1",
+      "x": 1643.9,
+      "y": 396.5
+    },
+    {
+      "id": "PersonalInformation.UseCase",
+      "title": "UseCase",
+      "type": "subreq",
+      "parent": "PersonalInformation",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-1",
+      "x": 1643.9,
+      "y": 404.8
+    },
+    {
+      "id": "PersonalInformation.UseCase.Notification",
+      "title": "Notification",
+      "type": "L3",
+      "parent": "PersonalInformation.UseCase",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-1",
+      "x": 1643.9,
+      "y": 382.8
+    },
+    {
+      "id": "PersonalInformation.UseCase.OtherInfo",
+      "title": "OtherInfo",
+      "type": "L3",
+      "parent": "PersonalInformation.UseCase",
+      "tags": [
+        "en18031-2",
+        "UNM",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** UNM-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1637.4,
+      "y": 443.3
+    },
+    {
+      "id": "Notification",
+      "title": "Notification",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-2",
+      "x": 1823.5,
+      "y": 410.8
+    },
+    {
+      "id": "Notification.UseCase",
+      "title": "UseCase",
+      "type": "subreq",
+      "parent": "Notification",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-2",
+      "x": 1823.5,
+      "y": 419.1
+    },
+    {
+      "id": "Notification.UseCase.Content",
+      "title": "Content",
+      "type": "L3",
+      "parent": "Notification.UseCase",
+      "tags": [
+        "en18031-2",
+        "UNM"
+      ],
+      "text": "**Mechanisms:** UNM-2",
+      "x": 1823.5,
+      "y": 427.3
+    },
+    {
+      "id": "CCK",
+      "title": "CCK",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK"
+      ],
+      "text": "**Mechanisms:** CCK-1, CCK-3",
+      "x": 2236.6,
+      "y": 1081.2
+    },
+    {
+      "id": "CCK.Deviation",
+      "title": "Deviation",
+      "type": "subreq",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-1\nConditional item: only to be documented when the condition applies.",
+      "x": 2281.1,
+      "y": 1089.5
+    },
+    {
+      "id": "CCK.SecurityStrength",
+      "title": "SecurityStrength",
+      "type": "subreq",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK"
+      ],
+      "text": "**Mechanisms:** CCK-1",
+      "x": 2218.1,
+      "y": 1029
+    },
+    {
+      "id": "CCK.Controlled",
+      "title": "Controlled",
+      "type": "subreq",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2195.1,
+      "y": 1089.5
+    },
+    {
+      "id": "CCK.Shared",
+      "title": "Shared",
+      "type": "subreq",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2184.6,
+      "y": 1150
+    },
+    {
+      "id": "CCK.Unique",
+      "title": "Unique",
+      "type": "subreq",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-3\nConditional item: only to be documented when the condition applies.",
+      "x": 2252.1,
+      "y": 1150
+    },
+    {
+      "id": "Generation",
+      "title": "Generation",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK"
+      ],
+      "text": "**Mechanisms:** CCK-2",
+      "x": 2613.7,
+      "y": 1125.5
+    },
+    {
+      "id": "Generation.CCK",
+      "title": "CCK",
+      "type": "subreq",
+      "parent": "Generation",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK"
+      ],
+      "text": "**Mechanisms:** CCK-2",
+      "x": 2500,
+      "y": 1080.4
+    },
+    {
+      "id": "Generation.RNSource",
+      "title": "RNSource",
+      "type": "subreq",
+      "parent": "Generation",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2624.4,
+      "y": 1133.8
+    },
+    {
+      "id": "Generation.RNG",
+      "title": "RNG",
+      "type": "subreq",
+      "parent": "Generation",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2605.4,
+      "y": 1194.3
+    },
+    {
+      "id": "Generation.Implementation",
+      "title": "Implementation",
+      "type": "subreq",
+      "parent": "Generation",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2642.4,
+      "y": 1073.3
+    },
+    {
+      "id": "Generation.Deviation",
+      "title": "Deviation",
+      "type": "subreq",
+      "parent": "Generation",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CCK",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CCK-2\nConditional item: only to be documented when the condition applies.",
+      "x": 2710.9,
+      "y": 1133.8
+    },
+    {
+      "id": "SoftwareDocumentation",
+      "title": "SoftwareDocumentation",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-1",
+      "x": 1157.4,
+      "y": 705.3
+    },
+    {
+      "id": "HardwareDocumentation",
+      "title": "HardwareDocumentation",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-1",
+      "x": 1672.4,
+      "y": 564.3
+    },
+    {
+      "id": "ListOfVulnerabilities",
+      "title": "ListOfVulnerabilities",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1488.9,
+      "y": 102.5
+    },
+    {
+      "id": "ListOfVulnerabilities.Remediated",
+      "title": "Remediated",
+      "type": "subreq",
+      "parent": "ListOfVulnerabilities",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1447.4,
+      "y": 110.8
+    },
+    {
+      "id": "ListOfVulnerabilities.SpecificCondition",
+      "title": "SpecificCondition",
+      "type": "subreq",
+      "parent": "ListOfVulnerabilities",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1465.9,
+      "y": 50.3
+    },
+    {
+      "id": "ListOfVulnerabilities.Mitgated",
+      "title": "Mitgated",
+      "type": "subreq",
+      "parent": "ListOfVulnerabilities",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1434.9,
+      "y": 171.3
+    },
+    {
+      "id": "ListOfVulnerabilities.Accepted",
+      "title": "Accepted",
+      "type": "subreq",
+      "parent": "ListOfVulnerabilities",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1540.4,
+      "y": 110.8
+    },
+    {
+      "id": "Setup",
+      "title": "Setup",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-2\nConditional item: only to be documented when the condition applies.",
+      "x": 1658.9,
+      "y": 705.3
+    },
+    {
+      "id": "UserDoc",
+      "title": "UserDoc",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-4",
+      "x": 1459.2,
+      "y": 939.3
+    },
+    {
+      "id": "UserDoc.NetworkInterface",
+      "title": "NetworkInterface",
+      "type": "subreq",
+      "parent": "UserDoc",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-4",
+      "x": 1580,
+      "y": 947.5
+    },
+    {
+      "id": "UserDoc.NetworkInterface.Exposure",
+      "title": "Exposure",
+      "type": "L3",
+      "parent": "UserDoc.NetworkInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-4",
+      "x": 1580,
+      "y": 955.8
+    },
+    {
+      "id": "UserDoc.NonNetworkInterface",
+      "title": "NonNetworkInterface",
+      "type": "subreq",
+      "parent": "UserDoc",
+      "tags": [
+        "en18031-2",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-7\nConditional item: only to be documented when the condition applies.",
+      "x": 1353.3,
+      "y": 960.8
+    },
+    {
+      "id": "PhysicalExternalInterface",
+      "title": "PhysicalExternalInterface",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-5",
+      "x": 1332.4,
+      "y": 603.4
+    },
+    {
+      "id": "PhysicalExternalInterface.Purpose",
+      "title": "Purpose",
+      "type": "subreq",
+      "parent": "PhysicalExternalInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-5",
+      "x": 1306.9,
+      "y": 611.7
+    },
+    {
+      "id": "PhysicalExternalInterface.Type",
+      "title": "Type",
+      "type": "subreq",
+      "parent": "PhysicalExternalInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-5",
+      "x": 1370.4,
+      "y": 611.7
+    },
+    {
+      "id": "IntFunc",
+      "title": "IntFunc",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-5",
+      "x": 1594.9,
+      "y": 705.3
+    },
+    {
+      "id": "ExternalInterface",
+      "title": "ExternalInterface",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-6",
+      "x": 1511.5,
+      "y": 581.1
+    },
+    {
+      "id": "ExternalInterface.Capabilities",
+      "title": "Capabilities",
+      "type": "subreq",
+      "parent": "ExternalInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-6",
+      "x": 1511.5,
+      "y": 559.1
+    },
+    {
+      "id": "ExternalInterface.Validation",
+      "title": "Validation",
+      "type": "subreq",
+      "parent": "ExternalInterface",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-6",
+      "x": 1505,
+      "y": 619.6
+    },
+    {
+      "id": "NonNetworkInterface",
+      "title": "NonNetworkInterface",
+      "type": "req",
+      "tags": [
+        "en18031-2",
+        "GEC",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** GEC-7\nConditional item: only to be documented when the condition applies.",
+      "x": 1353.9,
+      "y": 795.8
+    },
+    {
+      "id": "BootProcess",
+      "title": "BootProcess",
+      "type": "req",
+      "tags": [
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-8",
+      "x": 1491.9,
+      "y": 394.8
+    },
+    {
+      "id": "BootProcess.TrustAnchor",
+      "title": "TrustAnchor",
+      "type": "subreq",
+      "parent": "BootProcess",
+      "tags": [
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-8",
+      "x": 1469.4,
+      "y": 372.8
+    },
+    {
+      "id": "BootProcess.SecMech",
+      "title": "SecMech",
+      "type": "subreq",
+      "parent": "BootProcess",
+      "tags": [
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-8",
+      "x": 1459.4,
+      "y": 433.3
+    },
+    {
+      "id": "BootProcess.Modes",
+      "title": "Modes",
+      "type": "subreq",
+      "parent": "BootProcess",
+      "tags": [
+        "en18031-3",
+        "GEC"
+      ],
+      "text": "**Mechanisms:** GEC-8",
+      "x": 1533.4,
+      "y": 433.3
+    },
+    {
+      "id": "Assets",
+      "title": "Assets",
+      "type": "req",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CRY"
+      ],
+      "text": "**Mechanisms:** CRY-1",
+      "x": 1130.4,
+      "y": 596.3
+    },
+    {
+      "id": "Assets.Cryptography",
+      "title": "Cryptography",
+      "type": "subreq",
+      "parent": "Assets",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CRY"
+      ],
+      "text": "**Mechanisms:** CRY-1",
+      "x": 1130.4,
+      "y": 574.3
+    },
+    {
+      "id": "Assets.Deviation",
+      "title": "Deviation",
+      "type": "subreq",
+      "parent": "Assets",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3",
+        "CRY",
+        "conditional"
+      ],
+      "text": "**Mechanisms:** CRY-1\nConditional item: only to be documented when the condition applies.",
+      "x": 1115.4,
+      "y": 634.8
+    }
+  ],
+  "links": [
+    {
+      "from": "SecurityAsset.ACM",
+      "to": "ACM"
+    },
+    {
+      "from": "SecurityAsset.SSM",
+      "to": "SSM"
+    },
+    {
+      "from": "SecurityAsset.NetworkInterface",
+      "to": "NetworkInterface"
+    },
+    {
+      "from": "NetworkAsset.ACM",
+      "to": "ACM"
+    },
+    {
+      "from": "NetworkAsset.SSM",
+      "to": "SSM"
+    },
+    {
+      "from": "PrivacyAsset.ACM",
+      "to": "ACM"
+    },
+    {
+      "from": "PrivacyAsset.SSM",
+      "to": "SSM"
+    },
+    {
+      "from": "FinancialAsset.ACM",
+      "to": "ACM"
+    },
+    {
+      "from": "FinancialAsset.SSM",
+      "to": "SSM"
+    },
+    {
+      "from": "FinancialAsset.NetworkInterface",
+      "to": "NetworkInterface"
+    },
+    {
+      "from": "ACM.NetworkInterface",
+      "to": "NetworkInterface"
+    },
+    {
+      "from": "ACM.AuthenticationMechanism",
+      "to": "AuthenticationMechanism"
+    },
+    {
+      "from": "PartOfSoftw.SUM",
+      "to": "SUM"
+    },
+    {
+      "from": "SCM.CCK",
+      "to": "CCK"
+    },
+    {
+      "from": "PrivacyAssetEvent.LGM",
+      "to": "LGM"
+    },
+    {
+      "from": "FinancialAssetEvent.LGM",
+      "to": "LGM"
+    },
+    {
+      "from": "Generation.CCK",
+      "to": "CCK"
+    },
+    {
+      "from": "UserDoc.NetworkInterface",
+      "to": "NetworkInterface"
+    },
+    {
+      "from": "UserDoc.NetworkInterface.Exposure",
+      "to": "NetworkInterface.Exposure"
+    },
+    {
+      "from": "UserDoc.NonNetworkInterface",
+      "to": "NonNetworkInterface"
+    }
+  ]
+}

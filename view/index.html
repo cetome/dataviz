@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>Open a dataviz file ◼ dataviz</title>
+    <meta name="description" content="Open a dataviz file as an interactive dependency graph, or make one from a standard with a template, the builder or an AI prompt. Free, no account, nothing uploaded.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="dataviz">
+    <meta property="og:title" content="Open a dataviz file ◼ dataviz">
+    <meta property="og:description" content="Any standard as an interactive dependency graph: open a dataviz file or make one. Free, no account, nothing uploaded.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+    <link rel="stylesheet" href="/css/open.css">
+</head>
+
+<body class="graph-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="dataviz home"><img src="/img/dataviz.svg" alt="dataviz" width="193" height="48"></a>
+        <h1 class="page-title" id="page-title">Open a dataviz file <small>Any standard as an interactive dependency graph</small></h1>
+    </header>
+
+    <!-- start: pick what to open -->
+    <div class="start" id="start" hidden>
+        <div class="start-inner">
+            <p class="start-lead">dataviz shows a standard as an interactive graph you can filter, explore and assess against. It reads <strong>dataviz files</strong>: a simple description of the standard's items, links and filters, in JSON, YAML, Excel or CSV. <strong>Nothing is uploaded and there is no account:</strong> files are read in your browser and stay there.</p>
+
+            <section class="start-block">
+                <h2>Open a dataviz file</h2>
+                <label for="open-file" class="drop-zone" id="open-drop">
+                    <strong>Drop your dataviz file here</strong>
+                    <span>.json, .yaml, .xlsx, or .csv files (items, links...)</span>
+                    <input type="file" id="open-file" multiple accept=".json,.yaml,.yml,.xlsx,.xlsm,.xls,.ods,.csv,.tsv,.txt,.pdf,.docx">
+                </label>
+                <p class="start-error" id="open-error" role="alert" hidden></p>
+                <p class="hint">Only have the standard as a PDF or a Word document? Turn it into a dataviz file first, below.</p>
+            </section>
+
+            <section class="start-block start-make">
+                <h2>Make a dataviz file</h2>
+                <ol class="routes">
+                    <li><strong>With an AI assistant.</strong> Copy our prompt, paste it into the assistant you use with the standard attached, save its answer as a <code>.yaml</code> file and drop it above (or open it in the builder to check and fix it).
+                        <span class="route-actions"><button type="button" class="btn btn-primary" id="copy-prompt">Copy the AI prompt</button> <a href="/templates/ai-prompt.txt" target="_blank" rel="noopener">read it</a></span></li>
+                    <li><strong>By hand, from a template.</strong> Fill it in with your usual tools:
+                        <span class="route-actions"><a class="btn" href="/templates/dataviz-template.xlsx" download>Excel</a> <a class="btn" href="/templates/dataviz-template.yaml" download>YAML</a> <a class="btn" href="/templates/dataviz-template.json" download>JSON</a> <a href="/templates/dataviz-template-items.csv" download>CSV items</a> · <a href="/templates/dataviz-template-links.csv" download>CSV links</a></span></li>
+                    <li><strong>In the builder,</strong> item by item with a live preview, then export or share it.
+                        <span class="route-actions"><a class="btn" href="/builder/">Open the builder</a></span></li>
+                </ol>
+                <p class="hint">Every field is explained in <a href="/format/">the format reference</a>; <a href="/view/#/examples/example.dataviz.yaml">this example</a> uses them all.</p>
+            </section>
+
+            <section class="start-block">
+                <h2>Open from a web address</h2>
+                <form class="url-row" id="open-url-form">
+                    <label class="visually-hidden" for="open-url">Address of a dataviz file</label>
+                    <input type="url" class="input" id="open-url" placeholder="https://raw.githubusercontent.com/.../my-standard.dataviz.yaml" required>
+                    <button type="submit" class="btn btn-primary">Open</button>
+                </form>
+                <p class="hint">A dataviz file published on the web (GitHub raw files, gists, your own site). The server must allow cross-origin reads. The address goes after the # of the page link, so the link can be shared, and it never reaches our server.</p>
+            </section>
+
+            <section class="start-block" id="library-block" hidden>
+                <h2>In this browser</h2>
+                <ul class="std-list" id="library-list"></ul>
+            </section>
+
+            <section class="start-block">
+                <h2>Built-in standards</h2>
+                <ul class="std-list" id="builtin-list"><li class="hint">Loading...</li></ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- the graph -->
+    <div class="app" id="app" hidden>
+        <main class="graph" aria-label="Graph">
+            <div id="cy"></div>
+        </main>
+
+        <aside class="sidebar" aria-label="Filters">
+            <p class="hint">Click an item to read it and see what it links to. Click an empty part of the graph to go back.</p>
+
+            <section class="panel" id="about-panel"></section>
+
+            <section class="panel">
+                <h2 class="panel-title">Search</h2>
+                <label class="visually-hidden" for="search">Search the items</label>
+                <input type="search" class="input" id="search" placeholder="Id, title, text, tag..." autocomplete="off">
+                <p class="hint" id="search-count" aria-live="polite"></p>
+            </section>
+
+            <div id="filter-panels"></div>
+
+            <section class="panel" id="legend-panel">
+                <h2 class="panel-title">Legend</h2>
+                <div id="legend-types"></div>
+                <div id="legend-links"></div>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Options</h2>
+                <div class="select-row">
+                    <label for="layout-select">Layout</label>
+                    <select id="layout-select" class="input">
+                        <option value="saved">Saved positions</option>
+                        <option value="hierarchical">Hierarchical</option>
+                        <option value="organic">Organic</option>
+                        <option value="grid">Grid</option>
+                        <option value="circle">Circle</option>
+                    </select>
+                </div>
+                <label class="check"><input type="checkbox" id="opt-linked" checked> With filters on, also show the items linked to the ones kept</label>
+                <label class="check"><input type="checkbox" id="opt-isolate"> On click, hide the unrelated items instead of fading them</label>
+                <label class="check"><input type="checkbox" id="opt-labels"> Show the link labels</label>
+            </section>
+
+            <section class="panel" id="assessment-panel"></section>
+
+            <section class="panel">
+                <h2 class="panel-title">Share and download</h2>
+                <div class="actions">
+                    <button type="button" class="btn" id="share-link">Copy a share link</button>
+                    <button type="button" class="btn" id="edit-builder">Edit in the builder</button>
+                </div>
+                <p class="hint" id="share-note" aria-live="polite"></p>
+                <div class="actions assessment-tools">
+                    <button type="button" class="btn" data-export="json">.json</button>
+                    <button type="button" class="btn" data-export="yaml">.yaml</button>
+                    <button type="button" class="btn" data-export="xlsx">.xlsx</button>
+                    <a class="btn" href="/view/">Open another</a>
+                </div>
+            </section>
+
+            <section class="panel actions">
+                <button type="button" class="btn btn-primary" id="fit-graph">Fit view</button>
+                <button type="button" class="btn" id="reset-graph">Reset</button>
+            </section>
+
+            <footer class="site-footer">
+                <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+            </footer>
+        </aside>
+    </div>
+
+    <p class="toast" id="toast" role="status" hidden></p>
+
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/js/vendor/dagre/dagre.min.js"></script>
+    <script src="/js/vendor/dagre/cytoscape-dagre.js"></script>
+    <script src="/js/vendor/js-yaml.min.js"></script>
+    <script src="/js/vendor/xlsx.full.min.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/standard.js"></script>
+    <script src="/js/library.js"></script>
+    <script src="/js/io.js"></script>
+    <script src="/js/assessment.js"></script>
+    <script src="/js/viewer.js"></script>
+</body>
+</html>

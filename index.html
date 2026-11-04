@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>cetome dataviz ◼ Dependency graphs for product security standards</title>
+    <meta name="description" content="Explore the relationships inside and between EN 303 645, TS 103 701, EN 18031 and the CRA harmonised standard prEN 40000-1-3, free and in the browser.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="cetome dataviz">
+    <meta property="og:title" content="cetome dataviz ◼ Dependency graphs for product security standards">
+    <meta property="og:description" content="Explore the relationships inside and between EN 303 645, TS 103 701, EN 18031 and the CRA harmonised standard prEN 40000-1-3, free and in the browser.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="cetome dataviz ◼ Dependency graphs for product security standards">
+    <meta name="twitter:description" content="Explore the relationships inside and between EN 303 645, TS 103 701, EN 18031 and the CRA harmonised standard prEN 40000-1-3, free and in the browser.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="cetome dataviz"><img src="/img/dataviz.svg" alt="cetome dataviz" width="193" height="48"></a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Dependency graphs for product security standards</h1>
+            <p>See how the requirements of a standard depend on each other, and how standards map to one another. Click a node to focus on it, filter by standard or condition, and tailor the graph to your product.</p>
+            <p class="hero-note">Free and open source. No account: everything stays in your browser. Bring your own standard as a dataviz file.</p>
+        </div>
+    </section>
+
+    <main class="cards">
+        <a class="card" href="/pren40000-1-3/">
+            <span class="kicker">Cyber Resilience Act</span>
+            <h2>prEN 40000-1-3</h2>
+            <p>Vulnerability handling requirements mapped to the CRA essential requirements of Annex I Part 2, with a self-assessment and assessor mode.</p>
+            <span class="more">Open the graph →</span>
+        </a>
+        <a class="card" href="/en303645/">
+            <span class="kicker">Consumer IoT</span>
+            <h2>EN 303 645 / TS 103 701</h2>
+            <p>Provisions, conditions and the IXITs they need. Import your ICS to tailor the graph to your product and generate the IXIT list.</p>
+            <span class="more">Open the graph →</span>
+        </a>
+        <a class="card" href="/en18031/">
+            <span class="kicker">Radio Equipment Directive</span>
+            <h2>EN 18031 mechanisms</h2>
+            <p>Dependencies between the security mechanisms of EN 18031-1, EN 18031-2 and EN 18031-3.</p>
+            <span class="more">Open the graph →</span>
+        </a>
+        <a class="card" href="/einfo/">
+            <span class="kicker">Radio Equipment Directive</span>
+            <h2>EN 18031 E.Info</h2>
+            <p>The information the E.Info annex asks for, mechanism by mechanism, to simplify the EN 18031 documentation.</p>
+            <span class="more">Open the graph →</span>
+        </a>
+    </main>
+
+    <section class="own">
+        <h2>Your own standard</h2>
+        <div class="cards cards-own">
+            <a class="card" href="/view/">
+                <span class="kicker">Viewer</span>
+                <h2>Open a dataviz file</h2>
+                <p>Drop a dataviz file (JSON, YAML, Excel or CSV), or open one from a web address or a share link. Nothing is uploaded.</p>
+                <span class="more">Open a file →</span>
+            </a>
+            <a class="card" href="/builder/">
+                <span class="kicker">Builder</span>
+                <h2>Build a dataviz file</h2>
+                <p>Items, links, types and filters with a live preview. Export it as JSON, YAML, Excel or CSV, or share it as a link.</p>
+                <span class="more">Open the builder →</span>
+            </a>
+            <a class="card" href="/format/">
+                <span class="kicker">Format</span>
+                <h2>Templates and AI prompt</h2>
+                <p>Turn a standard into a dataviz file by hand from a template, or with an AI assistant and our prompt.</p>
+                <span class="more">Read the format →</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer home">
+        <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+    </footer>
+</body>
+</html>

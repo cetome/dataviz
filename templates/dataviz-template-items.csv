@@ -1,0 +1,7 @@
+﻿id,title,type,parent,tags,text,label,url,x,y
+1,Access control,chapter,,,,,,,
+1.1,Unique credentials,requirement,1,"device, c-passwords","Each device has its own credentials.
+- no shared default password",,,,
+1.2,Lock out repeated failures,recommendation,1,"device, cloud",,,,,
+2,Updates,chapter,,,,,,,
+2.1,Signed updates,requirement,2,device,,,,,

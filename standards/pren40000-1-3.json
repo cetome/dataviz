@@ -1,0 +1,1566 @@
+{
+  "dataviz": 1,
+  "id": "pren40000-1-3",
+  "title": "prEN 40000-1-3 and the CRA",
+  "subtitle": "Vulnerability handling requirements mapped to the essential requirements of Annex I Part 2",
+  "authors": "cetome",
+  "licence": "CC BY 4.0, data by cetome (see DATA-LICENSE.md)",
+  "description": "The vulnerability handling requirements of prEN 40000-1-3, their dependencies, and how they map to the essential requirements of CRA Annex I Part 2.",
+  "layout": "hierarchical",
+  "direction": "LR",
+  "types": [
+    {
+      "id": "ROOT_CONTAINER",
+      "label": "Domain",
+      "color": "#0044aa"
+    },
+    {
+      "id": "CHAPTER",
+      "label": "Chapter",
+      "color": "#1565d8"
+    },
+    {
+      "id": "RQ",
+      "label": "Requirement (RQ)",
+      "color": "#0044aa"
+    },
+    {
+      "id": "RC",
+      "label": "Recommendation (RC)",
+      "color": "#0044aa",
+      "border": "dashed"
+    },
+    {
+      "id": "PM",
+      "label": "Permission (PM)",
+      "color": "#7dd3fc"
+    },
+    {
+      "id": "EXTERNAL_ROOT",
+      "label": "prEN 40000-1-2",
+      "color": "#7e22ce"
+    },
+    {
+      "id": "EXTERNAL_LEAF",
+      "label": "prEN 40000-1-2 requirement",
+      "color": "#7e22ce",
+      "border": "dotted",
+      "assess": "no"
+    },
+    {
+      "id": "ESSR_CONTAINER",
+      "label": "CRA Annex I Part 2",
+      "color": "#16a34a"
+    },
+    {
+      "id": "ESSR",
+      "label": "Essential requirement (ESSR)",
+      "color": "#16a34a",
+      "shape": "hexagon",
+      "caption": "title"
+    }
+  ],
+  "linkTypes": [
+    {
+      "id": "dependency",
+      "label": "Depends on",
+      "color": "#475569"
+    },
+    {
+      "id": "essr",
+      "label": "Maps to essential requirement",
+      "color": "#166534"
+    }
+  ],
+  "items": [
+    {
+      "id": "Annex I Part 2",
+      "title": "Essential Requirements",
+      "type": "ESSR_CONTAINER"
+    },
+    {
+      "id": "I_2_1",
+      "label": "(1) Documentation",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Identify and document vulnerabilities and components contained in products with digital elements, including by drawing up a software bill of materials in a commonly used and machine-readable format covering at the very least the top-level dependencies of the products."
+    },
+    {
+      "id": "I_2_2",
+      "label": "(2) Risk remediation",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "In relation to the risks posed to products with digital elements, address and remediate vulnerabilities without delay, including by providing security updates; where technically feasible, new security updates shall be provided separately from functionality updates."
+    },
+    {
+      "id": "I_2_3",
+      "label": "(3) Regular review",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Apply effective and regular tests and reviews of the security of the product with digital elements."
+    },
+    {
+      "id": "I_2_4",
+      "label": "(4) Security advisory",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Once a security update has been made available, share and publicly disclose information about fixed vulnerabilities, including a description of the vulnerabilities, information allowing users to identify the product with digital elements affected, the impacts of the vulnerabilities, their severity and clear and accessible information helping users to remediate the vulnerabilities; in duly justified cases, where manufacturers consider the security risks of publication to outweigh the security benefits, they may delay making public information regarding a fixed vulnerability until after users have been given the possibility to apply the relevant patch."
+    },
+    {
+      "id": "I_2_5",
+      "label": "(5) Coordinated vulnerability disclosure",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Take measures to facilitate the sharing of information about potential vulnerabilities in their product with digital elements as well as in third-party components contained in that product, including by providing a contact address for the reporting of the vulnerabilities discovered in the product with digital elements."
+    },
+    {
+      "id": "I_2_6",
+      "label": "(6) Vulnerability exchange",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Put in place and enforce a policy on coordinated vulnerability disclosure."
+    },
+    {
+      "id": "I_2_7",
+      "label": "(7) Secure update distribution",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Provide for mechanisms to securely distribute updates for products with digital elements to ensure that vulnerabilities are fixed or mitigated in a timely manner and, where applicable for security updates, in an automatic manner."
+    },
+    {
+      "id": "I_2_8",
+      "label": "(8) Dissemination",
+      "type": "ESSR",
+      "parent": "Annex I Part 2",
+      "text": "Ensure that, where security updates are available to address identified security issues, they are disseminated without delay and, unless otherwise agreed between a manufacturer and a business user in relation to a tailor-made product with digital elements, free of charge, accompanied by advisory messages providing users with the relevant information, including on potential action to be taken."
+    },
+    {
+      "id": "[APP]",
+      "title": "Applicability",
+      "type": "ROOT_CONTAINER",
+      "text": "The rigor applied to vulnerability handling activities follows a risk-based approach aligned with the product's risks."
+    },
+    {
+      "id": "[APP-1]",
+      "title": "Requirement enhancement applicability",
+      "type": "CHAPTER",
+      "parent": "[APP]",
+      "text": "Manufacturers are normally responsible for conducting a risk assessment to assess the risks associated with the use of the product to determine the appropriate rigor for vulnerability handling.\nDependent upon the risks, there is an expectation to implement the relevant requirement enhancements in one or more of the following identified activities:\n- [PRE-5-RQ-01-RE] Secure communication\n- [PRE-7-RQ-03-RE] SBOM completeness\n- [PRE-7-RQ-07-RE] SBOM software component hash\n- [RLS-2-RQ-03-RE] Machine-readable advisories"
+    },
+    {
+      "id": "[APP-1-RQ-1]",
+      "title": "Risk-based applicability",
+      "type": "RQ",
+      "parent": "[APP-1]",
+      "text": "The applicability of the requirement enhancements shall be determined based on the product risks."
+    },
+    {
+      "id": "[PRE]",
+      "title": "Preparation",
+      "type": "ROOT_CONTAINER",
+      "text": "The preparation phase lays the foundation for establishing appropriate vulnerability handling and disclosure processes and policies to support the subsequent phases, providing a structured, methodological approach to identify, verify, and address vulnerabilities, including communication. This phase also includes requirements such as identifying software and hardware components, focusing on creating the Software Bill of Materials (SBOM), and establishing a coordinated vulnerability disclosure and vulnerability handling policy."
+    },
+    {
+      "id": "[PRE-1]",
+      "title": "Policy on vulnerability handling",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "A manufacturer establishes and maintains an internal vulnerability handling policy to clearly definedefinetheir approach for investigating and remediating security vulnerabilities. An additional important aspect covered is the testing strategy that should be defined to support effective and regular tests and reviews of its products. This policy forms a core part of the manufacturer’s overall vulnerability handling process and is compatible with the external coordinated vulnerability disclosure policy as per [PRE-2]. The intended audience for the vulnerability handling policy is the internal staff."
+    },
+    {
+      "id": "[PRE-1-RQ-01]",
+      "title": "Policy adherence",
+      "type": "RQ",
+      "parent": "[PRE-1]",
+      "text": "A policy on vulnerability handling shall be created, put in place and adhered to."
+    },
+    {
+      "id": "[PRE-1-RC-01]",
+      "title": "Organisational framework",
+      "type": "RC",
+      "parent": "[PRE-1]",
+      "text": "An organizational framework should be created to support the activities defined in the vulnerability handling process as per [PRE-1-RQ-01]."
+    },
+    {
+      "id": "[PRE-1-RQ-02]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[PRE-1]",
+      "text": "The vulnerability handling policy shall include:\n- basic guidance, principles, and responsibilities for handling potential vulnerabilities in products\n- measures to prevent premature disclosure of information about potential vulnerabilities before they are fixed\n- a target schedule for remediation development\n- strategies related to the regular test and review activities, as defined in [PRE-9]\n- measures to prevent premature disclosure of information about potential vulnerabilities before they are fixed, as defined in [PRE-5]\n- activities and criteria to define a target schedule for the remediation of the vulnerability, which depends on the embargo period, established and inflüenced by the complexity of the case by case situation with impacted upstream stakeholders, and on the criticality of the vulnerability and the product itself\n- where known and appropriate, it is important to list the downstream stakeholders that are using the product under scope\n- the mapping of upstream stakeholders to support the component identification required by [PRE-7] and [PRE-8]"
+    },
+    {
+      "id": "[PRE-1-RC-02]",
+      "title": "Recommended information",
+      "type": "RC",
+      "parent": "[PRE-1]",
+      "text": "A policy on vulnerability handling should include:\n- the full process description that is aligned with the expectations of this document\n- the roles and responsibilities that will be assigned to handle the potential vulnerabilities in the product"
+    },
+    {
+      "id": "[PRE-1-RQ-03]",
+      "title": "Effectiveness",
+      "type": "RQ",
+      "parent": "[PRE-1]",
+      "text": "The effectiveness of the vulnerability handling process shall be monitored."
+    },
+    {
+      "id": "[PRE-1-RQ-04]",
+      "title": "Interdependencies",
+      "type": "RQ",
+      "parent": "[PRE-1]",
+      "text": "For a timely resolution of the issues, a mapping of upstream interdependencies, including open source, is required to support the coordination and notification activities when a vulnerability is discovered."
+    },
+    {
+      "id": "[PRE-1-RQ-05]",
+      "title": "Activity support",
+      "type": "RQ",
+      "parent": "[PRE-1]",
+      "text": "A policy on vulnerability handling shall support all the activities that are defined in the vulnerability disclosure policy, as described in 5.3.3."
+    },
+    {
+      "id": "[PRE-2]",
+      "title": "Policy on coordinated vulnerability disclosure",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "The purpose of the coordinated vulnerability disclosure policy is to communicate the manufacturer's intentions, responsibilities, and expectations regarding vulnerability disclosure. A coordinated vulnerability disclosure policy encompasses both two-party coordination (e.g. between the reporter and the manufacturer) and multi-party disclosure involving multiple stakeholders. To support this, the manufacturer develops and publishes an external coordinated vulnerability disclosure policy and ensures the related internal activities are in place to effectively coordinate the disclosure of vulnerabilities.\n\nIn addition, to prevent attackers from gaining early access to sensitive information, reporters typically notify manufacturers privately, and refrain from public disclosure until a fix is available after an agreed-upon embargo period has passed. The receipt, verification, and remediation development stages are generally conducted within this embargo period, ensuring that vulnerabilities are addressed securely and responsibly by all the parties involved in the process."
+    },
+    {
+      "id": "[PRE-2-RQ-01]",
+      "title": "Public CVD policy",
+      "type": "RQ",
+      "parent": "[PRE-2]",
+      "text": "A policy on coordinated vulnerability disclosure (CVD) shall be created, published in an accessible format and adhered to."
+    },
+    {
+      "id": "[PRE-2-RQ-02]",
+      "title": "Point of contact",
+      "type": "RQ",
+      "parent": "[PRE-2]",
+      "text": "A coordinated vulnerability disclosure policy shall include one or more contact mechanisms."
+    },
+    {
+      "id": "[PRE-2-RC-01]",
+      "title": "Accessibility",
+      "type": "RC",
+      "parent": "[PRE-2]",
+      "text": "The contact mechanisms should provide accessibility via more than one sensory channel."
+    },
+    {
+      "id": "[PRE-2-RQ-03]",
+      "title": "Communication",
+      "type": "RQ",
+      "parent": "[PRE-2]",
+      "text": "Setting expectations for on-going communication shall be stated in this policy."
+    },
+    {
+      "id": "[PRE-2-RC-02]",
+      "title": "Recommended information",
+      "type": "RC",
+      "parent": "[PRE-2]",
+      "text": "A vulnerability disclosure policy should include following elements:\n- vulnerability report contents;\n- secure communication options as detailed in [PRE-5]\n- publication;\n- recognition."
+    },
+    {
+      "id": "[PRE-2-RC-03]",
+      "title": "Disclosure strategy",
+      "type": "RC",
+      "parent": "[PRE-2]",
+      "text": "A disclosure strategy should be in place to ensure that the information on vulnerability is not disclosed before it is addressed."
+    },
+    {
+      "id": "[PRE-3]",
+      "title": "Operational security",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "Information related to vulnerabilities is generally sensitive information, as vulnerabilities can be used by malicious actors. All external communication, as well as the manufacturers' internal processes, need to take operational security into account. The confidentiality controls can be lifted after remediation and advisory information has been published. Depending on the organization and its products, confidentiality controls can be as simple as marking information with TLP (Traffic Light Protocol) or be supported by technical controls like access control."
+    },
+    {
+      "id": "[PRE-3-RC-01]",
+      "title": "OpSec",
+      "type": "RC",
+      "parent": "[PRE-3]",
+      "text": "Operational security should be provided throughout the activities of receiving (5.4.2) and communicating about (5.3.5) vulnerability information or reports."
+    },
+    {
+      "id": "[PRE-3-RQ-01]",
+      "title": "Access control",
+      "type": "RQ",
+      "parent": "[PRE-3]",
+      "text": "Limiting access to non-public vulnerability information on a need-to-know basis shall be considered."
+    },
+    {
+      "id": "[PRE-4]",
+      "title": "On-going communication",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "The purpose of this phase is to maintain regular communication channels during the vulnerability handling activities with relevant stakeholders, such as users, coordinators, reporters, manufacturers, open-source stewards, maintainers of non-commercial open-source projects and other stakeholders, where required. Communication can be aligned with the product’s life cycle and occur in parallel with all vulnerability handling phases, rather than following a strict sequence."
+    },
+    {
+      "id": "[PRE-4-RQ-01]",
+      "title": "Effectiveness",
+      "type": "RQ",
+      "parent": "[PRE-4]",
+      "text": "Communication with reporters and other stakeholders shall be established and maintained."
+    },
+    {
+      "id": "[PRE-4-RQ-02]",
+      "title": "Accessibility",
+      "type": "RQ",
+      "parent": "[PRE-4]",
+      "text": "Communication with users shall implement accessible modes of communication."
+    },
+    {
+      "id": "[PRE-5]",
+      "title": "Secure communication",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "The purpose of this subclause is to define secure communication mechanisms. Since vulnerability information can be exploited to attack affected systems, it is essential that such sensitive information, especially when not publicly disclosed, is communicated confidentially."
+    },
+    {
+      "id": "[PRE-5-RC-01]",
+      "title": "Security mechanisms",
+      "type": "RC",
+      "parent": "[PRE-5]",
+      "text": "Secure communication mechanisms should be provided throughout the activities of receiving and communicating vulnerability information or reports."
+    },
+    {
+      "id": "[PRE-5-RQ-01-RE]",
+      "title": "Capability alignment",
+      "type": "RQ",
+      "parent": "[PRE-5]",
+      "text": "Secure communication mechanisms shall be provided and communicated to support 5.4.2."
+    },
+    {
+      "id": "[PRE-5-RC-02]",
+      "title": "Content protection",
+      "type": "RC",
+      "parent": "[PRE-5]",
+      "text": "Secure communication methods should support confidentiality and message integrity."
+    },
+    {
+      "id": "[PRE-5-RC-03]",
+      "title": "Anonymous reporting",
+      "type": "RC",
+      "parent": "[PRE-5]",
+      "text": "Stakeholders should have a way to report vulnerabilities anonymously."
+    },
+    {
+      "id": "[PRE-5-RC-04]",
+      "title": "Accessibility",
+      "type": "RC",
+      "parent": "[PRE-5]",
+      "text": "Methods of secure communication should not disrupt the accessibility of external communication."
+    },
+    {
+      "id": "[PRE-6]",
+      "title": "Product identification",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "This subclause describes the activities of recording relevant information to enable the product to be identifiable, for different purposes such as vulnerability handling, software bill of material generation and verification, and vulnerability information sharing and reporting."
+    },
+    {
+      "id": "[PRE-6-RQ-01]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[PRE-6]",
+      "text": "A product shall be identifiable by providing at least the following information:\n- manufacturer name;\n- product name;\n- (for hardware): any hardware product identifier, if applicable;\n- (for software): any software product identifier, if applicable."
+    },
+    {
+      "id": "[PRE-6-RQ-02]",
+      "title": "Separation of information",
+      "type": "RQ",
+      "parent": "[PRE-6]",
+      "text": "If the product consists of both hardware and software, information for product identification, as per [PRE-6-RQ-01], shall be provided separately."
+    },
+    {
+      "id": "[PRE-7]",
+      "title": "Identification of software components",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "This subclause describes the activities of identifying the software components that make up the product. The purpose of this identification is to enable effective vulnerability handling by ensuring that all components are known, traceable, and can be assessed for potential cybersecurity risks."
+    },
+    {
+      "id": "[PRE-7-RQ-01]",
+      "title": "Scope",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "All software components contained in the product shall be identified and documented."
+    },
+    {
+      "id": "[PRE-7-RQ-02]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "For each component identified in [PRE-7-RQ-01], the following information shall be included:\n- Software producer (For open-source software, which is supported by an open-source steward, this is the name of the stewarding organization)\n- Component name\n- Component version"
+    },
+    {
+      "id": "[PRE-7-RQ-03]",
+      "title": "SBOM",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "An SBOM shall be drawn up, including at least the top-level dependencies that are contained in the product, as identified in [PRE-7-RQ-01]."
+    },
+    {
+      "id": "[PRE-7-RQ-03-RE]",
+      "title": "Interdependencies",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "All the software components identified in [PRE-7-RQ-01] shall be drawn up in the SBOM to detect transitive dependencies when technically feasible."
+    },
+    {
+      "id": "[PRE-7-RQ-04]",
+      "title": "Machine-readable format",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "The SBOM shall be assembled in a structured, machine-readable format."
+    },
+    {
+      "id": "[PRE-7-RQ-05]",
+      "title": "Versioning",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "If the software component is updated with a new build or release, a new SBOM shall be created to reflect the new version of the software."
+    },
+    {
+      "id": "[PRE-7-RC-01]",
+      "title": "Revision",
+      "type": "RC",
+      "parent": "[PRE-7]",
+      "text": "When new details about the identified components are detected or the need to correct an error in the existing SBOM is discovered, a revised SBOM should be issued."
+    },
+    {
+      "id": "[PRE-7-RQ-06]",
+      "title": "Metadata",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "Metadata for the SBOM shall include:\n- SBOM Author (The name of the entity that creates the SBOM data for a component)\n- Version\n- Timestamp"
+    },
+    {
+      "id": "[PRE-7-RQ-07]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "For each component part of SBOM as [PRE-7-RQ-02], the following information shall be included:\n- Information as required from [PRE-7-RQ-02]\n- Dependency relationship\n- Unique component identifiers"
+    },
+    {
+      "id": "[PRE-7-RQ-07-RE]",
+      "title": "Hash",
+      "type": "RQ",
+      "parent": "[PRE-7]",
+      "text": "If the supplier provides the hash and the corresponding algorithm for the component, it shall be included in the SBOM."
+    },
+    {
+      "id": "[PRE-8]",
+      "title": "Identification of hardware components",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "This clause describes the activities for identifying the hardware components used in the product that may affect its cybersecurity. The purpose of this identification is to enable effective vulnerability handling by ensuring that the relevant hardware components integrated into the product are known, traceable, and assessable for potential cybersecurity risks."
+    },
+    {
+      "id": "[PRE-8-RQ-01]",
+      "title": "HBOM",
+      "type": "RQ",
+      "parent": "[PRE-8]",
+      "text": "Hardware components that are integrated in the product shall be identified and documented."
+    },
+    {
+      "id": "[PRE-8-RQ-02]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[PRE-8]",
+      "text": "For each identified hardware component as per [PRE-8-RQ-01], the following information shall be recorded:\n- hardware producer;\n- component name;\n- component identifier;\n- if applicable, firmware version."
+    },
+    {
+      "id": "[PRE-9]",
+      "title": "Planning regular test and reviews",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "Regular testing and review are necessary to maintain a product's security. Depending on the risks associated with the product's use, specific activities such as regular vulnerability scanning and other testing and review should be planned. This plan, including the schedule and actions, is needed for the security maintenance of a product, taking into account the product's context."
+    },
+    {
+      "id": "[PRE-9-RQ-01]",
+      "title": "Review planning",
+      "type": "RQ",
+      "parent": "[PRE-9]",
+      "text": "A risk-based security test and review plan shall be created. The plan shall include schedules and frequency of specific tests and reviews, and be appropriate to the assessed risks of the use of the product."
+    },
+    {
+      "id": "[PRE-9-RQ-02]",
+      "title": "Scope",
+      "type": "RQ",
+      "parent": "[PRE-9]",
+      "text": "A security test and review plan shall consider at least the following aspects:\n- product context;\n- cybersecurity architecture and design;\n- product cybersecurity requirements;\n- risk assessment;\n- test cases and test methodologies."
+    },
+    {
+      "id": "[PRE-9-RQ-03]",
+      "title": "Sources",
+      "type": "RQ",
+      "parent": "[PRE-9]",
+      "text": "Security reviews shall consider at least the following sources:\n- standards and publications describing the state-of-the-art in cybersecurity;\n- changes in the threat landscape applicable to the product;\n- vulnerabilities found in the product and its components;\n- vulnerabilities found in similar products and their components; or\n- information about the practical conditions of use as obtained by customer feedback, for example, due to support cases."
+    },
+    {
+      "id": "[PRE-9-RQ-04]",
+      "title": "Maintenance",
+      "type": "RQ",
+      "parent": "[PRE-9]",
+      "text": "A security test and review plan shall be maintained based on the results of performed tests and reviews."
+    },
+    {
+      "id": "[PRE-10]",
+      "title": "Mechanisms for distribution",
+      "type": "CHAPTER",
+      "parent": "[PRE]",
+      "text": "This subclause clarifies the preparation steps that enable the manufacturer to provide information and distribute security updates. The update mechanisms can include both manual and/or (semi-)automatic updates.\n\nThese mechanisms include, for example, websites for publishing information and the infrastructure required to enable automatic security update distribution."
+    },
+    {
+      "id": "[PRE-10-RQ-01]",
+      "title": "Secure update",
+      "type": "RQ",
+      "parent": "[PRE-10]",
+      "text": "A mechanism shall be provided to distribute security updates in a secure manner in accordance with prEN 40000-1-2:2025, 7.7.2."
+    },
+    {
+      "id": "[PRE-10-RQ-02]",
+      "title": "Advisory",
+      "type": "RQ",
+      "parent": "[PRE-10]",
+      "text": "A mechanism for the distribution of security information for the product shall be provided."
+    },
+    {
+      "id": "[PRE-10-RQ-03]",
+      "title": "Automation",
+      "type": "RQ",
+      "parent": "[PRE-10]",
+      "text": "Where applicable, mechanisms for automatic distribution of security updates for product shall be provided."
+    },
+    {
+      "id": "[RCP]",
+      "title": "Receipt",
+      "type": "ROOT_CONTAINER",
+      "text": "The receipt phase outlines requirements for monitoring both internal and external sources, as well as for receiving vulnerability reports, including those derived from testing and monitoring, submitted by various stakeholders.\n\nIn this phase, the manufacturer actively monitors publicly available sources for vulnerability disclosures or information that may affect its products. Upon receiving relevant vulnerability reports or information, the data are compared against the SBOM and the list of hardware components integrated in the product. By cross-referencing these sources, the manufacturer can efficiently identify any potentially affected components or products.\n\nThis phase also covers the initial assessment activities needed to identify potentially affected components. Essential to this includes activities related to regular tests and internal reviews to proactively discover new vulnerabilities."
+    },
+    {
+      "id": "[RCP-1]",
+      "title": "Capability to receive reports",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "The purpose of establishing the capability to receive vulnerability reports and related information is to provide researchers, users, and other interested stakeholders with mechanisms for timely reporting that are available and accessible. Publicly available reporting interfaces considering different sensory channels are essential to facilitate the prompt sharing of vulnerability information."
+    },
+    {
+      "id": "[RCP-1-RQ-01]",
+      "title": "Public reporting mechanism",
+      "type": "RQ",
+      "parent": "[RCP-1]",
+      "text": "A publicly accessible reporting mechanism facilitating accessible modes as per [PRE-2-RC-01] shall be provided to enable the receipt of vulnerability information or reports."
+    },
+    {
+      "id": "[RCP-1-RQ-02]",
+      "title": "Unique identifier",
+      "type": "RQ",
+      "parent": "[RCP-1]",
+      "text": "A mechanism shall be in place to track reported vulnerabilities with the use of an identifier or tracking number."
+    },
+    {
+      "id": "[RCP-1-RQ-03]",
+      "title": "Acknowledgement",
+      "type": "RQ",
+      "parent": "[RCP-1]",
+      "text": "A receipt of a potential vulnerability report shall be acknowledged within a time frame that is established and declared based on the coordinated vulnerability disclosure policy."
+    },
+    {
+      "id": "[RCP-1-RC-01]",
+      "title": "Acceptance",
+      "type": "RC",
+      "parent": "[RCP-1]",
+      "text": "Reports should be accepted even if they use less secure mechanisms as provided by [PRE-5]"
+    },
+    {
+      "id": "[RCP-2]",
+      "title": "Monitoring",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "This subclause outlines the monitoring activities for gathering vulnerability information. It involves tracking public sources and receiving information from private sources to identify potential vulnerabilities that could impact the product."
+    },
+    {
+      "id": "[RCP-2-RQ-01]",
+      "title": "Sources",
+      "type": "RQ",
+      "parent": "[RCP-2]",
+      "text": "Vulnerability information or reports from internal and external sources shall be monitored."
+    },
+    {
+      "id": "[RCP-2-RQ-02]",
+      "title": "Requires sources",
+      "type": "RQ",
+      "parent": "[RCP-2]",
+      "text": "The minimum list of sources that shall be used is:\nExternal sources\n- EU Vulnerability Database\n- Reported vulnerabilities [RCP-1]\nInternal sources\n- Regular testing [RCP-6]\n- Regular review [RCP-7]"
+    },
+    {
+      "id": "[RCP-2-RQ-03]",
+      "title": "Third-party components",
+      "type": "RQ",
+      "parent": "[RCP-2]",
+      "text": "The list of third-party components shall be monitored for end of support and usage."
+    },
+    {
+      "id": "[RCP-3]",
+      "title": "Potentially impacted software components",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "This clause describes the activities for comparing the product's identified software components with incoming vulnerability information. Optionally, it is possible to automate this using the SBOM."
+    },
+    {
+      "id": "[RCP-3-RQ-01]",
+      "title": "Scope",
+      "type": "RQ",
+      "parent": "[RCP-3]",
+      "text": "Potentially affected software components shall be identified based on vulnerability information collected from [RCP-2]"
+    },
+    {
+      "id": "[RCP-4]",
+      "title": "Potentially impacted hardware components",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "This subclause describes the activities for comparing the product's hardware component list with received vulnerability reports to identify potentially impacted hardware components."
+    },
+    {
+      "id": "[RCP-4-RQ-01]",
+      "title": "Scope",
+      "type": "RQ",
+      "parent": "[RCP-4]",
+      "text": "Potentially affected hardware components shall be identified based on vulnerability information collected from 5.4.3."
+    },
+    {
+      "id": "[RCP-5]",
+      "title": "Coordinator involvement",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "The purpose of this phase is to support transparent, timely communication by actively engaging with a coordinator. While optional, a coordinator is especially helpful when vulnerabilities affect multiple manufacturers or when direct communication between the stakeholders is complex or not feasible."
+    },
+    {
+      "id": "[RCP-5-RC-01]",
+      "title": "Responsibilities",
+      "type": "RC",
+      "parent": "[RCP-5]",
+      "text": "A coordinator should be assigned and involved in the vulnerability handling process, where appropriate."
+    },
+    {
+      "id": "[RCP-6]",
+      "title": "Performing regular tests",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "Regular testing helps maintain the security posture. Some testing methods are described in prEN 40000-1-2:2025, 7.6. The selection of appropriate tests and their schedules are dependent upon the product risk-based criteria related to the potential negative impact of vulnerabilities on the product's security posture over time, as documented in [PRE-9]."
+    },
+    {
+      "id": "[RCP-6-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[RCP-6]",
+      "text": "Security testing shall be performed according to the security test and review plan."
+    },
+    {
+      "id": "[RCP-7]",
+      "title": "Performing regular reviews",
+      "type": "CHAPTER",
+      "parent": "[RCP]",
+      "text": "Maintaining a product's security is an ongoing task. This includes performing security tests throughout the product's support period. It also includes activities to reassess the threats and risks posed to the product due to changes in cybersecurity attack techniques or the way the product is used in practical conditions.\n\nThe needs regarding these regular tests and reviews depend on the type of product and its use. A simple product developed on demand for a specific customer and purpose, as an individual unit, might require very few actions, while a more complex product supplied in large quantities for exposure to the Internet might require stringent monitoring.\n\nThe security risk a product is exposed to is not static. It changes as attack methods or the threat landscape evolves. This can, for example, include knowledge of cryptographic algorithms' strengths.\n\nIt can also turn out that the product context is not correctly described. For example, the product's use or operational environment may differ from the description during practical use."
+    },
+    {
+      "id": "[RCP-7-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[RCP-7]",
+      "text": "Security reviews shall be performed according to the security test and review plan."
+    },
+    {
+      "id": "[RCP-7-RQ-02]",
+      "title": "Maintenance",
+      "type": "RQ",
+      "parent": "[RCP-7]",
+      "text": "The assumptions and all inputs of the product cybersecurity risk assessment shall be reviewed periodically (at least once a year), even if the product design does not change."
+    },
+    {
+      "id": "[VRF]",
+      "title": "Verification",
+      "type": "ROOT_CONTAINER",
+      "text": "The verification phase, often referred to as triage, includes requirements for determining whether the reported vulnerability affects the product. It also includes requirements for prioritizing the vulnerability based on vulnerability risk assessment activities.\nThe primary objective of this phase is to assess the validity, reproducibility, and applicability of the reported vulnerability. During this phase, the received information is reviewed to determine whether it is complete and whether the vulnerability is genuine and applicable to the product in question.\n\nIf a vulnerability is assessed as relevant, the security risk analysis is performed to determine whether the risk associated with the vulnerability is to be mitigated and, if so, with what priority\n\nNote: Whereas [VRF-1] Initial assessment and verification and [VRF-2] Vulnerability risk assessment are separated, all the activities listed can occur in parallel rather than in a sequential order."
+    },
+    {
+      "id": "[VRF-1]",
+      "title": "Initial assessment and verification",
+      "type": "CHAPTER",
+      "parent": "[VRF]",
+      "text": "The clause describes the initial assessment and verification of the vulnerability report. The primary objective of this phase is to assess the validity, reproducibility, and applicability of reported vulnerabilities. The manufacturer evaluates the credibility and information provided in the report, attempts to reproduce the issue, assesses its impact on the affected product, and assesses the severity of the vulnerability. This step ensures that only verified vulnerabilities proceed to the security risk assessment."
+    },
+    {
+      "id": "[VRF-1-RQ-01]",
+      "title": "Completude",
+      "type": "RQ",
+      "parent": "[VRF-1]",
+      "text": "More information shall be requested from the reporter if the available information is insufficient"
+    },
+    {
+      "id": "[VRF-1-RQ-02]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[VRF-1]",
+      "text": "An assessment of the vulnerability shall be performed."
+    },
+    {
+      "id": "[VRF-2]",
+      "title": "Vulnerability risk assessment",
+      "type": "CHAPTER",
+      "parent": "[VRF]",
+      "text": "This clause describes the activities of conducting a risk assessment to determine the potential risk posed by a verified vulnerability, thereby prioritizing the vulnerability handling process. The risk assessment is based on the product’s established risk management framework, ensuring that the results are consistent with the overall risk evaluation methodology applied to the product prEN 40000-1-2."
+    },
+    {
+      "id": "[VRF-2-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[VRF-2]",
+      "text": "The risk introduced by the vulnerability shall be assessed in accordance with prEN 40000-1-2:2025, 6.4."
+    },
+    {
+      "id": "[VRF-2-RQ-02]",
+      "title": "Prioritisation",
+      "type": "RQ",
+      "parent": "[VRF-2]",
+      "text": "The priority shall be assigned to the vulnerability based on the risk assessment referenced in [VRF-2-RQ-01] and the product risk profile."
+    },
+    {
+      "id": "[VRF-2-RQ-03]",
+      "title": "Fast track",
+      "type": "RQ",
+      "parent": "[VRF-2]",
+      "text": "If the determination of the risk of the vulnerability as per [VRF-2-RQ-02] exceeds the defined threshold by the manufacturer's risk assessment, the resolution of the vulnerability shall be expedited."
+    },
+    {
+      "id": "[VRF-2-RQ-04]",
+      "title": "Communication",
+      "type": "RQ",
+      "parent": "[VRF-2]",
+      "text": "If the vulnerability information source is from a coordinated vulnerability disclosure, then the reporter shall be informed about the results of the verification ."
+    },
+    {
+      "id": "[RMD]",
+      "title": "Remediation",
+      "type": "ROOT_CONTAINER",
+      "text": "This phase includes decision making activities to mitigate cybersecurity risks associated with the verified vulnerability. This includes identifying appropriate fixes, planning, development, testing for effectiveness and compatibility, and preparing updates or mitigations for deployment."
+    },
+    {
+      "id": "[RMD-1]",
+      "title": "Remediation decision",
+      "type": "CHAPTER",
+      "parent": "[RMD]",
+      "text": "This phase includes the decision-making activities for mitigating the cybersecurity risks related to the verified vulnerability. It involves selecting and assessing risk remediation measures, evaluating their feasibility, and considering the potential impact on the product, users, and other stakeholders. Based on this analysis, the manufacturer determines the most appropriate remediation, which can include an update, intermediate mitigation, or a justified decision to defer or decline remediation."
+    },
+    {
+      "id": "[RMD-1-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[RMD-1]",
+      "text": "A decision on how to remediate the vulnerability shall be taken."
+    },
+    {
+      "id": "[RMD-1-RQ-02]",
+      "title": "Planning",
+      "type": "RQ",
+      "parent": "[RMD-1]",
+      "text": "In accordance with the decision in [RMD-1-RQ-01], subsequent actions shall be planned, including the definition of the timeline for the remediation."
+    },
+    {
+      "id": "[RMD-2]",
+      "title": "Remediation development",
+      "type": "CHAPTER",
+      "parent": "[RMD]",
+      "text": "After the decision to remediate a particular vulnerability has been taken and planned, it is essential to perform the activities that produce the remediation. During these activities, the manufacturer could produce updates, documentation, or configuration changes, as appropriate, to address a vulnerability.\n\nThese activities can involve third parties, including suppliers and open-source projects, to coordinate the development or source existing remediation."
+    },
+    {
+      "id": "[RMD-2-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[RMD-2]",
+      "text": "The remediation shall be produced."
+    },
+    {
+      "id": "[RMD-2-RQ-02]",
+      "title": "Separating security and functional updates",
+      "type": "RQ",
+      "parent": "[RMD-2]",
+      "text": "Security updates shall be provided separately from functional updates, where technically feasible."
+    },
+    {
+      "id": "[RMD-3]",
+      "title": "Remediation test",
+      "type": "CHAPTER",
+      "parent": "[RMD]",
+      "text": "This subclause describes the activities to develop and perform appropriate tests to ensure that the risks associated with a vulnerability are mitigated without a negative impact on the product or users."
+    },
+    {
+      "id": "[RMD-3-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[RMD-3]",
+      "text": "The remediation shall be tested to ensure the risks related to the vulnerability are mitigated and the impact on the product and the users is acceptable."
+    },
+    {
+      "id": "[RLS]",
+      "title": "Release",
+      "type": "ROOT_CONTAINER",
+      "text": "The release phase includes requirements for deploying and sharing remediation, describing associated changes, and disseminating remediation information to relevant stakeholders."
+    },
+    {
+      "id": "[RLS-1]",
+      "title": "Security update release",
+      "type": "CHAPTER",
+      "parent": "[RLS]",
+      "text": "This subclause addresses the activities of gathering all the artefacts to address vulnerabilities and disseminating security updates.\n\nAny delay in applying security updates gives attackers time to exploit the product's vulnerabilities. Therefore, the timely distribution of security updates is essential. A secure update distribution mechanism ensures the integrity and authenticity of security updates. An automatic update distribution mechanism ensures that vulnerabilities are remediated without user interaction for the products that support automatic updates.\n\nSuch updates need to be provided in a secure manner, which might, for example, use digital signatures and/or secure download services.\n\nSecurity updates are to be applied automatically or manually depending on the type of product, its technical implementation, its intended purpose, and its reasonably foreseeable use.\n\nProviding security updates that do not change the product's other functionality reduces the risk of unintended or unwanted operational impacts in the user's environment. On the other hand, some remediations require significant changes that cannot be implemented without larger interventions into the product."
+    },
+    {
+      "id": "[RLS-1-RQ-01]",
+      "title": "Free update",
+      "type": "RQ",
+      "parent": "[RLS-1]",
+      "text": "Security updates shall be provided, unless otherwise agreed between a manufacturer and a business user in relation to a tailor-made product with digital elements, free of charge."
+    },
+    {
+      "id": "[RLS-1-RQ-02]",
+      "title": "Timely distribution",
+      "type": "RQ",
+      "parent": "[RLS-1]",
+      "text": "Once a security update is provisioned, it shall be distributed in a timely manner."
+    },
+    {
+      "id": "[RLS-1-RQ-03]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[RLS-1]",
+      "text": "Installation instructions shall be provided for security updates unless distribution is fully automated."
+    },
+    {
+      "id": "[RLS-1-RQ-04]",
+      "title": "Security",
+      "type": "RQ",
+      "parent": "[RLS-1]",
+      "text": "The mechanisms to distribute security updates shall ensure their authenticity and integrity."
+    },
+    {
+      "id": "[RLS-2]",
+      "title": "Release information",
+      "type": "CHAPTER",
+      "parent": "[RLS]",
+      "text": "This phase describes a process for publishing information about resolved vulnerabilities and the distribution of corresponding security updates. It includes detailed guidance on communication, publication, and coordination with users and other stakeholders. Publications such as advisories or release notes provide clear, comprehensive documentation to help understand the nature of the vulnerabilities and manage associated risks effectively."
+    },
+    {
+      "id": "[RLS-2-RQ-01]",
+      "title": "Alignment",
+      "type": "RQ",
+      "parent": "[RLS-2]",
+      "text": "Information of fixed vulnerabilities shall be published in accordance with the policy on coordinating vulnerability disclosure (CVD) as required by [PRE-2-RQ-01], and where appropriate, this information can be summarized or aggregated."
+    },
+    {
+      "id": "[RLS-2-RQ-02]",
+      "title": "Required information",
+      "type": "RQ",
+      "parent": "[RLS-2]",
+      "text": "The publication shall contain at least, but not limited to, the following information to enable the target audience to decide if the vulnerabilities are relevant and how to remediate them:\n- description of the vulnerability;\n- vulnerability identifier;\n- information allowing the identification of the affected product;\n- potential impact of the vulnerability;\n- severity of the vulnerability;\n- detailed information on how to remediate the vulnerability;\n- release date and update date."
+    },
+    {
+      "id": "[RLS-2-RQ-03]",
+      "title": "Accessibility",
+      "type": "RQ",
+      "parent": "[RLS-2]",
+      "text": "Information regarding fixed vulnerabilities shall be made available in a human-readable format."
+    },
+    {
+      "id": "[RLS-2-RQ-03-RE]",
+      "title": "Machine-readable format",
+      "type": "RQ",
+      "parent": "[RLS-2]",
+      "text": "Information regarding fixed vulnerabilities shall be made available in a widely recognized machine-readable format."
+    },
+    {
+      "id": "[RLS-2-PM-01]",
+      "title": "Delayed disclosure",
+      "type": "PM",
+      "parent": "[RLS-2]",
+      "text": "To give sufficient time to distribute the security update, full publication according to [RLS-2-RQ-02] may be delayed if all the following conditions apply:\n- An evaluation determines that the security risks of full publication outweigh the security benefits.\n- Information about a vulnerability fixed by the security update is made available to users in such a way that an attacker could not use this information to exploit the vulnerability.\n- Product users are informed about the date of public disclosure of all vulnerability information, as required per [RLS-2-RQ-02]."
+    },
+    {
+      "id": "[RLS-2-RC-01]",
+      "title": "EUVD publication",
+      "type": "RC",
+      "parent": "[RLS-2]",
+      "text": "Vulnerability information from [RLS-2-RQ-01] should be made publicly available on the EU Vulnerability Database (EUVD)."
+    },
+    {
+      "id": "[PRA]",
+      "title": "Post-release",
+      "type": "ROOT_CONTAINER",
+      "text": "The post-release phase focuses on activities that occur after the remediation and release of a vulnerability. It includes requirements for monitoring released security updates, capturing lessons learned, and reflecting on the post-release process to inform and improve future development practices."
+    },
+    {
+      "id": "[PRA-1]",
+      "title": "Post-release actions",
+      "type": "CHAPTER",
+      "parent": "[PRA]",
+      "text": "This phase is crucial for ensuring the ongoing quality and effectiveness of the remediation. The manufacturer has the discretion to apply this action in a way that enables continuous improvement of their product-related processes."
+    },
+    {
+      "id": "[PRA-1-RQ-01]",
+      "title": "Execution",
+      "type": "RQ",
+      "parent": "[PRA-1]",
+      "text": "Post-release actions shall be carried out, including:\n- Case maintenance\n- Monitoring of remediation"
+    },
+    {
+      "id": "prEN 40000-1-2",
+      "title": "Cybersecurity requirements for products with digital elements Part 1-2: Principles for cyber resilience",
+      "type": "EXTERNAL_ROOT",
+      "text": "prEN 40000-1-2 specifies general cybersecurity principles and general risk management activities for all products with digital elements, hereafter also referred to as 'products'. It covers every stage of the product lifecycle to ensure and maintain an appropriate level of cybersecurity based on the risks.\nprEN 40000-1-2 also provides generic elements to support the development of coherent product-category-specific standards (vertical standards)."
+    },
+    {
+      "id": "40000-1-2/6.2",
+      "label": "prEN 40000-1-2 6.2",
+      "title": "Product Context",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Establishing the product context determines the starting point for the assessment and treatment of risks. This is an iterative task as changes to the product during development can cause the product context to change."
+    },
+    {
+      "id": "40000-1-2/6.4",
+      "label": "prEN 40000-1-2 6.4",
+      "title": "Risk assessment",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "The risk assessment is based on the products' context and the risk assessment results in an evaluation of identified risks.\nThe assessment of risks includes:\n- an identification of the assets and cybersecurity objectives;\n- an identification of the threats;\n- an estimation of the risks;\n- an evaluation of the risks."
+    },
+    {
+      "id": "40000-1-2/6.6",
+      "label": "prEN 40000-1-2 6.6",
+      "title": "Risk communication",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Risk communication refers to providing information on risks related to the product based on the product context.\nIt is necessary to clearly communicate all relevant risks transferred to the relevant stakeholder, as well as the actions and measures expected of the stakeholder to mitigate these risks. Where appropriately this communication considers accessibility aspects (e.g. simple language, multi-modal formats). This ensures that the stakeholder has the capability to take appropriate actions to mitigate those risks and securely use the product according to the product context."
+    },
+    {
+      "id": "40000-1-2/7.4",
+      "label": "prEN 40000-1-2 7.4",
+      "title": "Cybersecurity architecture and design",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "The secure architecture and the functional design of the product are based on the cybersecurity requirements as defined in 7.3 and the product context as defined in 6.2.\nConsider the following for the product cybersecurity architecture and design:\n- introduce trust boundaries between components and subsystems including RDPS, to ensure clear separation of privileges and responsibilities, as well as containment;\n- secure interface design, with particular attention to authentication, input validation, and minimization of the exposed attack surface."
+    },
+    {
+      "id": "40000-1-2/7.3",
+      "label": "prEN 40000-1-2 7.3",
+      "title": "Product cybersecurity requirements",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "The product cybersecurity requirements:\n- are managed throughout the product lifecycle, in line with the management of cybersecurity risks, in particular the assessment and treatment of product cybersecurity risks; and\n- are based on the needs and expectations of stakeholders relevant to the product, as well as regulatory product requirements such as those of the CRA.\nIn addition, the identification and formulation of product cybersecurity requirements typically consider:\n- the traceability, validity, understandability and verifiability of product cybersecurity technical specifications;\n- the cybersecurity properties of the product’s environment during development and production.\nThese requirements can then be fulfilled through the implementation of specific cybersecurity controls, typically selected from different catalogues."
+    },
+    {
+      "id": "40000-1-2/7.6",
+      "label": "prEN 40000-1-2 7.6",
+      "title": "Cybersecurity verification and validation",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "The goal of cybersecurity verification and validation (V&V) is to ensure that the concept, design and implementation of a product satisfy all respective cybersecurity requirements, and that the product is sufficiently cybersecure considering its context.\nV&V is crucial for detecting potential cybersecurity defects (such as coding mistakes, configuration errors, or design flaws) that could be exploited by malicious actors. Through V&V, the manufacturer identifies and mitigates or eliminates these vulnerabilities before the product is deployed or released, thereby reducing the risk of successful cyberattacks."
+    },
+    {
+      "id": "40000-1-2/7.7.2",
+      "label": "prEN 40000-1-2 7.7.2",
+      "title": "Digital production",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Digital production relates to activities for the production of software products and software updates, including compiling, building, packaging, and preparing software artefacts for distribution through digital channels.\nActivities in the secure digital production process ensure that digital products are protected from manipulation by external actors during digital distribution (for instance, via an online hosting platform such as an app store).\nFollow the measures defined in 7.6 to ensure that information supporting the product is complete, accurate and written in an appropriate language before distribution"
+    },
+    {
+      "id": "40000-1-2/6.7",
+      "label": "prEN 40000-1-2 6.7",
+      "title": "Risk monitoring and review",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "It is important to review and, if necessary, update the elements of risk management to address potential changes in the threat landscape and state of the art. This review can be triggered by the observation that the threat landscape has changed or can be done on a regular basis if required.\nReview of the risk assessment helps to create awareness of potential cybersecurity issues."
+    },
+    {
+      "id": "40000-1-2/7.2",
+      "label": "prEN 40000-1-2 7.2",
+      "title": "Product cybersecurity planning",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Cybersecurity planning involves describing the cybersecurity activities for a product throughout its lifecycle. Relevant activities are found in Clause 6 and Clause 7. Many activities are interrelated. Changes in one activity can affect others."
+    },
+    {
+      "id": "40000-1-2/7",
+      "label": "prEN 40000-1-2 7",
+      "title": "Cybersecurity activities",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Product cybersecurity activities are intended to be process agnostic. There are logical connections between activities: some are prerequisites for others but, with certain development methodologies (including agile approaches), the activities in this clause can be executed concurrently or in any order. Furthermore, many activities can be revisited at relevant points or regular intervals as a change in one can imply changes in several others. In that case, it is necessary to document the dependencies between process activities."
+    },
+    {
+      "id": "40000-1-2/7.7",
+      "label": "prEN 40000-1-2 7.7",
+      "title": "Secure production and distribution",
+      "type": "EXTERNAL_LEAF",
+      "parent": "prEN 40000-1-2",
+      "text": "Secure Production & Distribution activities ensure that the cybersecurity risks to the product are managed throughout the manufacturing and distribution process. These activities address the cybersecurity risks associated with producing and distributing the product.\nFor software products delivered digitally, this includes ensuring that the integrity and authenticity of the software is protected during delivery to the user.\nFor hardware products, or software products placed on the market with a hardware component, such as a gaming system disk or memory card, measures are needed to ensure that the components and data are protected from manipulation from the time of release from the development team, during the entire manufacturing process, and until the product is delivered to the user.\nA secure production control plan can support secure production activities."
+    }
+  ],
+  "links": [
+    {
+      "from": "[APP]",
+      "to": "40000-1-2/6.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[APP]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[APP-1]",
+      "to": "[PRE-9]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RC-01]",
+      "to": "[PRE-1-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RQ-02]",
+      "to": "[RMD]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RQ-02]",
+      "to": "[VRF-1]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RQ-02]",
+      "to": "[PRE-9]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RC-02]",
+      "to": "[PRE-5]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RC-02]",
+      "to": "[PRE-7]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RC-02]",
+      "to": "[PRE-8]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-1-RQ-05]",
+      "to": "[PRE-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-2-RQ-03]",
+      "to": "[PRE-4]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-2-RC-02]",
+      "to": "[PRE-5]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-4-RQ-02]",
+      "to": "40000-1-2/6.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-5]",
+      "to": "[RCP-1]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-5-RQ-01-RE]",
+      "to": "[RCP-1]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-6-RQ-02]",
+      "to": "[PRE-6-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7]",
+      "to": "[PRE-6]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7]",
+      "to": "40000-1-2/7.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7-RQ-02]",
+      "to": "[PRE-7-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7-RQ-03]",
+      "to": "[PRE-7-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7-RQ-03-RE]",
+      "to": "[PRE-7-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-7-RQ-07]",
+      "to": "[PRE-7-RQ-02]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-8]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-8]",
+      "to": "40000-1-2/7.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "40000-1-2/6.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "40000-1-2/7.3",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "40000-1-2/7.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "40000-1-2/7.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-9-RQ-01]",
+      "to": "40000-1-2/7.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-10-RQ-01]",
+      "to": "40000-1-2/7.7.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-1]",
+      "to": "[PRE-5-RQ-01-RE]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-1-RQ-01]",
+      "to": "[PRE-2-RC-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-1-RC-01]",
+      "to": "[PRE-5]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-2]",
+      "to": "[VRF-1]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-2]",
+      "to": "[PRA-1-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-2-RQ-02]",
+      "to": "[RCP-1]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-2-RQ-02]",
+      "to": "[RCP-6]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-2-RQ-02]",
+      "to": "[RCP-7]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-3]",
+      "to": "[RCP-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-3]",
+      "to": "[PRE-7]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-3-RQ-01]",
+      "to": "[RCP-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-4]",
+      "to": "[RCP-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-4]",
+      "to": "[PRE-8]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-4-RQ-01]",
+      "to": "[RCP-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-6]",
+      "to": "40000-1-2/7.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-6]",
+      "to": "[PRE-9]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-6-RQ-01]",
+      "to": "40000-1-2/7.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7]",
+      "to": "40000-1-2/6.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7]",
+      "to": "40000-1-2/7.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7-RQ-01]",
+      "to": "40000-1-2/6.7",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7-RQ-02]",
+      "to": "40000-1-2/6.7",
+      "type": "dependency"
+    },
+    {
+      "from": "[RCP-7-RQ-02]",
+      "to": "40000-1-2/7.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "[PRE-7]",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "[PRE-8]",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "[RCP-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "40000-1-2/6.2",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "40000-1-2/7.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-2]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-2-RQ-01]",
+      "to": "40000-1-2/6.4",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-2-RQ-02]",
+      "to": "[VRF-2-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[VRF-2-RQ-03]",
+      "to": "[VRF-2-RQ-02]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RMD-1]",
+      "to": "[VRF-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RMD-1-RQ-02]",
+      "to": "[RMD-1-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RMD-2-RQ-01]",
+      "to": "40000-1-2/7",
+      "type": "dependency"
+    },
+    {
+      "from": "[RMD-3-RQ-01]",
+      "to": "40000-1-2/7.6",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-1]",
+      "to": "[RMD-3]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-1-RQ-02]",
+      "to": "[VRF-2]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-1-RQ-02]",
+      "to": "40000-1-2/7.7",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-2]",
+      "to": "[RMD-3]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-2-RQ-01]",
+      "to": "[PRE-2-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-2-PM-01]",
+      "to": "[RLS-2-RQ-02]",
+      "type": "dependency"
+    },
+    {
+      "from": "[RLS-2-RC-01]",
+      "to": "[RLS-2-RQ-01]",
+      "type": "dependency"
+    },
+    {
+      "from": "[PRE-6]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-7]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-8]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-2]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-3]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-4]",
+      "to": "I_2_1",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-1]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-3]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-4]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-5]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[VRF-1]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[VRF-2]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[RMD-1]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[RMD-2]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[RMD-3]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[RLS-1]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[PRA-1]",
+      "to": "I_2_2",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-9]",
+      "to": "I_2_3",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-2]",
+      "to": "I_2_3",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-6]",
+      "to": "I_2_3",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-7]",
+      "to": "I_2_3",
+      "type": "essr"
+    },
+    {
+      "from": "[PRA-1]",
+      "to": "I_2_3",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-6]",
+      "to": "I_2_4",
+      "type": "essr"
+    },
+    {
+      "from": "[RLS-2]",
+      "to": "I_2_4",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-2]",
+      "to": "I_2_5",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-5]",
+      "to": "I_2_6",
+      "type": "essr"
+    },
+    {
+      "from": "[RCP-1]",
+      "to": "I_2_6",
+      "type": "essr"
+    },
+    {
+      "from": "[RLS-1]",
+      "to": "I_2_7",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-1]",
+      "to": "I_2_7",
+      "type": "essr"
+    },
+    {
+      "from": "[VRF-2]",
+      "to": "I_2_7",
+      "type": "essr"
+    },
+    {
+      "from": "[PRA-1]",
+      "to": "I_2_7",
+      "type": "essr"
+    },
+    {
+      "from": "[PRE-1]",
+      "to": "I_2_8",
+      "type": "essr"
+    },
+    {
+      "from": "[RLS-1]",
+      "to": "I_2_8",
+      "type": "essr"
+    },
+    {
+      "from": "[RLS-2]",
+      "to": "I_2_8",
+      "type": "essr"
+    }
+  ]
+}

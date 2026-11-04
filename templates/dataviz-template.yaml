@@ -1,0 +1,119 @@
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+#  dataviz file template (YAML)
+#
+#  A dataviz file describes a standard as a graph: its items (chapters, requirements...), the links
+#  between them, the item types, and the filters a reader can tick. Fill it in by hand, with a
+#  spreadsheet (the .xlsx template holds the same thing), or with an AI (templates/ai-prompt.md),
+#  then open it in the dataviz viewer (/view/) or the builder. Nothing is uploaded.
+#
+#  Only `items` with an `id` are required. Everything else has a sensible default.
+#  Full reference: docs/FORMAT.md at https://github.com/cetome/dataviz
+#  Lines starting with # are comments. Keep the indentation (spaces, never tabs).
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+
+dataviz: 1                      # format version, keep it
+id: my-standard                 # short name for files and links: lower case, digits, dashes
+title: My standard              # shown at the top of the viewer
+subtitle: What the graph shows, in one line
+version: "1.0"                  # the version of the standard (quotes keep "1.0" from becoming 1)
+date: 2026-01-31
+authors: Your name or organisation
+url: https://example.org/where-to-read-the-standard
+licence: CC-BY-4.0              # the licence of THIS file. Mind the copyright of text you quote.
+description: |
+  A few lines about the standard and this graph.
+  One paragraph per line. "- " starts a bullet, **bold** for bold, [a link](https://example.org) for links.
+layout: auto                    # auto | saved | hierarchical | organic | grid | circle
+direction: LR                   # for hierarchical: LR | TB | RL | BT
+
+# ── Item types: what each item is, and how it looks ──────────────────────────────────────
+#   color:   #rrggbb (leave it out for an automatic colour)
+#   shape:   round-rectangle | rectangle | ellipse | hexagon | diamond | triangle | octagon | tag | barrel
+#   border:  solid | dashed | dotted | double | none   (dashed and dotted draw a light, "optional" look)
+#   caption: what the node shows: id | title | both
+#   assess:  yes | no | leave out = assessable when the item has no children
+types:
+  - id: chapter
+    label: Chapter
+    color: "#475569"
+    caption: both
+  - id: requirement
+    label: Requirement
+    color: "#0044aa"
+  - id: recommendation
+    label: Recommendation
+    color: "#0044aa"
+    border: dashed
+
+# ── Link types: what an arrow means ──────────────────────────────────────────────────────
+#   style: solid | dashed | dotted        arrow: triangle | none | square | circle | diamond | tee | vee
+linkTypes:
+  - id: depends-on
+    label: Depends on
+  - id: refines
+    label: Refines
+    style: dashed
+
+# ── Filters: groups of tags the reader can tick in the viewer ───────────────────────────────
+#   mode: any  -> show the items carrying ANY ticked tag      (e.g. conditions)
+#         all  -> show the items carrying EVERY ticked tag    (e.g. "applies to part 1 and part 2")
+#         none -> HIDE the items carrying a ticked tag        (e.g. "hide optional items")
+#   Tag ids must be unique across all filters. Items list their tags in `tags`.
+filters:
+  - id: applies-to
+    label: Applies to
+    mode: all
+    tags:
+      - id: device
+        label: Devices
+      - id: cloud
+        label: Cloud services
+  - id: condition
+    label: Conditions
+    tags:
+      - id: c-passwords
+        label: Passwords are used
+
+# ── Items: one entry per chapter, requirement, recommendation... ─────────────────────────────
+#   id:     unique (required). Use the numbering of the standard: "5.1", "5.1-1", "ACM-1"...
+#   title:  its name                       type:   one of the types above
+#   parent: the id of the item containing it (chapters contain requirements). Leave out at the top
+#   tags:   [tag, tag]                     text:   the description (same little syntax as above)
+#   label:  optional short text drawn on the node instead of the caption of its type
+#   url:    optional link to this item     x, y:   saved position (the builder fills them in)
+items:
+  - id: "1"
+    title: Access control
+    type: chapter
+  - id: "1.1"
+    title: Unique credentials
+    type: requirement
+    parent: "1"
+    tags: [device, c-passwords]
+    text: |
+      Each device has its own credentials.
+      - no shared default password
+  - id: "1.2"
+    title: Lock out repeated failures
+    type: recommendation
+    parent: "1"
+    tags: [device, cloud]
+  - id: "2"
+    title: Updates
+    type: chapter
+  - id: "2.1"
+    title: Signed updates
+    type: requirement
+    parent: "2"
+    tags: [device]
+
+# ── Links: one entry per arrow, from an item to another ──────────────────────────────────────
+#   from, to: item ids     type: a link type above     label: optional text on the arrow
+links:
+  - from: "1.2"
+    to: "1.1"
+    type: depends-on
+  - from: "2.1"
+    to: "1.1"
+    type: depends-on
+    label: update server authentication

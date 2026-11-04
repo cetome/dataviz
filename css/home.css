@@ -1,0 +1,52 @@
+/* dataviz - landing page (index.html)  Copyright (C) 2024-2026 cetome. SPDX-License-Identifier: AGPL-3.0-or-later */
+
+.hero {
+  background: var(--blue);
+  color: #fff;
+  padding: 3rem var(--gutter);
+}
+.hero-inner { max-width: 72rem; margin: 0 auto; }
+.hero h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.hero p { margin: 0.75rem 0 0; font-size: 1.1rem; max-width: 42rem; color: rgba(255, 255, 255, 0.85); }
+
+.cards {
+  max-width: 72rem;
+  margin: 2.5rem auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 11rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-light);
+  color: var(--text);
+}
+.card .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.card h2 { font-size: 1.25rem; color: var(--blue); }
+.card:hover h2 { color: var(--blue-light); }
+.card p { margin: 0; font-size: 0.92rem; }
+.card .more { margin-top: auto; font-size: 0.85rem; font-weight: 600; color: var(--blue); }
+
+.site-footer.home { padding: 1.5rem var(--gutter) 2.5rem; max-width: 72rem; margin: 0 auto; }
+
+.hero .hero-note { font-size: 0.95rem; color: #fff; font-weight: 600; }
+.own { max-width: 72rem; margin: 0 auto 2.5rem; padding: 0 var(--gutter); }
+.own > h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.cards.cards-own { margin: 0; padding: 0; }
+@media (max-width: 600px) { .own { padding: 0 16px; } }

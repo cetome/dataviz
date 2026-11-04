@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/cetome/dataviz/main/schema/dataviz-file.schema.json",
+  "title": "dataviz file",
+  "description": "A standard as a graph: items, links, item types and link, filters. Format version 1. Reference: docs/FORMAT.md at https://github.com/cetome/dataviz . The viewer is more lenient than this schema (it fixes what it can and reports it); this schema describes a clean file.",
+  "type": "object",
+  "required": ["items"],
+  "properties": {
+    "dataviz": { "const": 1, "description": "Format version." },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "maxLength": 60, "description": "Short name for files, links and browser storage." },
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "version": { "type": "string" },
+    "date": { "type": "string", "description": "YYYY-MM-DD" },
+    "authors": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "licence": { "type": "string", "description": "Licence of this file, e.g. CC-BY-4.0." },
+    "description": { "type": "string" },
+    "layout": { "enum": ["auto", "saved", "hierarchical", "organic", "grid", "circle"], "default": "auto" },
+    "direction": { "enum": ["LR", "TB", "RL", "BT"], "default": "LR" },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string" },
+          "color": { "$ref": "#/$defs/color" },
+          "shape": { "enum": ["round-rectangle", "rectangle", "ellipse", "hexagon", "diamond", "triangle", "octagon", "tag", "barrel"], "default": "round-rectangle" },
+          "border": { "enum": ["solid", "dashed", "dotted", "double", "none"], "default": "solid" },
+          "caption": { "enum": ["id", "title", "both"], "default": "id" },
+          "assess": { "enum": ["yes", "no", "auto"], "default": "auto" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "linkTypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string" },
+          "color": { "$ref": "#/$defs/color" },
+          "style": { "enum": ["solid", "dashed", "dotted"], "default": "solid" },
+          "arrow": { "enum": ["triangle", "none", "square", "circle", "diamond", "tee", "vee"], "default": "triangle" }
+        }
+      }
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "tags"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string" },
+          "mode": { "enum": ["any", "all", "none"], "default": "any" },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id"],
+              "properties": { "id": { "type": "string", "minLength": 1 }, "label": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Unique among the items." },
+          "title": { "type": "string" },
+          "type": { "type": "string", "description": "The id of a type." },
+          "parent": { "type": "string", "description": "The id of the item containing this one." },
+          "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "text": { "type": "string", "description": "Lines are paragraphs; '- ' bullets, **bold**, `code`, [links](https://...)." },
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "x": { "type": "number" },
+          "y": { "type": "number" }
+        },
+        "dependentRequired": { "x": ["y"], "y": ["x"] }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string", "minLength": 1 },
+          "to": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "description": "The id of a link type." },
+          "label": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "color": { "type": "string", "pattern": "^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$" }
+  }
+}

@@ -1,0 +1,17 @@
+# Private deployment files of the hosted site: never published.
+cetome/
+config.php
+storage/
+
+# what the deploy script assembles
+dist/
+
+# the previous version of the site, kept locally only
+_archive/
+
+# tooling
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini

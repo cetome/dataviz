@@ -1,0 +1,125 @@
+{
+  "dataviz": 1,
+  "id": "my-standard",
+  "title": "My standard",
+  "subtitle": "What the graph shows, in one line",
+  "version": "1.0",
+  "date": "2026-01-31",
+  "authors": "Your name or organisation",
+  "url": "https://example.org/where-to-read-the-standard",
+  "licence": "CC-BY-4.0",
+  "description": "A few lines about the standard and this graph.\nOne paragraph per line. \"- \" starts a bullet, **bold** for bold, [a link](https://example.org) for links.",
+  "layout": "auto",
+  "types": [
+    {
+      "id": "chapter",
+      "label": "Chapter",
+      "color": "#475569",
+      "caption": "both"
+    },
+    {
+      "id": "requirement",
+      "label": "Requirement",
+      "color": "#0044aa"
+    },
+    {
+      "id": "recommendation",
+      "label": "Recommendation",
+      "color": "#0044aa",
+      "border": "dashed"
+    }
+  ],
+  "linkTypes": [
+    {
+      "id": "depends-on",
+      "label": "Depends on"
+    },
+    {
+      "id": "refines",
+      "label": "Refines",
+      "style": "dashed"
+    }
+  ],
+  "filters": [
+    {
+      "id": "applies-to",
+      "label": "Applies to",
+      "mode": "all",
+      "tags": [
+        {
+          "id": "device",
+          "label": "Devices"
+        },
+        {
+          "id": "cloud",
+          "label": "Cloud services"
+        }
+      ]
+    },
+    {
+      "id": "condition",
+      "label": "Conditions",
+      "tags": [
+        {
+          "id": "c-passwords",
+          "label": "Passwords are used"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "title": "Access control",
+      "type": "chapter"
+    },
+    {
+      "id": "1.1",
+      "title": "Unique credentials",
+      "type": "requirement",
+      "parent": "1",
+      "tags": [
+        "device",
+        "c-passwords"
+      ],
+      "text": "Each device has its own credentials.\n- no shared default password"
+    },
+    {
+      "id": "1.2",
+      "title": "Lock out repeated failures",
+      "type": "recommendation",
+      "parent": "1",
+      "tags": [
+        "device",
+        "cloud"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Updates",
+      "type": "chapter"
+    },
+    {
+      "id": "2.1",
+      "title": "Signed updates",
+      "type": "requirement",
+      "parent": "2",
+      "tags": [
+        "device"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "1.2",
+      "to": "1.1",
+      "type": "depends-on"
+    },
+    {
+      "from": "2.1",
+      "to": "1.1",
+      "type": "depends-on",
+      "label": "update server authentication"
+    }
+  ]
+}

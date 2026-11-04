@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>Standard builder ◼ dataviz</title>
+    <meta name="description" content="Build your own standard as an interactive dependency graph: items, links, types and filters, with a live preview. Export it as JSON, YAML, Excel or CSV, or share it as a link. Free, no account, nothing uploaded.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="dataviz">
+    <meta property="og:title" content="Standard builder ◼ dataviz">
+    <meta property="og:description" content="Build your own standard as an interactive dependency graph. Free, no account, nothing uploaded.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+    <link rel="stylesheet" href="/css/open.css">
+    <link rel="stylesheet" href="/css/builder.css">
+</head>
+
+<body class="builder-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="dataviz home"><img src="/img/dataviz.svg" alt="dataviz" width="193" height="48"></a>
+        <h1 class="page-title">Standard builder <small id="doc-title">Your standard, as a graph</small></h1>
+    </header>
+
+    <nav class="toolbar" aria-label="Builder">
+        <div class="toolbar-group">
+            <details class="dropdown">
+                <summary class="btn">New</summary>
+                <div class="dropdown-menu">
+                    <button type="button" data-new="blank">Blank standard</button>
+                    <button type="button" data-new="example">The example (every feature)</button>
+                    <div id="new-builtins"></div>
+                </div>
+            </details>
+            <label class="btn" for="import-file">Open file…</label>
+            <input type="file" id="import-file" class="visually-hidden" multiple accept=".json,.yaml,.yml,.xlsx,.xlsm,.xls,.ods,.csv,.tsv,.txt">
+            <details class="dropdown" id="library-menu">
+                <summary class="btn">My standards</summary>
+                <div class="dropdown-menu" id="library-items"></div>
+            </details>
+        </div>
+        <div class="toolbar-group">
+            <button type="button" class="btn" id="undo" title="Undo (Ctrl+Z)" disabled>↶ Undo</button>
+            <button type="button" class="btn" id="redo" title="Redo (Ctrl+Y)" disabled>↷ Redo</button>
+        </div>
+        <div class="toolbar-group">
+            <details class="dropdown dropdown-right">
+                <summary class="btn">Export</summary>
+                <div class="dropdown-menu">
+                    <button type="button" data-export="json">JSON (.json)</button>
+                    <button type="button" data-export="yaml">YAML (.yaml)</button>
+                    <button type="button" data-export="xlsx">Excel (.xlsx)</button>
+                    <button type="button" data-export="csv">CSV (one file per table)</button>
+                </div>
+            </details>
+            <button type="button" class="btn" id="share">Copy share link</button>
+            <button type="button" class="btn btn-primary" id="open-viewer">Open in the viewer</button>
+        </div>
+        <p class="save-state" id="save-state" aria-live="polite"></p>
+    </nav>
+
+    <div class="builder">
+        <section class="editor" aria-label="Editor">
+            <div class="tabs" role="tablist">
+                <button type="button" role="tab" data-tab="about">About</button>
+                <button type="button" role="tab" data-tab="items">Items <span class="count" id="count-items"></span></button>
+                <button type="button" role="tab" data-tab="links">Links <span class="count" id="count-links"></span></button>
+                <button type="button" role="tab" data-tab="types">Types <span class="count" id="count-types"></span></button>
+                <button type="button" role="tab" data-tab="filters">Filters <span class="count" id="count-filters"></span></button>
+                <button type="button" role="tab" data-tab="check">Check <span class="count" id="count-issues"></span></button>
+            </div>
+            <div class="tab-panel" id="panel" role="tabpanel"></div>
+        </section>
+
+        <section class="preview" aria-label="Preview">
+            <div class="preview-bar">
+                <label class="visually-hidden" for="preview-layout">Layout of the preview</label>
+                <select id="preview-layout" class="input">
+                    <option value="auto">Layout: auto</option>
+                    <option value="saved">Saved positions</option>
+                    <option value="hierarchical">Hierarchical</option>
+                    <option value="organic">Organic</option>
+                    <option value="grid">Grid</option>
+                    <option value="circle">Circle</option>
+                </select>
+                <button type="button" class="btn" id="relayout" title="Run the layout again">Re-arrange</button>
+                <button type="button" class="btn" id="link-mode" aria-pressed="false" title="Click an item, then another, to link them">Draw links</button>
+                <button type="button" class="btn" id="save-positions" title="Keep the positions of the preview in the standard (layout: saved)">Save positions</button>
+                <button type="button" class="btn" id="fit">Fit</button>
+            </div>
+            <div class="preview-graph"><div id="cy"></div></div>
+            <p class="preview-hint" id="preview-hint">Click an item to edit it. Drag it onto another to put it inside, or out of its box to take it out.</p>
+        </section>
+    </div>
+
+    <footer class="site-footer builder-footer">
+        <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+    </footer>
+
+    <p class="toast" id="toast" role="status" hidden></p>
+
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/js/vendor/dagre/dagre.min.js"></script>
+    <script src="/js/vendor/dagre/cytoscape-dagre.js"></script>
+    <script src="/js/vendor/js-yaml.min.js"></script>
+    <script src="/js/vendor/xlsx.full.min.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/standard.js"></script>
+    <script src="/js/library.js"></script>
+    <script src="/js/io.js"></script>
+    <script src="/js/builder.js"></script>
+</body>
+</html>

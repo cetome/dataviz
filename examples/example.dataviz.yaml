@@ -1,0 +1,134 @@
+# dataviz example: a FICTIONAL baseline for connected products, written to show every feature of
+# the format (types, link types, the three filter modes, text, links with labels, sources).
+# It is not a real standard. Reference: docs/FORMAT.md at https://github.com/cetome/dataviz
+dataviz: 1
+id: example-connected-baseline
+title: Example connected product baseline
+subtitle: A fictional standard showing every feature of the dataviz format
+version: "0.1"
+date: 2026-11-04
+authors: dataviz contributors
+licence: CC0-1.0
+description: |
+  This standard does not exist. It shows what a dataviz file can describe:
+  - chapters containing requirements, recommendations and documents
+  - links that say what depends on what, with labels
+  - filters by product type (all), by condition (any), and one that hides optional items (none)
+layout: hierarchical
+direction: LR
+
+types:
+  - id: chapter
+    label: Chapter
+    color: "#475569"
+    caption: both
+  - id: requirement
+    label: Requirement
+    color: "#0044aa"
+    description: Must be met.
+  - id: recommendation
+    label: Recommendation
+    color: "#0044aa"
+    border: dashed
+    description: Should be met. Deviations are justified.
+  - id: document
+    label: Document to provide
+    color: "#16a34a"
+    shape: tag
+    assess: "no"
+
+linkTypes:
+  - id: depends-on
+    label: Depends on
+  - id: documented-in
+    label: Documented in
+    color: "#16a34a"
+    style: dashed
+
+filters:
+  - id: product
+    label: Product type
+    mode: all
+    tags:
+      - { id: device, label: Device }
+      - { id: app, label: Mobile app }
+      - { id: cloud, label: Cloud service }
+  - id: condition
+    label: Conditions
+    mode: any
+    tags:
+      - { id: has-passwords, label: Passwords are used }
+      - { id: has-updates, label: The product can be updated }
+      - { id: has-radio, label: The product has a radio interface }
+  - id: hide
+    label: Hide
+    mode: none
+    tags:
+      - { id: optional, label: Recommendations }
+
+items:
+  - { id: AC, title: Access control, type: chapter }
+  - id: AC-1
+    title: No default password
+    type: requirement
+    parent: AC
+    tags: [device, app, cloud, has-passwords]
+    text: |
+      Passwords are unique per product or set by the user at first use.
+      - **no** universal default password
+      - see [the NIST guidance](https://pages.nist.gov/800-63-4/) for strength
+  - id: AC-2
+    title: Brute-force protection
+    type: recommendation
+    parent: AC
+    tags: [device, cloud, has-passwords, optional]
+    text: Repeated failed attempts are slowed down or locked out.
+  - id: AC-3
+    title: Least privilege
+    type: requirement
+    parent: AC
+    tags: [device, app, cloud]
+
+  - { id: UP, title: Updates, type: chapter }
+  - id: UP-1
+    title: Authenticated updates
+    type: requirement
+    parent: UP
+    tags: [device, app, has-updates]
+    text: The product only installs updates whose origin and integrity it has verified.
+  - id: UP-2
+    title: Automatic updates
+    type: recommendation
+    parent: UP
+    tags: [device, app, has-updates, optional]
+  - id: UP-3
+    title: Support period
+    type: requirement
+    parent: UP
+    tags: [device, app, cloud]
+    text: The support period is published and kept.
+
+  - { id: CO, title: Communication, type: chapter }
+  - id: CO-1
+    title: Encrypted communication
+    type: requirement
+    parent: CO
+    tags: [device, app, cloud]
+  - id: CO-2
+    title: Radio pairing protection
+    type: requirement
+    parent: CO
+    tags: [device, has-radio]
+
+  - { id: DOC, title: Documentation, type: chapter }
+  - { id: DOC-1, title: Update policy, type: document, parent: DOC, tags: [device, app, cloud] }
+  - { id: DOC-2, title: Security guide for users, type: document, parent: DOC, tags: [device, app] }
+
+links:
+  - { from: AC-2, to: AC-1, type: depends-on }
+  - { from: UP-1, to: CO-1, type: depends-on, label: "updates travel over an encrypted channel" }
+  - { from: UP-2, to: UP-1, type: depends-on }
+  - { from: UP-3, to: DOC-1, type: documented-in }
+  - { from: UP-2, to: DOC-1, type: documented-in }
+  - { from: AC-1, to: DOC-2, type: documented-in, label: how to set the password }
+  - { from: CO-2, to: AC-3, type: depends-on }

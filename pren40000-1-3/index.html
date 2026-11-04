@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>prEN 40000-1-3 and the CRA essential requirements ◼ cetome dataviz</title>
+    <meta name="description" content="The vulnerability handling requirements of prEN 40000-1-3 mapped to the CRA essential requirements of Annex I Part 2, as an interactive graph with a self-assessment and assessor mode.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="cetome dataviz">
+    <meta property="og:title" content="prEN 40000-1-3 and the CRA essential requirements ◼ cetome dataviz">
+    <meta property="og:description" content="The vulnerability handling requirements of prEN 40000-1-3 mapped to the CRA essential requirements of Annex I Part 2, as an interactive graph with a self-assessment and assessor mode.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="prEN 40000-1-3 and the CRA essential requirements ◼ cetome dataviz">
+    <meta name="twitter:description" content="The vulnerability handling requirements of prEN 40000-1-3 mapped to the CRA essential requirements of Annex I Part 2, as an interactive graph with a self-assessment and assessor mode.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+</head>
+
+<body class="graph-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="cetome dataviz home"><img src="/img/dataviz.svg" alt="cetome dataviz" width="193" height="48"></a>
+        <h1 class="page-title">prEN 40000-1-3 and the CRA <small>Vulnerability handling requirements mapped to the essential requirements of Annex I Part 2</small></h1>
+    </header>
+
+    <nav class="menu-bar" aria-label="Domains">
+        <ul class="menu" id="mechanism-menu">
+            <li><a href="#">PRE</a>
+                <ul>
+                    <li><a href="#">PRE-1</a></li><li><a href="#">PRE-2</a></li><li><a href="#">PRE-3</a></li><li><a href="#">PRE-4</a></li><li><a href="#">PRE-5</a></li>
+                    <li><a href="#">PRE-6</a></li><li><a href="#">PRE-7</a></li><li><a href="#">PRE-8</a></li><li><a href="#">PRE-9</a></li><li><a href="#">PRE-10</a></li>
+                </ul>
+            </li>
+            <li><a href="#">RCP</a>
+                <ul>
+                    <li><a href="#">RCP-1</a></li><li><a href="#">RCP-2</a></li><li><a href="#">RCP-3</a></li><li><a href="#">RCP-4</a></li>
+                    <li><a href="#">RCP-5</a></li><li><a href="#">RCP-6</a></li><li><a href="#">RCP-7</a></li>
+                </ul>
+            </li>
+            <li><a href="#">VRF</a><ul><li><a href="#">VRF-1</a></li><li><a href="#">VRF-2</a></li></ul></li>
+            <li><a href="#">RMD</a><ul><li><a href="#">RMD-1</a></li><li><a href="#">RMD-2</a></li><li><a href="#">RMD-3</a></li></ul></li>
+            <li><a href="#">RLS</a><ul><li><a href="#">RLS-1</a></li><li><a href="#">RLS-2</a></li></ul></li>
+            <li><a href="#">PRA</a><ul><li><a href="#">PRA-1</a></li></ul></li>
+            <li><a href="#">APP</a></li>
+        </ul>
+        <div class="menu-tools">
+            <label for="layout-select">Layout</label>
+            <select id="layout-select" class="input">
+                <option value="dagre">Hierarchical</option>
+                <option value="cose-bilkent">Organic</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="app">
+        <main class="graph" aria-label="Graph">
+            <div id="cy"></div>
+        </main>
+
+        <aside class="sidebar" aria-label="Filters">
+            <p class="hint">Click a requirement to read it and record its status. Pick a domain in the menu to keep only its requirements and what they map to. Click an empty part of the graph to clear the selection.</p>
+
+            <section class="panel">
+                <h2 class="panel-title">Options</h2>
+                <label class="check"><input type="checkbox" id="show-highlevel-only"> Show domains and chapters only</label>
+                <label class="check check-strong"><input type="checkbox" id="show-edges" checked> Show dependencies</label>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Domains</h2>
+                <div id="root-filters"></div>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Legend</h2>
+                <div id="type-filters">
+                    <label class="check"><input type="checkbox" value="RQ" checked> <span class="swatch" style="background:#0044aa"></span> Requirement (RQ)</label>
+                    <label class="check"><input type="checkbox" value="RC" checked> <span class="swatch" style="background:#fff; border-color:#0044aa"></span> Recommendation (RC)</label>
+                    <label class="check"><input type="checkbox" value="PM" checked> <span class="swatch" style="background:#bae6fd; border-color:#0369a1"></span> Permission (PM)</label>
+                    <label class="check"><input type="checkbox" value="EXTERNAL_LEAF" checked> <span class="swatch" style="background:#faf5ff; border-color:#7e22ce"></span> prEN 40000-1-2 requirement</label>
+                    <label class="check"><input type="checkbox" value="ESSR" checked> <span class="swatch" style="background:#22c55e"></span> Essential requirement (ESSR)</label>
+                </div>
+            </section>
+
+            <section class="panel" id="assessment-panel"></section>
+
+            <section class="panel actions">
+                <button type="button" class="btn btn-primary" id="fit-btn">Auto fit</button>
+                <button type="button" class="btn" id="reset-btn">Reset view</button>
+            </section>
+
+            <footer class="site-footer">
+                <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/js/vendor/dagre/dagre.min.js"></script>
+    <script src="/js/vendor/dagre/cytoscape-dagre.js"></script>
+    <script src="/data/pren40000-1-3.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/extras.js"></script>
+    <script src="/js/assessment.js"></script>
+    <script src="/js/pren40000-1-3.js"></script>
+    <script src="/pren40000-1-3/start.js"></script>
+</body>
+</html>

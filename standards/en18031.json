@@ -1,0 +1,1016 @@
+{
+  "dataviz": 1,
+  "id": "en18031",
+  "title": "EN 18031 security mechanisms",
+  "subtitle": "Dependencies between the mechanisms of EN 18031-1, -2 and -3",
+  "authors": "cetome",
+  "licence": "CC BY 4.0, data by cetome (see DATA-LICENSE.md)",
+  "description": "Dependencies between the security mechanisms of EN 18031-1, EN 18031-2 and EN 18031-3.",
+  "layout": "organic",
+  "types": [
+    {
+      "id": "family",
+      "label": "Mechanism family",
+      "color": "#0044aa",
+      "caption": "both"
+    },
+    {
+      "id": "mechanism",
+      "label": "Mechanism",
+      "color": "#1565d8"
+    }
+  ],
+  "linkTypes": [
+    {
+      "id": "access-control",
+      "label": "access control"
+    },
+    {
+      "id": "authentication"
+    },
+    {
+      "id": "update"
+    },
+    {
+      "id": "secure-storage",
+      "label": "secure storage"
+    },
+    {
+      "id": "best-practice",
+      "label": "best practice"
+    },
+    {
+      "id": "secure-communication",
+      "label": "secure communication"
+    },
+    {
+      "id": "vulnerability-review",
+      "label": "vulnerability review"
+    },
+    {
+      "id": "logging"
+    },
+    {
+      "id": "log-data-stored-on-device",
+      "label": "log data stored on device"
+    },
+    {
+      "id": "notification"
+    },
+    {
+      "id": "documentation"
+    }
+  ],
+  "filters": [
+    {
+      "id": "part",
+      "label": "Applies to",
+      "mode": "all",
+      "tags": [
+        {
+          "id": "en18031-1",
+          "label": "EN 18031-1"
+        },
+        {
+          "id": "en18031-2",
+          "label": "EN 18031-2"
+        },
+        {
+          "id": "en18031-3",
+          "label": "EN 18031-3"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "ACM-1",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "ACM-2",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "ACM-3",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "ACM-4",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "ACM-5",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "ACM-6",
+      "type": "mechanism",
+      "parent": "ACM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "AUM-1",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-1-1",
+      "type": "mechanism",
+      "parent": "AUM-1",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-1-2",
+      "type": "mechanism",
+      "parent": "AUM-1",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-1-3",
+      "type": "mechanism",
+      "parent": "AUM-1",
+      "tags": [
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-2",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-2-1",
+      "type": "mechanism",
+      "parent": "AUM-2",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-2-2",
+      "type": "mechanism",
+      "parent": "AUM-2",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-3",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-4",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-5",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-5-1",
+      "type": "mechanism",
+      "parent": "AUM-5",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-5-2",
+      "type": "mechanism",
+      "parent": "AUM-5",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM-6",
+      "type": "mechanism",
+      "parent": "AUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SUM-1",
+      "type": "mechanism",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SUM-2",
+      "type": "mechanism",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SUM-3",
+      "type": "mechanism",
+      "parent": "SUM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SSM-1",
+      "type": "mechanism",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SSM-2",
+      "type": "mechanism",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SSM-3",
+      "type": "mechanism",
+      "parent": "SSM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SCM-1",
+      "type": "mechanism",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SCM-2",
+      "type": "mechanism",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SCM-3",
+      "type": "mechanism",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SCM-4",
+      "type": "mechanism",
+      "parent": "SCM",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "RLM-1",
+      "type": "mechanism",
+      "parent": "RLM",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "NMM-1",
+      "type": "mechanism",
+      "parent": "NMM",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "TCM-1",
+      "type": "mechanism",
+      "parent": "TCM",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "LGM-1",
+      "type": "mechanism",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "LGM-2",
+      "type": "mechanism",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "LGM-3",
+      "type": "mechanism",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "LGM-4",
+      "type": "mechanism",
+      "parent": "LGM",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "DLM-1",
+      "type": "mechanism",
+      "parent": "DLM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "UNM-1",
+      "type": "mechanism",
+      "parent": "UNM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "UNM-2",
+      "type": "mechanism",
+      "parent": "UNM",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "CCK-1",
+      "type": "mechanism",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "CCK-2",
+      "type": "mechanism",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "CCK-3",
+      "type": "mechanism",
+      "parent": "CCK",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-1",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-2",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-3",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-4",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-5",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-6",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC-7",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "GEC-8",
+      "type": "mechanism",
+      "parent": "GEC",
+      "tags": [
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "CRY-1",
+      "type": "mechanism",
+      "parent": "CRY",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "ACM",
+      "title": "Access control mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "AUM",
+      "title": "Authentication mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SUM",
+      "title": "Secure update mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SSM",
+      "title": "Secure storage mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "SCM",
+      "title": "Secure communication mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "RLM",
+      "title": "Resilience mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "NMM",
+      "title": "Network monitoring mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "TCM",
+      "title": "Traffic control mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-1"
+      ]
+    },
+    {
+      "id": "LGM",
+      "title": "Logging mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "DLM",
+      "title": "Deletion mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "UNM",
+      "title": "User notification mechanism",
+      "type": "family",
+      "tags": [
+        "en18031-2"
+      ]
+    },
+    {
+      "id": "CCK",
+      "title": "Confidential cryptographic keys",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "GEC",
+      "title": "General equipment capabilities",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    },
+    {
+      "id": "CRY",
+      "title": "Cryptography",
+      "type": "family",
+      "tags": [
+        "en18031-1",
+        "en18031-2",
+        "en18031-3"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "ACM-1",
+      "to": "ACM-2",
+      "type": "access-control"
+    },
+    {
+      "from": "AUM",
+      "to": "ACM-2",
+      "type": "authentication"
+    },
+    {
+      "from": "ACM-1",
+      "to": "ACM-3",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "ACM-4",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "ACM-5",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "ACM-6",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "AUM-1",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "AUM-1-1",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "AUM-1-2",
+      "type": "access-control"
+    },
+    {
+      "from": "ACM-1",
+      "to": "AUM-1-3",
+      "type": "access-control"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-2-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-2-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-2-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-2-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-2-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-2-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-3",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-3",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-3",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-4",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-4",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-4",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-5",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-5",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-5",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-5-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-5-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-5-1",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-5-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-5-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-5-2",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-1",
+      "to": "AUM-6",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-2",
+      "to": "AUM-6",
+      "type": "authentication"
+    },
+    {
+      "from": "AUM-1-3",
+      "to": "AUM-6",
+      "type": "authentication"
+    },
+    {
+      "from": "SUM-1",
+      "to": "SUM-2",
+      "type": "update"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SUM-2",
+      "type": "update"
+    },
+    {
+      "from": "SCM-1",
+      "to": "SUM-2",
+      "type": "update"
+    },
+    {
+      "from": "ACM-2",
+      "to": "SUM-2",
+      "type": "update"
+    },
+    {
+      "from": "SUM-1",
+      "to": "SUM-3",
+      "type": "update"
+    },
+    {
+      "from": "SSM-1",
+      "to": "SSM-2",
+      "type": "secure-storage"
+    },
+    {
+      "from": "SSM-1",
+      "to": "SSM-3",
+      "type": "secure-storage"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SCM-1",
+      "type": "best-practice"
+    },
+    {
+      "from": "SCM-1",
+      "to": "SCM-2",
+      "type": "secure-communication"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SCM-2",
+      "type": "best-practice"
+    },
+    {
+      "from": "GEC-1",
+      "to": "SCM-2",
+      "type": "vulnerability-review"
+    },
+    {
+      "from": "SCM-1",
+      "to": "SCM-3",
+      "type": "secure-communication"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SCM-3",
+      "type": "best-practice"
+    },
+    {
+      "from": "GEC-1",
+      "to": "SCM-3",
+      "type": "vulnerability-review"
+    },
+    {
+      "from": "SCM-1",
+      "to": "SCM-4",
+      "type": "secure-communication"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SCM-4",
+      "type": "best-practice"
+    },
+    {
+      "from": "LGM-1",
+      "to": "LGM-2",
+      "type": "logging"
+    },
+    {
+      "from": "LGM-1",
+      "to": "LGM-3",
+      "type": "log-data-stored-on-device"
+    },
+    {
+      "from": "LGM-1",
+      "to": "LGM-4",
+      "type": "log-data-stored-on-device"
+    },
+    {
+      "from": "UNM-1",
+      "to": "UNM-2",
+      "type": "notification"
+    },
+    {
+      "from": "CRY-1",
+      "to": "CCK-1",
+      "type": "best-practice"
+    },
+    {
+      "from": "CCK-2",
+      "to": "CCK-1",
+      "type": "documentation"
+    },
+    {
+      "from": "CRY-1",
+      "to": "CCK-2",
+      "type": "best-practice"
+    },
+    {
+      "from": "SUM-1",
+      "to": "CRY-1",
+      "type": "update"
+    },
+    {
+      "from": "CRY-1",
+      "to": "AUM",
+      "type": "best-practice"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SUM",
+      "type": "best-practice"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SSM",
+      "type": "best-practice"
+    },
+    {
+      "from": "CRY-1",
+      "to": "SCM",
+      "type": "best-practice"
+    }
+  ]
+}

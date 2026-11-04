@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>EN 18031 security mechanisms ◼ cetome dataviz</title>
+    <meta name="description" content="Dependencies between the security mechanisms of EN 18031-1, EN 18031-2 and EN 18031-3, as an interactive graph.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="cetome dataviz">
+    <meta property="og:title" content="EN 18031 security mechanisms ◼ cetome dataviz">
+    <meta property="og:description" content="Dependencies between the security mechanisms of EN 18031-1, EN 18031-2 and EN 18031-3, as an interactive graph.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EN 18031 security mechanisms ◼ cetome dataviz">
+    <meta name="twitter:description" content="Dependencies between the security mechanisms of EN 18031-1, EN 18031-2 and EN 18031-3, as an interactive graph.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+</head>
+
+<body class="graph-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="cetome dataviz home"><img src="/img/dataviz.svg" alt="cetome dataviz" width="193" height="48"></a>
+        <h1 class="page-title">EN 18031 security mechanisms <small>Dependencies between the mechanisms of EN 18031-1, -2 and -3</small></h1>
+    </header>
+
+    <div class="app">
+        <main class="graph" aria-label="Graph">
+            <div id="cy"></div>
+        </main>
+
+        <aside class="sidebar" aria-label="Filters">
+            <p class="hint">Click a mechanism to see what it depends on, or an arrow to see the two mechanisms it links. Click an empty part of the graph to go back.</p>
+
+            <section class="panel">
+                <h2 class="panel-title">Filter by standard</h2>
+                <ul id="standard-filter">
+                    <li><label class="check"><input type="checkbox" id="filter-1"> EN 18031-1</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-2"> EN 18031-2</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-3"> EN 18031-3</label></li>
+                </ul>
+            </section>
+
+            <section class="panel" id="assessment-panel"></section>
+
+            <section class="panel actions">
+                <button type="button" class="btn btn-primary" id="fit-graph">Fit view</button>
+                <button type="button" class="btn" id="reset-graph">Reset graph</button>
+            </section>
+
+            <footer class="site-footer">
+                <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/data/en18031.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/extras.js"></script>
+    <script src="/js/assessment.js"></script>
+    <script src="/js/en18031.js"></script>
+    <script src="/en18031/start.js"></script>
+</body>
+</html>

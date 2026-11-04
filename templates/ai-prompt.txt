@@ -1,0 +1,99 @@
+You are turning a standard (a specification, a regulation, a security framework...) into a dataviz file: a YAML file that the free, open-source dataviz tool (https://github.com/cetome/dataviz) shows as an interactive dependency graph. I attach or paste the standard after this message.
+
+Answer with ONE YAML file and nothing else: no explanation before or after, no Markdown fences. If the standard is too long for one answer, do the first chapters, end with the comment line `# CONTINUE FROM <last id>`, and continue when I say "continue" (then answer with the `items` and `links` entries only, in the same indentation).
+
+## Settings (I may change them)
+
+- TEXT: summary — for each item's `text`, write a faithful summary of one to three sentences in your own words. (If I write "TEXT: verbatim", copy the text of the standard exactly instead.)
+- LANGUAGE: the language of the standard.
+- SCOPE: the whole standard.
+
+## The format
+
+```
+dataviz: 1
+id: <short-name>                 # lower case, digits and dashes, e.g. en-303-645
+title: <title of the standard>
+subtitle: <one line: what the graph shows>
+version: "<version of the standard>"
+date: <publication date, YYYY-MM-DD, if known>
+authors: <who wrote this dataviz file: write "AI draft, to be reviewed">
+url: <where the standard can be read, if known>
+licence: <leave empty unless I tell you>
+description: |
+  <two or three lines about the standard>
+layout: hierarchical             # or organic for a web of cross-references
+direction: LR
+
+types:                           # what sort of thing each item is
+  - id: chapter
+    label: Chapter
+    caption: both                # node shows id + title
+    assess: "no"
+  - id: requirement              # "shall"
+    label: Requirement
+    color: "#0044aa"
+  - id: recommendation           # "should"
+    label: Recommendation
+    color: "#0044aa"
+    border: dashed
+  # add types the standard uses: permission ("may"), definition, document to provide, test...
+  # fields: id, label, color (#rrggbb), shape (round-rectangle | rectangle | ellipse | hexagon |
+  # diamond | triangle | octagon | tag | barrel), border (solid | dashed | dotted | double | none),
+  # caption (id | title | both), assess ("yes" | "no", default: items without children)
+
+linkTypes:                       # what an arrow means
+  - id: depends-on
+    label: Depends on
+  - id: refers-to
+    label: Refers to
+    style: dashed
+  # fields: id, label, color, style (solid | dashed | dotted), arrow (triangle | none | tee | ...)
+
+filters:                         # checkboxes in the viewer: items carry the tag ids in `tags`
+  - id: condition
+    label: Conditions
+    mode: any                    # any: show items with any ticked tag
+    tags:
+      - id: c1
+        label: <the condition, as the standard words it>
+  - id: applies-to
+    label: Applies to
+    mode: all                    # all: show items with every ticked tag
+    tags:
+      - id: <e.g. part-1>
+        label: <e.g. Part 1>
+  # mode none hides the items with a ticked tag (e.g. a "Hide: informative items" filter)
+
+items:                           # every chapter, requirement, recommendation...
+  - id: "5"
+    title: <chapter title>
+    type: chapter
+  - id: "5.1-1"                  # the numbering the standard uses, as a quoted string
+    title: <short name, five words or so>
+    type: requirement
+    parent: "5"                  # the id of the item containing it
+    tags: [c1]                   # tag ids from the filters
+    text: |
+      <the text, see TEXT above: one paragraph per line, "- " for bullets>
+
+links:                           # one entry per arrow
+  - from: "5.1-2"
+    to: "5.1-1"
+    type: depends-on
+    label: <optional, a few words on the arrow>
+```
+
+## Rules
+
+1. Every item has a unique `id` taken from the standard's own numbering. Quote ids that look like numbers ("5", "5.1").
+2. Build the hierarchy with `parent`: clauses contain sub-clauses, chapters contain requirements. Every `parent` must be the id of another item in the file.
+3. Pick the `type` from the wording: "shall" → requirement, "should" → recommendation, "may" → permission (declare it). Declare every type you use under `types`.
+4. Add a link whenever the standard makes one item depend on, refer to, refine or require another (e.g. "as specified in 5.1-2", "in addition to", "see clause 6"). Both ends must be item ids in the file. Do not invent links the text does not support.
+5. When requirements apply only under a condition, to a product type, a part or a level, make a filter for it and tag the items. Every tag must be declared in exactly one filter.
+6. Leave a field out rather than guessing. Never invent requirements, numbers or dates.
+7. Use plain YAML: two-space indentation, no tabs, quote any value containing ": " or starting with a special character.
+
+Before answering, check that all ids are unique, that every parent, link end, type and tag exists, and that the YAML is valid.
+
+Then the person checks the draft: they drop the file on the dataviz viewer (/view/ of a dataviz site) (or open it in the builder, whose Check tab lists any problem) and correct it against the standard.

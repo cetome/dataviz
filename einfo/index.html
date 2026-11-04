@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <title>EN 18031 E.Info ◼ cetome dataviz</title>
+    <meta name="description" content="The information the E.Info annex of EN 18031 asks for, mechanism by mechanism, as an interactive graph to simplify the documentation.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="cetome dataviz">
+    <meta property="og:title" content="EN 18031 E.Info ◼ cetome dataviz">
+    <meta property="og:description" content="The information the E.Info annex of EN 18031 asks for, mechanism by mechanism, as an interactive graph to simplify the documentation.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EN 18031 E.Info ◼ cetome dataviz">
+    <meta name="twitter:description" content="The information the E.Info annex of EN 18031 asks for, mechanism by mechanism, as an interactive graph to simplify the documentation.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="dataviz">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/graph.css">
+</head>
+
+<body class="graph-page">
+    <header class="site-header">
+        <a class="logo" href="/" aria-label="cetome dataviz home"><img src="/img/dataviz.svg" alt="cetome dataviz" width="193" height="48"></a>
+        <h1 class="page-title">EN 18031 E.Info <small>The information to document for each mechanism of EN 18031-1, -2 and -3</small></h1>
+    </header>
+
+    <nav class="menu-bar" aria-label="Mechanisms">
+        <ul class="menu" id="mechanism-menu">
+            <li><a href="#">ACM</a>
+                <ul>
+                    <li><a href="#">ACM-1</a></li><li><a href="#">ACM-2</a></li><li><a href="#">ACM-3</a></li>
+                    <li><a href="#">ACM-4</a></li><li><a href="#">ACM-5</a></li><li><a href="#">ACM-6</a></li>
+                </ul>
+            </li>
+            <li><a href="#">AUM</a>
+                <ul>
+                    <li><a href="#">AUM-1</a>
+                        <ul><li><a href="#">AUM-1-1</a></li><li><a href="#">AUM-1-2</a></li><li><a href="#">AUM-1-3</a></li></ul>
+                    </li>
+                    <li><a href="#">AUM-2</a>
+                        <ul><li><a href="#">AUM-2-1</a></li><li><a href="#">AUM-2-2</a></li></ul>
+                    </li>
+                    <li><a href="#">AUM-3</a></li>
+                    <li><a href="#">AUM-4</a></li>
+                    <li><a href="#">AUM-5</a>
+                        <ul><li><a href="#">AUM-5-1</a></li><li><a href="#">AUM-5-2</a></li></ul>
+                    </li>
+                    <li><a href="#">AUM-6</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SUM</a><ul><li><a href="#">SUM-1</a></li><li><a href="#">SUM-2</a></li><li><a href="#">SUM-3</a></li></ul></li>
+            <li><a href="#">SSM</a><ul><li><a href="#">SSM-1</a></li><li><a href="#">SSM-2</a></li><li><a href="#">SSM-3</a></li></ul></li>
+            <li><a href="#">SCM</a><ul><li><a href="#">SCM-1</a></li><li><a href="#">SCM-2</a></li><li><a href="#">SCM-3</a></li><li><a href="#">SCM-4</a></li></ul></li>
+            <li><a href="#">RLM</a><ul><li><a href="#">RLM-1</a></li></ul></li>
+            <li><a href="#">NMM</a><ul><li><a href="#">NMM-1</a></li></ul></li>
+            <li><a href="#">TCM</a><ul><li><a href="#">TCM-1</a></li></ul></li>
+            <li><a href="#">LGM</a><ul><li><a href="#">LGM-1</a></li><li><a href="#">LGM-2</a></li><li><a href="#">LGM-3</a></li><li><a href="#">LGM-4</a></li></ul></li>
+            <li><a href="#">DLM</a><ul><li><a href="#">DLM-1</a></li></ul></li>
+            <li><a href="#">UNM</a><ul><li><a href="#">UNM-1</a></li><li><a href="#">UNM-2</a></li></ul></li>
+            <li><a href="#">CCK</a><ul><li><a href="#">CCK-1</a></li><li><a href="#">CCK-2</a></li><li><a href="#">CCK-3</a></li></ul></li>
+            <li><a href="#">GEC</a>
+                <ul>
+                    <li><a href="#">GEC-1</a></li><li><a href="#">GEC-2</a></li><li><a href="#">GEC-3</a></li><li><a href="#">GEC-4</a></li>
+                    <li><a href="#">GEC-5</a></li><li><a href="#">GEC-6</a></li><li><a href="#">GEC-7</a></li><li><a href="#">GEC-8</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CRY</a><ul><li><a href="#">CRY-1</a></li></ul></li>
+        </ul>
+        <span class="menu-tools">Pick a mechanism to keep only its information. Pick it again to show everything.</span>
+    </nav>
+
+    <div class="app">
+        <main class="graph" aria-label="Graph">
+            <div id="cy"></div>
+        </main>
+
+        <aside class="sidebar" aria-label="Filters">
+            <p class="hint">Click an item to see the information linked to it. Click an empty part of the graph to go back. Dashed nodes only apply under a condition.</p>
+
+            <section class="panel">
+                <h2 class="panel-title">Filter by standard</h2>
+                <ul id="standard-filter">
+                    <li><label class="check"><input type="checkbox" id="filter-1"> EN 18031-1</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-2"> EN 18031-2</label></li>
+                    <li><label class="check"><input type="checkbox" id="filter-3"> EN 18031-3</label></li>
+                </ul>
+                <ul id="condition-filter">
+                    <li><label class="check"><input type="checkbox" id="filter-condition"> Exclude conditional items</label></li>
+                </ul>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Highlight mechanisms</h2>
+                <ul id="highlight-mechanism">
+                    <li><label class="check"><input type="checkbox" id="ACM" value="ACM"> <span><span class="tag">[ACM]</span>Access control mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="AUM" value="AUM"> <span><span class="tag">[AUM]</span>Authentication mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="SUM" value="SUM"> <span><span class="tag">[SUM]</span>Secure update mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="SSM" value="SSM"> <span><span class="tag">[SSM]</span>Secure storage mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="SCM" value="SCM"> <span><span class="tag">[SCM]</span>Secure communication mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="RLM" value="RLM"> <span><span class="tag">[RLM]</span>Resilience mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="NMM" value="NMM"> <span><span class="tag">[NMM]</span>Network monitoring mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="TCM" value="TCM"> <span><span class="tag">[TCM]</span>Traffic control mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="LGM" value="LGM"> <span><span class="tag">[LGM]</span>Logging mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="DLM" value="DLM"> <span><span class="tag">[DLM]</span>Deletion mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="UNM" value="UNM"> <span><span class="tag">[UNM]</span>User notification mechanism</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="CCK" value="CCK"> <span><span class="tag">[CCK]</span>Confidential cryptographic keys</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="GEC" value="GEC"> <span><span class="tag">[GEC]</span>General equipment capabilities</span></label></li>
+                    <li><label class="check"><input type="checkbox" id="CRY" value="CRY"> <span><span class="tag">[CRY]</span>Cryptography</span></label></li>
+                </ul>
+            </section>
+
+            <section class="panel" id="assessment-panel"></section>
+
+            <section class="panel actions">
+                <button type="button" class="btn btn-primary" id="fit-graph">Fit view</button>
+                <button type="button" class="btn" id="reset-graph">Reset graph</button>
+            </section>
+
+            <footer class="site-footer">
+                <p>dataviz by cetome &middot; <a href="https://github.com/cetome/dataviz">Open source on GitHub</a> &middot; <a href="/licence/">Data licence</a><!-- site-footer --></p>
+            </footer>
+        </aside>
+    </div>
+
+    <script src="/js/vendor/cytoscape.min.js"></script>
+    <script src="/js/vendor/cose-bilkent/layout-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cose-base.js"></script>
+    <script src="/js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"></script>
+    <script src="/data/en18031-einfo.js"></script>
+    <script src="/js/graph-common.js"></script>
+    <script src="/js/extras.js"></script>
+    <script src="/js/assessment.js"></script>
+    <script src="/js/en18031.js"></script>
+    <script src="/einfo/start.js"></script>
+</body>
+</html>

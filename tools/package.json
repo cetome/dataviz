@@ -1,0 +1,14 @@
+{
+  "name": "dataviz-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build helpers for dataviz: favicon set and social (Open Graph) images. Both drive Microsoft Edge through playwright-core.",
+  "scripts": {
+    "icons": "node icons.mjs",
+    "social": "node social.mjs",
+    "check": "node check-data.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}

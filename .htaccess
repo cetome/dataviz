@@ -1,0 +1,77 @@
+# dataviz - Apache configuration. A static site: any web server works; this file is for Apache.
+
+# A request for a folder serves its index (index.php only exists in a deployment with an API)
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks -MultiViews -Indexes
+    RewriteEngine On
+    RewriteBase /
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Never serve the tooling, the notes, the archive, a private overlay or what a deployment keeps
+    # to itself (lib/: PHP includes, storage/: counters)
+    RewriteRule ^(tools|docs|_archive|cetome|dist|node_modules|lib|storage)(/|$) - [F,L]
+    RewriteRule (^|/)\.git - [F,L]
+    RewriteRule \.(md|lock)$ - [F,L]
+    RewriteRule (^|/)package(-lock)?\.json$ - [F,L]
+</IfModule>
+
+# Configuration files of a deployment: never served, even without mod_rewrite
+<FilesMatch "^config(\.sample)?\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+ErrorDocument 404 /index.html
+
+<IfModule mod_headers.c>
+    # Content-Security-Policy: only this site's own scripts run, whatever a dataviz file contains.
+    # The same text is in a <meta> of every page (for servers that do not read this file);
+    # tools/check-public.mjs fails if the two differ. connect-src https: lets the viewer open a file
+    # from any address; worker-src data: is for the proof-of-work widget of a deployment's gate.
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https:; worker-src 'self' blob: data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Default caching: 1 day
+    Header set Cache-Control "max-age=86400, public"
+
+    # Pages, scripts, styles, graph data and dataviz files: 1 hour, so an update reaches visitors quickly
+    <FilesMatch "\.(html|js|css|json|yaml|csv|txt)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+
+    # Fonts, icons, logos and social images: 30 days
+    <FilesMatch "\.(woff2|png|svg|ico|webmanifest)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+
+    # An API, where a deployment has one: never cached
+    <FilesMatch "\.php$">
+        Header set Cache-Control "no-store"
+    </FilesMatch>
+
+    # The dataviz files, templates and schema are open: other sites and tools may fetch them
+    <If "%{REQUEST_URI} =~ m#^/(standards|templates|examples|schema)/#">
+        Header set Access-Control-Allow-Origin "*"
+    </If>
+</IfModule>
+
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+    AddType font/woff2 .woff2
+    AddType application/yaml .yaml .yml
+    AddType text/csv .csv
+    AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet .xlsx
+    AddType application/schema+json .schema.json
+    AddCharset utf-8 .yaml .yml .csv .txt .json
+</IfModule>

@@ -1,0 +1,8 @@
+# Text files keep LF line endings everywhere (the site and the tools are written with LF).
+* text=auto eol=lf
+
+# Binary files: never touched
+*.png binary
+*.ico binary
+*.woff2 binary
+*.xlsx binary

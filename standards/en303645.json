@@ -1,0 +1,1640 @@
+{
+  "dataviz": 1,
+  "id": "en303645",
+  "title": "EN 303 645 and TS 103 701",
+  "subtitle": "Provisions, conditions and the IXITs they need",
+  "authors": "cetome",
+  "licence": "CC BY 4.0, data by cetome (see DATA-LICENSE.md)",
+  "description": "The provisions of ETSI EN 303 645, their conditions, and the TS 103 701 IXIT fields each provision requires.",
+  "layout": "saved",
+  "types": [
+    {
+      "id": "parent",
+      "label": "Chapter",
+      "color": "#475569",
+      "caption": "title"
+    },
+    {
+      "id": "mandatory",
+      "label": "Mandatory provision",
+      "color": "#0044aa",
+      "assess": "yes"
+    },
+    {
+      "id": "recommended",
+      "label": "Recommended provision",
+      "color": "#64748b",
+      "border": "dashed",
+      "assess": "yes"
+    },
+    {
+      "id": "IXIT",
+      "label": "IXIT (TS 103 701)",
+      "color": "#16a34a",
+      "assess": "no"
+    }
+  ],
+  "linkTypes": [
+    {
+      "id": "requires",
+      "label": "Requires IXIT fields"
+    }
+  ],
+  "filters": [
+    {
+      "id": "condition",
+      "label": "Conditions",
+      "tags": [
+        {
+          "id": "c1",
+          "label": "passwords are used"
+        },
+        {
+          "id": "c2",
+          "label": "pre-installed passwords are used"
+        },
+        {
+          "id": "c3",
+          "label": "software components are not updateable"
+        },
+        {
+          "id": "c4",
+          "label": "the device is constrained"
+        },
+        {
+          "id": "c5",
+          "label": "the device is not constrained"
+        },
+        {
+          "id": "c6",
+          "label": "telemetry data is collected"
+        },
+        {
+          "id": "c7",
+          "label": "personal data is processed on the basis of consumers' consent"
+        },
+        {
+          "id": "c8",
+          "label": "the device allows user authentication"
+        },
+        {
+          "id": "c9",
+          "label": "the device supports automatic updates and/or update notifications"
+        },
+        {
+          "id": "c10",
+          "label": "a hard-coded unique per device identity is used for security purposes"
+        },
+        {
+          "id": "c11",
+          "label": "updates are delivered over a network interface"
+        },
+        {
+          "id": "c12",
+          "label": "an update mechanism is implemented"
+        },
+        {
+          "id": "c13",
+          "label": "a debug interface is physically accessible"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "4",
+      "title": "4 Reporting implementation",
+      "type": "parent",
+      "x": 220.1,
+      "y": 70.3
+    },
+    {
+      "id": "5.1",
+      "title": "5.1 No universal default password",
+      "type": "parent",
+      "x": 1284.5,
+      "y": -96.7
+    },
+    {
+      "id": "5.2",
+      "title": "5.2 Implement a means to manage reports of vulnerabilities",
+      "type": "parent",
+      "x": 734,
+      "y": 47.4
+    },
+    {
+      "id": "5.3",
+      "title": "5.3 Keep software updated",
+      "type": "parent",
+      "x": 977.7,
+      "y": 805.6
+    },
+    {
+      "id": "5.4",
+      "title": "5.4 Securely store sensitive security parameters",
+      "type": "parent",
+      "x": 2308,
+      "y": -139.7
+    },
+    {
+      "id": "5.5",
+      "title": "5.5 Communicate securely",
+      "type": "parent",
+      "x": 2078.6,
+      "y": 235.8
+    },
+    {
+      "id": "5.6",
+      "title": "5.6 Minimize exposed attack surfaces",
+      "type": "parent",
+      "x": 1669,
+      "y": 627.8
+    },
+    {
+      "id": "5.7",
+      "title": "5.7 Ensure software integrity",
+      "type": "parent",
+      "x": 388.9,
+      "y": 52.6
+    },
+    {
+      "id": "5.8",
+      "title": "5.8 Ensure that personal data is secure",
+      "type": "parent",
+      "x": 142.3,
+      "y": 643.3
+    },
+    {
+      "id": "5.9",
+      "title": "5.9 Make system resilient to outages",
+      "type": "parent",
+      "x": 99.8,
+      "y": 1252.7
+    },
+    {
+      "id": "5.10",
+      "title": "5.10 Examine system telemetry data",
+      "type": "parent",
+      "x": 396.6,
+      "y": 936.6
+    },
+    {
+      "id": "5.11",
+      "title": "5.11 Make it easy for users to delete user data",
+      "type": "parent",
+      "x": 2168.3,
+      "y": 980.2
+    },
+    {
+      "id": "5.12",
+      "title": "5.12 Make installation and maintenance of devices easy",
+      "type": "parent",
+      "x": 241.6,
+      "y": 390.5
+    },
+    {
+      "id": "5.13",
+      "title": "5.13 Validate input data",
+      "type": "parent",
+      "x": 389.2,
+      "y": 1221.2
+    },
+    {
+      "id": "6",
+      "title": "6 Data protection provision for consumer IoT",
+      "type": "parent",
+      "x": 764.5,
+      "y": 1222.8
+    },
+    {
+      "id": "4-1",
+      "type": "mandatory",
+      "parent": "4",
+      "x": 220.1,
+      "y": 78.5
+    },
+    {
+      "id": "5.1-1",
+      "type": "mandatory",
+      "parent": "5.1",
+      "tags": [
+        "c1"
+      ],
+      "x": 1276.8,
+      "y": -209.7
+    },
+    {
+      "id": "5.1-2",
+      "type": "mandatory",
+      "parent": "5.1",
+      "tags": [
+        "c2"
+      ],
+      "x": 1273.1,
+      "y": -133.3
+    },
+    {
+      "id": "5.1-3",
+      "type": "mandatory",
+      "parent": "5.1",
+      "x": 1273.8,
+      "y": -72.5
+    },
+    {
+      "id": "5.1-4",
+      "type": "mandatory",
+      "parent": "5.1",
+      "tags": [
+        "c8"
+      ],
+      "x": 1295.9,
+      "y": -24.6
+    },
+    {
+      "id": "5.1-5",
+      "type": "mandatory",
+      "parent": "5.1",
+      "x": 1288.1,
+      "y": 32.8
+    },
+    {
+      "id": "5.2-1",
+      "type": "mandatory",
+      "parent": "5.2",
+      "x": 602.1,
+      "y": 60.7
+    },
+    {
+      "id": "5.2-2",
+      "type": "recommended",
+      "parent": "5.2",
+      "x": 665.7,
+      "y": 56.6
+    },
+    {
+      "id": "5.2-3",
+      "type": "recommended",
+      "parent": "5.2",
+      "x": 866,
+      "y": 50.7
+    },
+    {
+      "id": "5.3-1",
+      "type": "recommended",
+      "parent": "5.3",
+      "x": 1039.5,
+      "y": 832.3
+    },
+    {
+      "id": "5.3-2",
+      "type": "mandatory",
+      "parent": "5.3",
+      "tags": [
+        "c5"
+      ],
+      "x": 1040.4,
+      "y": 719.7
+    },
+    {
+      "id": "5.3-3",
+      "type": "mandatory",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 996.5,
+      "y": 852.9
+    },
+    {
+      "id": "5.3-4",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 1056.2,
+      "y": 882.2
+    },
+    {
+      "id": "5.3-5",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c9",
+        "c12"
+      ],
+      "x": 1088.6,
+      "y": 838
+    },
+    {
+      "id": "5.3-6",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 1091,
+      "y": 771.3
+    },
+    {
+      "id": "5.3-7",
+      "type": "mandatory",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 1124.4,
+      "y": 884.4
+    },
+    {
+      "id": "5.3-8",
+      "type": "mandatory",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 918.8,
+      "y": 952.8
+    },
+    {
+      "id": "5.3-9",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 992.4,
+      "y": 807.7
+    },
+    {
+      "id": "5.3-10",
+      "type": "mandatory",
+      "parent": "5.3",
+      "tags": [
+        "c11",
+        "c12"
+      ],
+      "x": 995.4,
+      "y": 725.2
+    },
+    {
+      "id": "5.3-11",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 993.5,
+      "y": 766.6
+    },
+    {
+      "id": "5.3-12",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c12"
+      ],
+      "x": 1042.6,
+      "y": 777
+    },
+    {
+      "id": "5.3-13",
+      "type": "mandatory",
+      "parent": "5.3",
+      "x": 835.4,
+      "y": 703.1
+    },
+    {
+      "id": "5.3-14",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c3",
+        "c4"
+      ],
+      "x": 898,
+      "y": 697.8
+    },
+    {
+      "id": "5.3-15",
+      "type": "recommended",
+      "parent": "5.3",
+      "tags": [
+        "c3",
+        "c4"
+      ],
+      "x": 993.2,
+      "y": 911.1
+    },
+    {
+      "id": "5.3-16",
+      "type": "mandatory",
+      "parent": "5.3",
+      "x": 959.1,
+      "y": 674.9
+    },
+    {
+      "id": "5.4-1",
+      "type": "mandatory",
+      "parent": "5.4",
+      "x": 2308.5,
+      "y": -212.4
+    },
+    {
+      "id": "5.4-2",
+      "type": "mandatory",
+      "parent": "5.4",
+      "tags": [
+        "c10"
+      ],
+      "x": 2306.8,
+      "y": -159.7
+    },
+    {
+      "id": "5.4-3",
+      "type": "mandatory",
+      "parent": "5.4",
+      "x": 2307.7,
+      "y": -106.8
+    },
+    {
+      "id": "5.4-4",
+      "type": "mandatory",
+      "parent": "5.4",
+      "x": 2309.2,
+      "y": -50.5
+    },
+    {
+      "id": "5.5-1",
+      "type": "mandatory",
+      "parent": "5.5",
+      "x": 1918.8,
+      "y": 223.6
+    },
+    {
+      "id": "5.5-2",
+      "type": "recommended",
+      "parent": "5.5",
+      "x": 2260.6,
+      "y": 353.8
+    },
+    {
+      "id": "5.5-3",
+      "type": "recommended",
+      "parent": "5.5",
+      "x": 1896.6,
+      "y": 368.5
+    },
+    {
+      "id": "5.5-4",
+      "type": "recommended",
+      "parent": "5.5",
+      "x": 2104.2,
+      "y": 274.7
+    },
+    {
+      "id": "5.5-5",
+      "type": "mandatory",
+      "parent": "5.5",
+      "x": 2096.6,
+      "y": 190.2
+    },
+    {
+      "id": "5.5-6",
+      "type": "recommended",
+      "parent": "5.5",
+      "x": 2182,
+      "y": 253.3
+    },
+    {
+      "id": "5.5-7",
+      "type": "mandatory",
+      "parent": "5.5",
+      "x": 2191.5,
+      "y": 298.7
+    },
+    {
+      "id": "5.5-8",
+      "type": "mandatory",
+      "parent": "5.5",
+      "x": 2113,
+      "y": 119.6
+    },
+    {
+      "id": "5.6-1",
+      "type": "mandatory",
+      "parent": "5.6",
+      "x": 1720.4,
+      "y": 562.8
+    },
+    {
+      "id": "5.6-2",
+      "type": "mandatory",
+      "parent": "5.6",
+      "x": 1821.1,
+      "y": 563.7
+    },
+    {
+      "id": "5.6-3",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1672.9,
+      "y": 565.5
+    },
+    {
+      "id": "5.6-4",
+      "type": "mandatory",
+      "parent": "5.6",
+      "tags": [
+        "c13"
+      ],
+      "x": 1768.9,
+      "y": 566
+    },
+    {
+      "id": "5.6-5",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1638.4,
+      "y": 708.4
+    },
+    {
+      "id": "5.6-6",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1517,
+      "y": 563.9
+    },
+    {
+      "id": "5.6-7",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1575.4,
+      "y": 564.6
+    },
+    {
+      "id": "5.6-8",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1624.1,
+      "y": 565.8
+    },
+    {
+      "id": "5.6-9",
+      "type": "recommended",
+      "parent": "5.6",
+      "x": 1530.9,
+      "y": 709.3
+    },
+    {
+      "id": "5.7-1",
+      "type": "recommended",
+      "parent": "5.7",
+      "x": 356.2,
+      "y": 61.1
+    },
+    {
+      "id": "5.7-2",
+      "type": "recommended",
+      "parent": "5.7",
+      "x": 421.6,
+      "y": 60.6
+    },
+    {
+      "id": "5.8-1",
+      "type": "recommended",
+      "parent": "5.8",
+      "x": 63.2,
+      "y": 641.8
+    },
+    {
+      "id": "5.8-2",
+      "type": "mandatory",
+      "parent": "5.8",
+      "x": 160.1,
+      "y": 629.8
+    },
+    {
+      "id": "5.8-3",
+      "type": "mandatory",
+      "parent": "5.8",
+      "x": 221.3,
+      "y": 673.2
+    },
+    {
+      "id": "5.9-1",
+      "type": "recommended",
+      "parent": "5.9",
+      "x": 159.9,
+      "y": 1234.1
+    },
+    {
+      "id": "5.9-2",
+      "type": "recommended",
+      "parent": "5.9",
+      "x": 170.3,
+      "y": 1287.9
+    },
+    {
+      "id": "5.9-3",
+      "type": "recommended",
+      "parent": "5.9",
+      "x": 29.4,
+      "y": 1285.9
+    },
+    {
+      "id": "5.10-1",
+      "type": "recommended",
+      "parent": "5.10",
+      "tags": [
+        "c6"
+      ],
+      "x": 396.6,
+      "y": 944.8
+    },
+    {
+      "id": "5.11-1",
+      "type": "mandatory",
+      "parent": "5.11",
+      "x": 2242.7,
+      "y": 1066.3
+    },
+    {
+      "id": "5.11-2",
+      "type": "recommended",
+      "parent": "5.11",
+      "x": 2167.8,
+      "y": 951.8
+    },
+    {
+      "id": "5.11-3",
+      "type": "recommended",
+      "parent": "5.11",
+      "x": 2093.8,
+      "y": 910.6
+    },
+    {
+      "id": "5.11-4",
+      "type": "recommended",
+      "parent": "5.11",
+      "x": 2111.4,
+      "y": 972.6
+    },
+    {
+      "id": "5.12-1",
+      "type": "recommended",
+      "parent": "5.12",
+      "x": 179.2,
+      "y": 399.3
+    },
+    {
+      "id": "5.12-2",
+      "type": "recommended",
+      "parent": "5.12",
+      "x": 238.7,
+      "y": 398.1
+    },
+    {
+      "id": "5.12-3",
+      "type": "recommended",
+      "parent": "5.12",
+      "x": 304,
+      "y": 399.2
+    },
+    {
+      "id": "5.13-1",
+      "type": "mandatory",
+      "parent": "5.13",
+      "x": 389.2,
+      "y": 1229.5
+    },
+    {
+      "id": "6-1",
+      "type": "mandatory",
+      "parent": "6",
+      "x": 698.5,
+      "y": 1184.2
+    },
+    {
+      "id": "6-2",
+      "type": "mandatory",
+      "parent": "6",
+      "tags": [
+        "c7"
+      ],
+      "x": 699.4,
+      "y": 1232.8
+    },
+    {
+      "id": "6-3",
+      "type": "mandatory",
+      "parent": "6",
+      "x": 700.5,
+      "y": 1280.1
+    },
+    {
+      "id": "6-4",
+      "type": "recommended",
+      "parent": "6",
+      "tags": [
+        "c6"
+      ],
+      "x": 764.2,
+      "y": 1182
+    },
+    {
+      "id": "6-5",
+      "type": "mandatory",
+      "parent": "6",
+      "tags": [
+        "c6"
+      ],
+      "x": 830.6,
+      "y": 1183.3
+    },
+    {
+      "id": "IXIT 1-AuthMech",
+      "type": "IXIT",
+      "x": 1670.5,
+      "y": -56.5
+    },
+    {
+      "id": "IXIT 2-UserInfo",
+      "type": "IXIT",
+      "x": 533.7,
+      "y": 538.3
+    },
+    {
+      "id": "IXIT 3-VulnTypes",
+      "type": "IXIT",
+      "x": 827.7,
+      "y": 556.6
+    },
+    {
+      "id": "IXIT 4-Conf",
+      "type": "IXIT",
+      "x": 1178.3,
+      "y": 314.5
+    },
+    {
+      "id": "IXIT 5-VulnMon",
+      "type": "IXIT",
+      "x": 1037.7,
+      "y": 7.8
+    },
+    {
+      "id": "IXIT 6-SoftComp",
+      "type": "IXIT",
+      "x": 1297.3,
+      "y": 957.7
+    },
+    {
+      "id": "IXIT 7-UpdMech",
+      "type": "IXIT",
+      "x": 1306.5,
+      "y": 724.4
+    },
+    {
+      "id": "IXIT 8-UpdProc",
+      "type": "IXIT",
+      "x": 878.4,
+      "y": 1050.2
+    },
+    {
+      "id": "IXIT 9-ReplSup",
+      "type": "IXIT",
+      "x": 1117.3,
+      "y": 1063.2
+    },
+    {
+      "id": "IXIT 10-SecParam",
+      "type": "IXIT",
+      "x": 2011.7,
+      "y": -126.1
+    },
+    {
+      "id": "IXIT 11-ComMech",
+      "type": "IXIT",
+      "x": 14.5,
+      "y": 911.8
+    },
+    {
+      "id": "IXIT 12-NetSecImpl",
+      "type": "IXIT",
+      "x": 2379.1,
+      "y": 364.8
+    },
+    {
+      "id": "IXIT 13-SoftServ",
+      "type": "IXIT",
+      "x": 1882,
+      "y": 910.1
+    },
+    {
+      "id": "IXIT 14-SecMgmt",
+      "type": "IXIT",
+      "x": 527.8,
+      "y": 694.4
+    },
+    {
+      "id": "IXIT 15-Intf",
+      "type": "IXIT",
+      "x": 1832.2,
+      "y": 458.2
+    },
+    {
+      "id": "IXIT 16-CodeMin",
+      "type": "IXIT",
+      "x": 1493.8,
+      "y": 403.2
+    },
+    {
+      "id": "IXIT 17-PrivlCtrl",
+      "type": "IXIT",
+      "x": 1601.6,
+      "y": 483.5
+    },
+    {
+      "id": "IXIT 18-AccCtrl",
+      "type": "IXIT",
+      "x": 1709.8,
+      "y": 415.2
+    },
+    {
+      "id": "IXIT 19-SecDev",
+      "type": "IXIT",
+      "x": 1421.1,
+      "y": 620.8
+    },
+    {
+      "id": "IXIT 20-SecBoot",
+      "type": "IXIT",
+      "x": 386.5,
+      "y": 160.9
+    },
+    {
+      "id": "IXIT 21-PersData",
+      "type": "IXIT",
+      "x": 351.3,
+      "y": 774.9
+    },
+    {
+      "id": "IXIT 22-ExtSens",
+      "type": "IXIT",
+      "x": 364.2,
+      "y": 664.4
+    },
+    {
+      "id": "IXIT 23-ResMech",
+      "type": "IXIT",
+      "x": 298.8,
+      "y": 1324.7
+    },
+    {
+      "id": "IXIT 24-TelData",
+      "type": "IXIT",
+      "x": 571.4,
+      "y": 950.4
+    },
+    {
+      "id": "IXIT 25-DelFunc",
+      "type": "IXIT",
+      "x": 1544,
+      "y": 1196
+    },
+    {
+      "id": "IXIT 26-UserDec",
+      "type": "IXIT",
+      "x": 220.1,
+      "y": 547.9
+    },
+    {
+      "id": "IXIT 27-UserIntf",
+      "type": "IXIT",
+      "x": 404.8,
+      "y": 1121.8
+    },
+    {
+      "id": "IXIT 28-ExtAPI",
+      "type": "IXIT",
+      "x": 510.8,
+      "y": 1076.2
+    },
+    {
+      "id": "IXIT 29-InpVal",
+      "type": "IXIT",
+      "x": 268.6,
+      "y": 1061.7
+    }
+  ],
+  "links": [
+    {
+      "from": "5.1-1",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Authentication Factor, Password Generation Mechanism"
+    },
+    {
+      "from": "5.1-2",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Authentication Factor, Password Generation Mechanism"
+    },
+    {
+      "from": "5.1-3",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.1-4",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.1-4",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Change Mechanisms"
+    },
+    {
+      "from": "5.1-5",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Brute Force Prevention"
+    },
+    {
+      "from": "5.2-1",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Publication of Vulnerability Disclosure Policy"
+    },
+    {
+      "from": "5.2-2",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Publication of Vulnerability Disclosure Policy"
+    },
+    {
+      "from": "5.2-2",
+      "to": "IXIT 3-VulnTypes",
+      "type": "requires",
+      "label": "ID, Description, Action, Time Frame"
+    },
+    {
+      "from": "5.2-2",
+      "to": "IXIT 4-Conf",
+      "type": "requires",
+      "label": "Confirmation of Vulnerability Actions"
+    },
+    {
+      "from": "5.2-3",
+      "to": "IXIT 4-Conf",
+      "type": "requires",
+      "label": "Confirmation of Vulnerability Monitoring"
+    },
+    {
+      "from": "5.2-3",
+      "to": "IXIT 5-VulnMon",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.3-1",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "ID, Description, Update Mechanism"
+    },
+    {
+      "from": "5.3-1",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details, Initiation and Interaction"
+    },
+    {
+      "from": "5.3-2",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details, Initiation and Interaction"
+    },
+    {
+      "from": "5.3-3",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "ID, Description, Update Mechanism"
+    },
+    {
+      "from": "5.3-3",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Initiation and Interaction"
+    },
+    {
+      "from": "5.3-4",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "ID, Description, Update Mechanism"
+    },
+    {
+      "from": "5.3-4",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Initiation and Interaction, Configuration"
+    },
+    {
+      "from": "5.3-5",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "ID, Description, Update Mechanism"
+    },
+    {
+      "from": "5.3-5",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Update Checking"
+    },
+    {
+      "from": "5.3-6",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Initiation and Interaction, Configuration, User Notification"
+    },
+    {
+      "from": "5.3-7",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.3-8",
+      "to": "IXIT 4-Conf",
+      "type": "requires",
+      "label": "Confirmation of Update Procedures"
+    },
+    {
+      "from": "5.3-8",
+      "to": "IXIT 8-UpdProc",
+      "type": "requires",
+      "label": "ID, Description, Time Frame"
+    },
+    {
+      "from": "5.3-9",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.3-10",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.3-11",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, User Notification"
+    },
+    {
+      "from": "5.3-12",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description, User Notification"
+    },
+    {
+      "from": "5.3-13",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Support Period, Publication of Support Period"
+    },
+    {
+      "from": "5.3-14",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Replacement, Publication of Non-Updatable"
+    },
+    {
+      "from": "5.3-15",
+      "to": "IXIT 9-ReplSup",
+      "type": "requires",
+      "label": "Isolation, Hardware Replacement"
+    },
+    {
+      "from": "5.3-16",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Model Designation"
+    },
+    {
+      "from": "5.4-1",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Security Guarantees, Protection Scheme"
+    },
+    {
+      "from": "5.4-2",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Security Guarantees, Protection Scheme"
+    },
+    {
+      "from": "5.4-3",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Provisioning Mechanism"
+    },
+    {
+      "from": "5.4-4",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Generation Mechanism"
+    },
+    {
+      "from": "5.5-1",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.5-2",
+      "to": "IXIT 12-NetSecImpl",
+      "type": "requires",
+      "label": "ID, Description, Review/Evaluation Method, Report"
+    },
+    {
+      "from": "5.5-3",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "ID, Description, Update Mechanism, Cryptographic Usage"
+    },
+    {
+      "from": "5.5-3",
+      "to": "IXIT 7-UpdMech",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.5-4",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.5-4",
+      "to": "IXIT 13-SoftServ",
+      "type": "requires",
+      "label": "ID, Description, Authentication Mechanism"
+    },
+    {
+      "from": "5.5-5",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.5-5",
+      "to": "IXIT 13-SoftServ",
+      "type": "requires",
+      "label": "ID, Description, Allows Configuration, Authentication Mechanism"
+    },
+    {
+      "from": "5.5-6",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Communication Mechanisms"
+    },
+    {
+      "from": "5.5-6",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.5-7",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "ID, Description, Type, Communication Mechanisms"
+    },
+    {
+      "from": "5.5-7",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.5-8",
+      "to": "IXIT 4-Conf",
+      "type": "requires",
+      "label": "Confirmation of Secure Management"
+    },
+    {
+      "from": "5.5-8",
+      "to": "IXIT 14-SecMgmt",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.6-1",
+      "to": "IXIT 15-Intf",
+      "type": "requires",
+      "label": "ID, Description, Type, Status"
+    },
+    {
+      "from": "5.6-2",
+      "to": "IXIT 15-Intf",
+      "type": "requires",
+      "label": "ID, Description, Type, Disclosed Information"
+    },
+    {
+      "from": "5.6-3",
+      "to": "IXIT 15-Intf",
+      "type": "requires",
+      "label": "ID, Description, Type, Status, Protection"
+    },
+    {
+      "from": "5.6-4",
+      "to": "IXIT 15-Intf",
+      "type": "requires",
+      "label": "ID, Description, Type, Status, Debug Interface, Protection"
+    },
+    {
+      "from": "5.6-5",
+      "to": "IXIT 13-SoftServ",
+      "type": "requires",
+      "label": "ID, Description, Status, Justification"
+    },
+    {
+      "from": "5.6-6",
+      "to": "IXIT 16-CodeMin",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.6-7",
+      "to": "IXIT 17-PrivlCtrl",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.6-8",
+      "to": "IXIT 18-AccCtrl",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.6-9",
+      "to": "IXIT 4-Conf",
+      "type": "requires",
+      "label": "Confirmation of Secure Development"
+    },
+    {
+      "from": "5.6-9",
+      "to": "IXIT 19-SecDev",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.7-1",
+      "to": "IXIT 20-SecBoot",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Detection Mechanisms"
+    },
+    {
+      "from": "5.7-2",
+      "to": "IXIT 20-SecBoot",
+      "type": "requires",
+      "label": "ID, Description, User Notification, Notification Functionality"
+    },
+    {
+      "from": "5.8-1",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.8-1",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Communication Mechanisms"
+    },
+    {
+      "from": "5.8-2",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees, Cryptographic Details"
+    },
+    {
+      "from": "5.8-2",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Processing Activities, Communication Mechanisms, Sensitive"
+    },
+    {
+      "from": "5.8-3",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Sensors"
+    },
+    {
+      "from": "5.8-3",
+      "to": "IXIT 22-ExtSens",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.9-1",
+      "to": "IXIT 23-ResMech",
+      "type": "requires",
+      "label": "ID, Description, Security Guarantees"
+    },
+    {
+      "from": "5.9-2",
+      "to": "IXIT 23-ResMech",
+      "type": "requires",
+      "label": "ID, Description, Type, Security Guarantees"
+    },
+    {
+      "from": "5.9-3",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description, Resilience Measures"
+    },
+    {
+      "from": "5.10-1",
+      "to": "IXIT 24-TelData",
+      "type": "requires",
+      "label": "ID, Description, Security Examination"
+    },
+    {
+      "from": "5.11-1",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "ID, Description, Target Type, Initiation and Interaction"
+    },
+    {
+      "from": "5.11-2",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Processing Activities"
+    },
+    {
+      "from": "5.11-2",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "ID, Description, Target Type, Initiation and Interaction"
+    },
+    {
+      "from": "5.11-3",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Deletion"
+    },
+    {
+      "from": "5.11-3",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Processing Activities"
+    },
+    {
+      "from": "5.11-3",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "ID, Description, Target Type"
+    },
+    {
+      "from": "5.11-4",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Deletion"
+    },
+    {
+      "from": "5.11-4",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.12-1",
+      "to": "IXIT 26-UserDec",
+      "type": "requires",
+      "label": "ID, Description, Options, Triggered By"
+    },
+    {
+      "from": "5.12-2",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Secure Setup"
+    },
+    {
+      "from": "5.12-2",
+      "to": "IXIT 26-UserDec",
+      "type": "requires",
+      "label": "ID, Description, Options"
+    },
+    {
+      "from": "5.12-3",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Setup Check"
+    },
+    {
+      "from": "5.13-1",
+      "to": "IXIT 11-ComMech",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.13-1",
+      "to": "IXIT 27-UserIntf",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.13-1",
+      "to": "IXIT 28-ExtAPI",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "5.13-1",
+      "to": "IXIT 29-InpVal",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "6-1",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Personal Data"
+    },
+    {
+      "from": "6-1",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Processing Activities"
+    },
+    {
+      "from": "6-2",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Obtaining Consent"
+    },
+    {
+      "from": "6-3",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description, Obtaining Consent, Withdrawing Consent"
+    },
+    {
+      "from": "6-4",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "ID, Description"
+    },
+    {
+      "from": "6-4",
+      "to": "IXIT 24-TelData",
+      "type": "requires",
+      "label": "ID, Description, Purpose, Personal Data"
+    },
+    {
+      "from": "6-5",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation of Telemetry Data"
+    },
+    {
+      "from": "6-5",
+      "to": "IXIT 24-TelData",
+      "type": "requires",
+      "label": "ID, Description, Purpose"
+    },
+    {
+      "from": "IXIT 1-AuthMech",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Changing authentication value"
+    },
+    {
+      "from": "IXIT 3-VulnTypes",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Action, Time Frame"
+    },
+    {
+      "from": "IXIT 7-UpdMech",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "Description of software update"
+    },
+    {
+      "from": "IXIT 7-UpdMech",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "Automation of software update"
+    },
+    {
+      "from": "IXIT 7-UpdMech",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "Enabling of automatic software update"
+    },
+    {
+      "from": "IXIT 7-UpdMech",
+      "to": "IXIT 6-SoftComp",
+      "type": "requires",
+      "label": "Update checking"
+    },
+    {
+      "from": "IXIT 2-UserInfo",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Support period verification"
+    },
+    {
+      "from": "IXIT 1-AuthMech",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "Verify sensitive parameters"
+    },
+    {
+      "from": "IXIT 13-SoftServ",
+      "to": "IXIT 1-AuthMech",
+      "type": "requires",
+      "label": "Authentication mechanism"
+    },
+    {
+      "from": "IXIT 11-ComMech",
+      "to": "IXIT 10-SecParam",
+      "type": "requires",
+      "label": "Critical security parameter"
+    },
+    {
+      "from": "IXIT 11-ComMech",
+      "to": "IXIT 21-PersData",
+      "type": "requires",
+      "label": "Personal data"
+    },
+    {
+      "from": "IXIT 10-SecParam",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "User data"
+    },
+    {
+      "from": "IXIT 21-PersData",
+      "to": "IXIT 25-DelFunc",
+      "type": "requires",
+      "label": "User data"
+    },
+    {
+      "from": "IXIT 25-DelFunc",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation"
+    },
+    {
+      "from": "IXIT 26-UserDec",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Documentation"
+    },
+    {
+      "from": "IXIT 27-UserIntf",
+      "to": "IXIT 29-InpVal",
+      "type": "requires",
+      "label": "Protection"
+    },
+    {
+      "from": "IXIT 28-ExtAPI",
+      "to": "IXIT 29-InpVal",
+      "type": "requires",
+      "label": "Protection"
+    },
+    {
+      "from": "IXIT 11-ComMech",
+      "to": "IXIT 29-InpVal",
+      "type": "requires",
+      "label": "Protection"
+    },
+    {
+      "from": "IXIT 21-PersData",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Description"
+    },
+    {
+      "from": "IXIT 21-PersData",
+      "to": "IXIT 24-TelData",
+      "type": "requires",
+      "label": "Description"
+    },
+    {
+      "from": "IXIT 24-TelData",
+      "to": "IXIT 2-UserInfo",
+      "type": "requires",
+      "label": "Purpose"
+    }
+  ]
+}
