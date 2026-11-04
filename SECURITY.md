@@ -9,3 +9,6 @@ lets a dataviz file, a share link or a `#` address run script in the viewer or t
 visitor did not choose to share.
 
 dataviz keeps no data on a server: there are no accounts or databases to breach in this code.
+
+The third-party components and the analysis of their known vulnerabilities are published as a
+CycloneDX SBOM and VEX in `sbom/` (served at `/sbom/` by a dataviz site).

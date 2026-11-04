@@ -1,0 +1,438 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:0be73e59-df35-46f1-a4de-d1f1135fb735",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-04T13:32:56Z",
+    "component": {
+      "bom-ref": "dataviz",
+      "type": "application",
+      "name": "dataviz",
+      "version": "1.0.0",
+      "supplier": {
+        "name": "cetome",
+        "url": [
+          "https://github.com/cetome"
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-or-later"
+          }
+        }
+      ],
+      "purl": "pkg:github/cetome/dataviz@1.0.0",
+      "description": "Interactive dependency graphs for standards, a static web application.",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/cetome/dataviz"
+        }
+      ]
+    },
+    "supplier": {
+      "name": "cetome",
+      "url": [
+        "https://github.com/cetome"
+      ]
+    }
+  },
+  "vulnerabilities": [
+    {
+      "bom-ref": "vuln-GHSA-2883-xcg3-v3hh",
+      "id": "CVE-2026-84375",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84375"
+      },
+      "references": [
+        {
+          "id": "GHSA-2883-xcg3-v3hh",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh"
+          }
+        }
+      ],
+      "description": "maxTotalMergeKeys does not limit CPU use for empty merge sources",
+      "analysis": {
+        "state": "resolved",
+        "detail": "dataviz updated js-yaml from 4.1.0 to 4.3.2 on 2026-11-04, which fixes it. Before that, dataviz was not affected either: it parses YAML with CORE_SCHEMA only, which treats \"<<\" as an ordinary key and refuses the !!omap tag."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-52cp-r559-cp3m",
+      "id": "CVE-2026-59869",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59869"
+      },
+      "references": [
+        {
+          "id": "GHSA-52cp-r559-cp3m",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-52cp-r559-cp3m"
+          }
+        }
+      ],
+      "description": "YAML merge-key chains can force quadratic CPU consumption",
+      "analysis": {
+        "state": "resolved",
+        "detail": "dataviz updated js-yaml from 4.1.0 to 4.3.2 on 2026-11-04, which fixes it. Before that, dataviz was not affected either: it parses YAML with CORE_SCHEMA only, which treats \"<<\" as an ordinary key and refuses the !!omap tag."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-5p4m-2wfm-xmqj",
+      "id": "GHSA-5p4m-2wfm-xmqj",
+      "source": {
+        "name": "GitHub Advisories",
+        "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj"
+      },
+      "references": [
+        {
+          "id": "GHSA-5p4m-2wfm-xmqj",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj"
+          }
+        }
+      ],
+      "description": "Quadratic CPU consumption in !!omap resolution",
+      "analysis": {
+        "state": "resolved",
+        "detail": "dataviz updated js-yaml from 4.1.0 to 4.3.2 on 2026-11-04, which fixes it. Before that, dataviz was not affected either: it parses YAML with CORE_SCHEMA only, which treats \"<<\" as an ordinary key and refuses the !!omap tag."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-h67p-54hq-rp68",
+      "id": "CVE-2026-53550",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53550"
+      },
+      "references": [
+        {
+          "id": "GHSA-h67p-54hq-rp68",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-h67p-54hq-rp68"
+          }
+        }
+      ],
+      "description": "Quadratic-complexity DoS in merge key handling via repeated aliases",
+      "analysis": {
+        "state": "resolved",
+        "detail": "dataviz updated js-yaml from 4.1.0 to 4.3.2 on 2026-11-04, which fixes it. Before that, dataviz was not affected either: it parses YAML with CORE_SCHEMA only, which treats \"<<\" as an ordinary key and refuses the !!omap tag."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-mh29-5h37-fv8m",
+      "id": "CVE-2025-64718",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+      },
+      "references": [
+        {
+          "id": "GHSA-mh29-5h37-fv8m",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m"
+          }
+        }
+      ],
+      "description": "js-yaml has prototype pollution in merge (<<)",
+      "analysis": {
+        "state": "resolved",
+        "detail": "dataviz updated js-yaml from 4.1.0 to 4.3.2 on 2026-11-04, which fixes it. Before that, dataviz was not affected either: it parses YAML with CORE_SCHEMA only, which treats \"<<\" as an ordinary key and refuses the !!omap tag."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-29mw-wpgm-hmr9",
+      "id": "CVE-2020-28500",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28500"
+      },
+      "references": [
+        {
+          "id": "GHSA-29mw-wpgm-hmr9",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-29mw-wpgm-hmr9"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "medium",
+          "method": "other"
+        }
+      ],
+      "description": "Regular Expression Denial of Service (ReDoS) in lodash",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The slow regular expression runs when toNumber, trim or trimEnd receive long strings. trim and trimEnd are not in the bundle. toNumber is, but dagre only passes it numbers (sizes, ranges), never text from a dataviz file."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-35jh-r3h4-6jhm",
+      "id": "CVE-2021-23337",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23337"
+      },
+      "references": [
+        {
+          "id": "GHSA-35jh-r3h4-6jhm",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "high",
+          "method": "other"
+        }
+      ],
+      "description": "Command Injection in lodash",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Affects lodash template, which is not in the subset bundled in dagre.min.js."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-p6mc-m468-83gw",
+      "id": "CVE-2020-8203",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8203"
+      },
+      "references": [
+        {
+          "id": "GHSA-p6mc-m468-83gw",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-p6mc-m468-83gw"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "high",
+          "method": "other"
+        }
+      ],
+      "description": "Prototype Pollution in lodash",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_reachable",
+        "detail": "The flaw is in the path setter used by zipObjectDeep (not bundled). The bundle reaches the same setter only through pick, which dagre calls with fixed attribute names. Nothing from a dataviz file becomes a path."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-r5fr-rjxr-66jc",
+      "id": "CVE-2026-4800",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4800"
+      },
+      "references": [
+        {
+          "id": "GHSA-r5fr-rjxr-66jc",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-r5fr-rjxr-66jc"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "high",
+          "method": "other"
+        }
+      ],
+      "description": "lodash vulnerable to Code Injection via `_.template` imports key names",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Affects lodash template, which is not in the subset bundled in dagre.min.js."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-xxjr-mmjv-4gpg",
+      "id": "CVE-2025-13465",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13465"
+      },
+      "references": [
+        {
+          "id": "GHSA-xxjr-mmjv-4gpg",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "medium",
+          "method": "other"
+        }
+      ],
+      "description": "Lodash has Prototype Pollution Vulnerability in `_.unset`, `_.omit`, and `_.pullAt` functions",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "unset, omit and pullAt are not in the subset bundled in dagre.min.js."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-4r6h-8v6p-xvw6",
+      "id": "CVE-2023-30533",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-30533"
+      },
+      "references": [
+        {
+          "id": "GHSA-4r6h-8v6p-xvw6",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-4r6h-8v6p-xvw6"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "high",
+          "method": "other"
+        }
+      ],
+      "description": "Prototype Pollution in sheetJS",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Fixed in SheetJS CE 0.19.3. dataviz ships 0.20.3 from cdn.sheetjs.com. Databases list every npm version as affected because the fixed releases are not published on npm."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#xlsx"
+        }
+      ]
+    },
+    {
+      "bom-ref": "vuln-GHSA-5pgg-2g8v-p4x9",
+      "id": "CVE-2024-22363",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22363"
+      },
+      "references": [
+        {
+          "id": "GHSA-5pgg-2g8v-p4x9",
+          "source": {
+            "name": "GitHub Advisories",
+            "url": "https://github.com/advisories/GHSA-5pgg-2g8v-p4x9"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "source": {
+            "name": "GitHub Advisories"
+          },
+          "severity": "high",
+          "method": "other"
+        }
+      ],
+      "description": "SheetJS Regular Expression Denial of Service (ReDoS)",
+      "analysis": {
+        "state": "not_affected",
+        "justification": "code_not_present",
+        "detail": "Fixed in SheetJS CE 0.20.2. dataviz ships 0.20.3 from cdn.sheetjs.com. Databases list every npm version as affected because the fixed releases are not published on npm."
+      },
+      "affects": [
+        {
+          "ref": "urn:cdx:10ac4ed2-debb-495f-a634-877b8aa5a2a4/1#xlsx"
+        }
+      ]
+    }
+  ]
+}

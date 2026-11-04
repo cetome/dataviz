@@ -60,8 +60,8 @@ ErrorDocument 404 /index.html
         Header set Cache-Control "no-store"
     </FilesMatch>
 
-    # The dataviz files, templates and schema are open: other sites and tools may fetch them
-    <If "%{REQUEST_URI} =~ m#^/(standards|templates|examples|schema)/#">
+    # The dataviz files, templates, schema, SBOM and VEX are open: other sites and tools may fetch them
+    <If "%{REQUEST_URI} =~ m#^/(standards|templates|examples|schema|sbom)/#">
         Header set Access-Control-Allow-Origin "*"
     </If>
 </IfModule>

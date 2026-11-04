@@ -13,12 +13,14 @@ Not covered by the AGPL:
 - the names "cetome" and "dataviz by cetome" and the logos in img/: trademarks of cetome, not
   licensed. A modified version published by someone else must use its own name and logo.
 
-Third-party software included in js/vendor/ and fonts/, each under its own licence:
+Third-party software included in js/vendor/ and fonts/, each under its own licence. Exact versions,
+licences and SHA-256 fingerprints: sbom/dataviz.cdx.json (CycloneDX SBOM).
 
 - Cytoscape.js            MIT          https://github.com/cytoscape/cytoscape.js
 - cytoscape-cose-bilkent  MIT          https://github.com/cytoscape/cytoscape.js-cose-bilkent
 - cose-base, layout-base  MIT          https://github.com/iVis-at-Bilkent/cose-base
 - dagre                   MIT          https://github.com/dagrejs/dagre
+  (its distribution file bundles graphlib, MIT, and a subset of lodash, MIT)
 - cytoscape-dagre         MIT          https://github.com/cytoscape/cytoscape.js-dagre
 - SheetJS Community Ed.   Apache-2.0   https://git.sheetjs.com/sheetjs/sheetjs
 - js-yaml                 MIT          https://github.com/nodeca/js-yaml

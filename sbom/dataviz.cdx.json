@@ -1,0 +1,580 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:10ac4ed2-debb-495f-a634-877b8aa5a2a4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-04T13:32:56Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "tools/sbom.mjs",
+          "supplier": {
+            "name": "cetome"
+          },
+          "externalReferences": [
+            {
+              "type": "vcs",
+              "url": "https://github.com/cetome/dataviz"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "dataviz",
+      "type": "application",
+      "name": "dataviz",
+      "version": "1.0.0",
+      "supplier": {
+        "name": "cetome",
+        "url": [
+          "https://github.com/cetome"
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-or-later"
+          }
+        }
+      ],
+      "purl": "pkg:github/cetome/dataviz@1.0.0",
+      "description": "Interactive dependency graphs for standards, a static web application.",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/cetome/dataviz"
+        }
+      ]
+    },
+    "supplier": {
+      "name": "cetome",
+      "url": [
+        "https://github.com/cetome"
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "cytoscape",
+      "type": "library",
+      "name": "cytoscape",
+      "version": "3.30.3",
+      "supplier": {
+        "name": "The Cytoscape Consortium"
+      },
+      "description": "Graph theory and visualisation library: draws every graph.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cytoscape@3.30.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "14f26e42750a194e5f827e9498c628efc7d411e2a1274126b9ee4e6daffa7694"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/cytoscape.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://js.cytoscape.org"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/cytoscape/cytoscape.js"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cytoscape-cose-bilkent",
+      "type": "library",
+      "name": "cytoscape-cose-bilkent",
+      "version": "4.1.0",
+      "supplier": {
+        "name": "i-Vis Research Lab, Bilkent University"
+      },
+      "description": "The organic layout of the graphs.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cytoscape-cose-bilkent@4.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9297c5b4245efd314941c622cb045fb96ffbfde3268985463745311699cae0b2"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/cose-bilkent/cytoscape-cose-bilkent.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/cytoscape/cytoscape.js-cose-bilkent"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cose-base",
+      "type": "library",
+      "name": "cose-base",
+      "version": "2.2.0",
+      "supplier": {
+        "name": "i-Vis Research Lab, Bilkent University"
+      },
+      "description": "Core of the CoSE layout algorithm.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cose-base@2.2.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7cae9509bd36235a63a85e71c8d9fa2cd0bc1d0c1ecc5b5a737976f39d040ddf"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/cose-bilkent/cose-base.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/iVis-at-Bilkent/cose-base"
+        }
+      ]
+    },
+    {
+      "bom-ref": "layout-base",
+      "type": "library",
+      "name": "layout-base",
+      "version": "2.0.1",
+      "supplier": {
+        "name": "i-Vis Research Lab, Bilkent University"
+      },
+      "description": "Base classes of the layout algorithms.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/layout-base@2.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ec15ab5df9af3f20708f4faab994accf91cda71848cd5bb10a23432cc50b6745"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/cose-bilkent/layout-base.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/iVis-at-Bilkent/layout-base"
+        }
+      ]
+    },
+    {
+      "bom-ref": "cytoscape-dagre",
+      "type": "library",
+      "name": "cytoscape-dagre",
+      "version": "2.5.0",
+      "supplier": {
+        "name": "The Cytoscape Consortium"
+      },
+      "description": "The hierarchical layout of the graphs.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cytoscape-dagre@2.5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bf70fe402991dcbff33e05a7e4a5271c78020bb75e85d1c80ab7538e4157112e"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/dagre/cytoscape-dagre.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/cytoscape/cytoscape.js-dagre"
+        }
+      ]
+    },
+    {
+      "bom-ref": "dagre",
+      "type": "library",
+      "name": "dagre",
+      "version": "0.8.5",
+      "supplier": {
+        "name": "Chris Pettitt"
+      },
+      "description": "Directed graph layout. Its distribution file bundles graphlib and a subset of lodash.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/dagre@0.8.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "62eb9787ccfdbdf4148d4d99d31dbf9ee4770eafee81e637d759b52aac22cd51"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/dagre/dagre.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/dagrejs/dagre"
+        }
+      ]
+    },
+    {
+      "bom-ref": "graphlib",
+      "type": "library",
+      "name": "graphlib",
+      "version": "2.1.8",
+      "supplier": {
+        "name": "Chris Pettitt"
+      },
+      "description": "Graph data structure, bundled in dagre.min.js (version stated in the bundle).",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/graphlib@2.1.8",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/dagre/dagre.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/dagrejs/graphlib"
+        }
+      ]
+    },
+    {
+      "bom-ref": "lodash",
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.15",
+      "supplier": {
+        "name": "OpenJS Foundation"
+      },
+      "description": "Subset of lodash modules bundled in dagre.min.js: clone, cloneDeep, constant, defaults, each, filter, find, flatten, forEach, forIn, has, isArray, isEmpty, isFunction, isUndefined, keys, last, map, mapValues, max, merge, min, minBy, now, pick, range, reduce, size, sortBy, transform, union, uniqueId, values, zipObject. The bundle states no version: dagre 0.8.5 was built on 2019-12-03 against lodash ^4.17.15, the latest lodash release at that date.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/lodash@4.17.15",
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/dagre/dagre.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/lodash/lodash"
+        }
+      ]
+    },
+    {
+      "bom-ref": "js-yaml",
+      "type": "library",
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "supplier": {
+        "name": "Vitaly Puzrin and contributors"
+      },
+      "description": "Reads and writes the YAML dataviz files.",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/js-yaml@4.3.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "16856483bd487fbe901dc900656a97babd10a70b3a44921744b18d64607c5185"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/js-yaml.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "xlsx",
+      "type": "library",
+      "name": "xlsx",
+      "version": "0.20.3",
+      "supplier": {
+        "name": "SheetJS LLC"
+      },
+      "description": "SheetJS Community Edition: reads and writes the Excel dataviz files, the ICS and the IXIT list. Distributed by cdn.sheetjs.com since 0.19 (the npm package stopped at 0.18.5).",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/xlsx@0.20.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc015130aa8521e7f088f88898eba949ccdcbfb38df0bd129b44b7273c3a6f41"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "js/vendor/xlsx.full.min.js"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://sheetjs.com"
+        },
+        {
+          "type": "vcs",
+          "url": "https://git.sheetjs.com/sheetjs/sheetjs"
+        },
+        {
+          "type": "distribution",
+          "url": "https://cdn.sheetjs.com/xlsx-0.20.3/"
+        }
+      ]
+    },
+    {
+      "bom-ref": "inter",
+      "type": "file",
+      "name": "Inter",
+      "version": "4.001",
+      "supplier": {
+        "name": "Rasmus Andersson"
+      },
+      "description": "The typeface, variable, latin subset (version 4.001 from the font name table).",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ],
+      "purl": "pkg:github/rsms/inter@v4.001",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+        }
+      ],
+      "evidence": {
+        "occurrences": [
+          {
+            "location": "fonts/inter-latin-variable.woff2"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://rsms.me/inter/"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/rsms/inter"
+        }
+      ]
+    },
+    {
+      "bom-ref": "playwright-core",
+      "type": "library",
+      "name": "playwright-core",
+      "version": "1.64.0",
+      "supplier": {
+        "name": "Microsoft"
+      },
+      "description": "Build tooling only (tools/icons.mjs, tools/social.mjs), never part of the site.",
+      "scope": "excluded",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/playwright-core@1.64.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/microsoft/playwright"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "dataviz",
+      "dependsOn": [
+        "cytoscape",
+        "cytoscape-cose-bilkent",
+        "cytoscape-dagre",
+        "js-yaml",
+        "xlsx",
+        "inter"
+      ]
+    },
+    {
+      "ref": "cytoscape",
+      "dependsOn": []
+    },
+    {
+      "ref": "cytoscape-cose-bilkent",
+      "dependsOn": [
+        "cose-base"
+      ]
+    },
+    {
+      "ref": "cose-base",
+      "dependsOn": [
+        "layout-base"
+      ]
+    },
+    {
+      "ref": "layout-base",
+      "dependsOn": []
+    },
+    {
+      "ref": "cytoscape-dagre",
+      "dependsOn": [
+        "dagre"
+      ]
+    },
+    {
+      "ref": "dagre",
+      "dependsOn": [
+        "graphlib",
+        "lodash"
+      ]
+    },
+    {
+      "ref": "graphlib",
+      "dependsOn": [
+        "lodash"
+      ]
+    },
+    {
+      "ref": "lodash",
+      "dependsOn": []
+    },
+    {
+      "ref": "js-yaml",
+      "dependsOn": []
+    },
+    {
+      "ref": "xlsx",
+      "dependsOn": []
+    },
+    {
+      "ref": "inter",
+      "dependsOn": []
+    },
+    {
+      "ref": "playwright-core",
+      "dependsOn": []
+    }
+  ]
+}

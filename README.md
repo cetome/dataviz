@@ -104,6 +104,7 @@ node tools/convert-builtins.mjs   data/ -> standards/*.json, then standards/inde
 node tools/index-standards.mjs    standards/index.json from the files in standards/
 node tools/templates.mjs          templates/* and format/index.html from their sources, then checks
                                   every carrier round-trips and every dataviz file reads cleanly
+node tools/sbom.mjs               sbom/: the SBOM and the VEX, checked against OSV (fails on a new vulnerability)
 node tools/check-data.mjs         data/ still holds exactly the original graph elements
 node tools/build.mjs [--url ...]  dist/, ready to upload (see "Host it on your own site")
 node tools/check-public.mjs       nothing private (secret, PHP, private files, a private domain) would be published
@@ -111,6 +112,14 @@ cd tools && npm install           once, for the two scripts below (drive Microso
 node tools/icons.mjs              the favicon set
 node tools/social.mjs [page]      the social cards (--url, --out)
 ```
+
+## Software bill of materials and vulnerabilities
+
+`sbom/dataviz.cdx.json` lists every third-party component dataviz ships, with its version, licence,
+package URL and the SHA-256 of its file (CycloneDX 1.6). `sbom/dataviz.vex.cdx.json` states, for each
+known vulnerability of those versions, whether dataviz is affected and why (CycloneDX VEX). A site
+serves both at `/sbom/`. `node tools/sbom.mjs` writes them again and checks the components against
+the OSV database: a vulnerability nobody has analysed yet makes it fail.
 
 ## Licences
 

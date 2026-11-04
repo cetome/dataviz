@@ -7,7 +7,8 @@ Thank you for helping. dataviz stays free, open and account-free, and contributi
 - **No accounts, no tracking, no server-side storage** in the viewer and the builder. Everything a
   visitor opens or makes stays in their browser unless they download or share it themselves.
 - **No build step.** Plain HTML, CSS and JavaScript that a browser runs as is. Third-party libraries
-  go in `js/vendor/`, pinned, with their licence listed in `NOTICE`.
+  go in `js/vendor/`, pinned, with their licence listed in `NOTICE`. When you add or update one, update
+  `COMPONENTS` in `tools/sbom.mjs` and run it: the SBOM and the VEX in `sbom/` must stay current.
 - **The format is a contract.** Files written for `dataviz: 1` must keep opening. A change to the
   format updates `js/standard.js`, `docs/FORMAT.md`, `schema/`, the YAML template and the AI
   prompt together. Then run `node tools/templates.mjs`, which must end with `ALL GOOD`.
