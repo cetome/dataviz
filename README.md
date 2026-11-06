@@ -7,9 +7,9 @@ Free, open source, no account: everything happens in your browser.
 Source: **https://github.com/cetome/dataviz**. Host it on your own site: it comes with four built-in graphs (EN 18031, EN 18031 E.Info,
 EN 303 645 / TS 103 701, prEN 40000-1-3 and the CRA) and:
 
-- **the viewer** (`/view/`): opens any *dataviz file* from your disk, a web address or a share link;
+- **the viewer** (`/view/`): opens any *dataviz file* from your disk, a web address or a share link.
 - **the builder** (`/builder/`): makes or edits a dataviz file, with a live preview, and exports it
-  as JSON, YAML, Excel or CSV, or as a share link;
+  as JSON, YAML, Excel or CSV, or as a share link.
 - **the format reference** (`/format/`), templates and an AI prompt to turn a standard into a dataviz file.
 
 ## Make your own dataviz file
@@ -38,8 +38,10 @@ from the viewer or the builder: it carries the whole file after the `#`, so no s
 No account, no cookie, no analytics, no server-side storage. Files are read in the browser, and what you
 open, build and assess is kept in the browser's local storage, and you can download or delete it at
 any time. The only requests the viewer makes are for the site's own files and for a web address you
-typed. (The cetome-hosted copy of the four built-in graphs asks for an email address before
-downloading the IXIT list and assessment files. That part is not in this repository.)
+typed. (The cetome-hosted copy adds two things of its own, neither in this repository: the four
+built-in graphs ask for an email address before downloading the IXIT list and assessment files,
+and the site measures its audience without cookies, sending page paths only, never the content of
+a dataviz file.)
 
 ## Run it
 
@@ -63,7 +65,8 @@ node tools/build.mjs --url https://your.site      # then upload the content of d
 ```
 
 A site file holds more: your own files laid over the build at the same paths (social pictures in
-`img/social/`, a `js/extras.js`...) and links added to every page footer. See the head of
+`img/social/`, a `js/extras.js`...), scripts of your own added to every page with the sources they
+need in the Content-Security-Policy, and links added to every page footer. See the head of
 `tools/build.mjs`, then run `node tools/build.mjs --site path/to/site.json`. Social pictures for
 your address: `node tools/social.mjs --url https://your.site --out path/to/img/social`.
 

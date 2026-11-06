@@ -39,6 +39,7 @@ function publicFiles() {
 
 const files = publicFiles().filter((f) => fs.existsSync(path.join(root, f))); // not files deleted since the last commit
 const problems = [];
+const TRACKING = /_paq\b|matomo\.(js|php)|piwik\.(js|php)|setTrackerUrl|googletagmanager|google-analytics|gtag\(|plausible\.io|dvGoal|dvTrack/i;
 const SUSPICIOUS = [
   [/BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY/, 'a private key'],
   [/'\w*(pass|secret|token)\w*'\s*=>\s*'[^']{6,}'/i, 'a password or secret set in PHP'],
@@ -72,6 +73,8 @@ for (const f of files) {
   const text = fs.readFileSync(full, 'utf8');
   SUSPICIOUS.forEach(([re, what]) => { if (re.test(text)) problems.push(`${f}: contains ${what}`); });
   if (domainRule && f !== 'SECURITY.md' && domainRule.test(text)) problems.push(`${f}: names the private site's domain (the repository must work on any site)`);
+  // no audience-measurement code in the open-source package: a site adds its own (site.json "scripts")
+  if (f !== 'tools/check-public.mjs' && TRACKING.test(text)) problems.push(`${f}: contains tracking code (it belongs to a site's private files)`);
 }
 
 /* Content-Security-Policy: the header of .htaccess and the <meta> of every page say the same, and no

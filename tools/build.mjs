@@ -13,6 +13,11 @@
  *   overlay   a folder (relative to the site file) laid over the build at the same paths: the site's
  *             own files, such as social pictures (img/social/<page>.png), a js/extras.js, a server API
  *   footer    HTML added at the end of every page footer (the site's own links)
+ *   scripts   script addresses added at the end of the <head> of every page, in order (the site's
+ *             own scripts, served from its overlay)
+ *   csp       sources added to the Content-Security-Policy, by directive, for example
+ *             { "img-src": ["https://img.example.org"] }: applied to every page and to .htaccess
+ * The overlay's tools/ and docs/ folders are never copied: they are the site's own tooling.
  * Then upload the content of dist/ to the root of the web server.
  *
  * Copyright (C) 2024-2026 cetome
@@ -39,6 +44,19 @@ const url = (arg('--url') || site.url || '').replace(/\/+$/, '');
 if (url && !/^https?:\/\/[^/]+$/.test(url)) { console.error(`"${url}" is not a site address like https://example.org`); process.exit(1); }
 const overlay = site.overlay ? path.resolve(siteDir, site.overlay) : null;
 const footer = site.footer || '';
+const scripts = Array.isArray(site.scripts) ? site.scripts : [];
+const cspAdd = site.csp && typeof site.csp === 'object' ? site.csp : {};
+
+/** The policy of the site: the sources of site.csp added to their directives (created when missing). */
+function withCsp(policy) {
+  const directives = policy.split(';').map((d) => d.trim()).filter(Boolean).map((d) => d.split(/\s+/));
+  for (const [name, sources] of Object.entries(cspAdd)) {
+    let d = directives.find((x) => x[0] === name);
+    if (!d) { d = [name]; directives.push(d); }
+    for (const src of [].concat(sources)) if (!d.includes(src)) d.push(src);
+  }
+  return directives.map((d) => d.join(' ')).join('; ');
+}
 
 /* ---- 1. the public files ---------------------------------------------------------------------- */
 // not served: the tooling, the notes, the archive, private folders, the build itself
@@ -68,7 +86,11 @@ publicCount = copyTree(root, dist, true, SKIP_FILE);
 let overlayCount = 0;
 if (overlay) {
   if (!fs.existsSync(overlay)) { console.error(`The overlay folder ${overlay} does not exist. Nothing more written.`); process.exit(1); }
-  overlayCount = copyTree(overlay, dist, false, /\.md$|^site\.json$/);
+  overlayCount = copyTree(overlay, dist, true, /\.md$|^site\.json$/); // top level: its tools/ and docs/ stay out
+}
+if (Object.keys(cspAdd).length) {
+  const ht = path.join(dist, '.htaccess');
+  if (fs.existsSync(ht)) fs.writeFileSync(ht, fs.readFileSync(ht, 'utf8').replace(/(Header always set Content-Security-Policy ")([^"]+)(")/, (m, a, policy, c) => a + withCsp(policy) + c));
 }
 
 /* ---- 3. the pages: the site's address and footer links ---------------------------------------- */
@@ -103,6 +125,8 @@ for (const rel of pages) {
     html = html.replace(/(\s*)<\/head>/, (m, space) => `\n    <!-- added by tools/build.mjs for ${url} -->\n    ${tags.join('\n    ')}${space}</head>`);
   }
   html = html.split('<!-- site-footer -->').join(footer);
+  if (scripts.length) html = html.replace(/(\s*)<\/head>/, (m, space) => `\n    ${scripts.map((src) => `<script src="${esc(src)}"></script>`).join('\n    ')}${space}</head>`);
+  if (Object.keys(cspAdd).length) html = html.replace(/(<meta http-equiv="Content-Security-Policy" content=")([^"]+)(">)/, (m, a, policy, c) => a + withCsp(policy) + c);
   fs.writeFileSync(file, html);
 }
 
